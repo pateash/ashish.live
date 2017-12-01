@@ -9,7 +9,7 @@
       <div class="logo">
         <h3><a href="/">AP</a></h3>
       </div>
-      <apNav></apNav>
+      <ap-nav></ap-nav>
       <div class="social-icons">
         <a target='_blank' title='linkedin' href=https://linkedin.com/in/ashishpatel0720  style="color:#006699"><i
                 class="fa fa-linkedin-square fa-2x"></i></a>
@@ -42,11 +42,11 @@
 </template>
 
 <script>
-  import {apNav} from '@/components/apNav';
+  import apNav from '@/components/apnav';
 
     export default {
         name: 'app',
-        components:{'apNav':apNav}
+        components:{apNav}
     }
 </script>
 

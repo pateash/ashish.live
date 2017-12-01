@@ -24,8 +24,8 @@
 
 <script>
     export default {
-           name: 'apNav',
- }
+        name:'ap-hav'
+  }
 </script>
 
 <style>
