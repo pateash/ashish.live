@@ -27,8 +27,8 @@
                                                                          style="color:#ff7018">Ashish</a></b> in <span
                 class="icon"><i class="fa fa-heart" style="color:#ff4d44"></i></span> with <br><a target='_blank'
                                                                                                   href="//laravel.com"><img
-                src="/images/laravel-icon.png"></a> <a target='_blank' href="//vuejs.org"><img
-                src="/images/vue-icon.png"></a>.</p>
+                src="/static/images/laravel-icon.png"></a> <a target='_blank' href="//vuejs.org"><img
+                src="/static/images/vue-icon.png"></a>.</p>
         <p>Copyright &copy; 2017 <a target='_blank' href="//github.com/ashishpatel0720">@ashishpatel0720</a></p>
       </div>
     </header>

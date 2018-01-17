@@ -56,7 +56,7 @@
                     <article class="media">
                         <div class="media-left">
                             <figure class="image is-64x64">
-                                <img src="/images/grabpustak.png" alt="Image">
+                                <img src="/static/images/grabpustak.png" alt="Image">
                             </figure>
                         </div>
                         <div class="media-content">

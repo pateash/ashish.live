@@ -8,7 +8,7 @@
 						<div class="card">
 							<div class="card-image">
 								<figure class="image">
-									<img src="/images/me.jpg"  alt="Image">
+									<img src="/static/images/me.jpg"  alt="Image">
 								</figure>
 							</div>
 							<div class="card-content">
