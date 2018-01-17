@@ -15,61 +15,60 @@ import GrabPustak from "@/components/projects/grabpustak.vue"
 import ManitMoodle from "@/components/projects/manitmoodle.vue"
 import Captcha from "@/components/projects/captcha.vue"
 import BigQueryProject from "@/components/projects/bigquery_project.vue"
-Vue.use(Router);
-
 let routes=[
-  {
-    path:"/",
-    component:Home
-  },
-  {
-    path:"/education",
-    component:Education
-  },
-  {
-    path:"/work",
-    component:Work
-  },
-  {
-    path:"/contact",
-    component:Contact
-  },
-  {
-    path:"/projects",
-    component:Projects
-  },
-  {
-    path:"/projects/kisanmitra",
-    component:Kisanmitra
-  },
-  {
-    path:"/projects/bigquery",
-    redirect:"/projects/bigquery/architecture"
-  },
-  {
-    path:"/projects/bigquery/architecture",
-    component:BigQuery
-  },
-  {
-    path:"/projects/grabpustak",
-    component:GrabPustak
-  },
-  {
-    path:"/projects/manitmoodle",
-    component:ManitMoodle
-  },
-  {
-    path:"/projects/captcha",
-    component:Captcha
-  },
-  {
-    path:"/projects/bigquery/project",
-    component:BigQueryProject
-  },
+    {
+        path:"/",
+        component:Home
+    },
+    {
+        path:"/education",
+        component:Education
+    },
+    {
+        path:"/work",
+        component:Work
+    },
+    {
+        path:"/contact",
+        component:Contact
+    },
+    {
+        path:"/projects",
+        component:Projects
+    },
+    {
+        path:"/projects/kisanmitra",
+        component:Kisanmitra
+    },
+    {
+        path:"/projects/bigquery",
+        redirect:"/projects/bigquery/architecture"
+    },
+    {
+        path:"/projects/bigquery/architecture",
+        component:BigQuery
+    },
+    {
+        path:"/projects/grabpustak",
+        component:GrabPustak
+    },
+    {
+        path:"/projects/manitmoodle",
+        component:ManitMoodle
+    },
+    {
+        path:"/projects/captcha",
+        component:Captcha
+    },
+    {
+        path:"/projects/bigquery/project",
+        component:BigQueryProject
+    },
 
 ]
 
 export default new Router({
-  routes,
-  mode:'history'
+    routes:routes,
+    mode:'history',
+    linkActiveClass:'selected'
 })

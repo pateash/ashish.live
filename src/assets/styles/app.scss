@@ -1,0 +1,27 @@
+
+/* Fonts*/
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+ /*Variables*/
+@import "_variables.scss";
+
+/* Bootstrap
+@import "~bootstrap-sass";
+
+@import "~font-awesome"; #TODO: why we can't do this(error not readable)
+@import "/node_modules/font-awesome/css/font-awesome.css";
+@import "~font-awesome";*/
+
+/*//template specific styles*/
+@import "linea.scss";
+
+@import "~bulma";
+
+@import "et-line-icons.scss";
+
+@import "owl.carousel.scss";
+
+/*
+//for overriding styles
+*/
+@import "style.scss";
