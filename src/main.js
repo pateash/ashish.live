@@ -9,6 +9,8 @@ import "./assets/scripts/jquery.slicknav"
 import "./assets/scripts/owl.carousel"
 import "./assets/scripts/main"
 
+import VueRouter from 'vue-router'
+Vue.use(VueRouter); //telling vue to use this object for routing
 
 Vue.config.productionTip = false
 
