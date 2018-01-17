@@ -77,8 +77,8 @@ const webpackConfig = merge(baseWebpackConfig, {
           /\.js$/.test(module.resource) &&
           module.resource.indexOf(
             path.join(__dirname, '../node_modules')
-          ) === 0
-        )
+            ) === 0
+          )
       }
     }),
     // extract webpack runtime and module manifest to its own file in order to
@@ -89,14 +89,19 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     // copy custom static assets
     new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, '../static'),
-        to: config.build.assetsSubDirectory,
-        ignore: ['.*']
-      }
+    {
+      from: path.resolve(__dirname, '../static'),
+      to: config.build.assetsSubDirectory,
+      ignore: ['.*']
+    },
+    {
+      from: path.resolve(__dirname, '../netlify_config'),
+      to: config.build.assetsRoot,
+      ignore: ['.*']
+    }
     ])
-  ]
-})
+    ]
+  })
 
 if (config.build.productionGzip) {
   const CompressionWebpackPlugin = require('compression-webpack-plugin')
@@ -109,11 +114,11 @@ if (config.build.productionGzip) {
         '\\.(' +
         config.build.productionGzipExtensions.join('|') +
         ')$'
-      ),
+        ),
       threshold: 10240,
       minRatio: 0.8
     })
-  )
+    )
 }
 
 if (config.build.bundleAnalyzerReport) {
