@@ -1,9 +1,9 @@
 <template>
     <!--<div class="columns">-->
     <!--<div class="column">-->
-    <div class="inner-item" style="margin-top:-2em">
-        <span style="font-size:2em;">Kisanmitra <span class="tag is-primary" style="font-size:0.4em;"><a href="//kisanmitra.ml" target="_blank" style="color:white">Visit Website</a></span></span>
-        <p align="center"><img src="http://www.indiawaterportal.org/sites/indiawaterportal.org/files/KSY.jpg"></p>
+    <div class="inner-item">
+        <span style="font-size:2em;">Kisanmitra <span class="tag is-primary" style="font-size:0.4em;"><a href="//github.com/ashishpatel0720/kisanmitra" target="_blank" style="color:white">Project at Github</a></span></span>
+        <p align="center" style="margin-top:1em"><img src="http://www.indiawaterportal.org/sites/indiawaterportal.org/files/KSY.jpg"></p>
         <br>
         <p align="center">
             <a  target='_blank' href="https://packagist.org/packages/ashishpatel0720/kisanmitra"><img src="https://poser.pugx.org/ashishpatel0720/kisanmitra/v/unstable.svg" alt="Latest UnStable Version"></a>
@@ -19,7 +19,7 @@
                 <div class="media">
                     <div class="media-left">
                         <figure class="image is-48x48">
-                            <img src="/images/laravel-icon.png">
+                            <img src="/static/images/laravel-icon.png">
                         </figure>
                     </div>
                     <div class="media-content">
@@ -37,7 +37,7 @@
                 <div class="media">
                     <div class="media-left">
                         <figure class="image is-48x48">
-                            <img src="/images/scikit-logo.jpg">
+                            <img src="/static/images/scikit-logo.jpg">
                         </figure>
                     </div>
                     <div class="media-content">

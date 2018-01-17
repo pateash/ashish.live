@@ -1,10 +1,12 @@
 <template>
     <!--<div class="columns">-->
     <!--<div class="column">-->
-    <div class="inner-item" style="margin-top:-2em">
-        <span style="font-size:2em">Captcha <span class="tag is-primary" style="font-size:0.4em;"><a href="//captcha.tk" target="_blank" style="color:white;">Visit Website</a></span></span>
+    <div class="inner-item">
+        <span style="font-size:2em">Captcha
+            <span class="tag is-primary" style="font-size:0.4em;"><a href="//github.com/ashishpatel0720/mycaptcha" target="_blank" style="color:white;">Project at Github</a></span>
+        </span>
         <br>
-        <p align="left"><img class="image"  width="40%" height="40%" src="https://vignette3.wikia.nocookie.net/central/images/6/66/Captcha.png/revision/latest?cb=20121024110649"></p>
+        <p align="left" style="margin-top:1em"><img class="image"  width="40%" height="40%" src="/static/images/captcha.jpg"></p>
         <br>
         <h4 id="about-manitmoodle">About&nbsp;Captcha</h4>
         <p>
@@ -23,10 +25,10 @@
         <h4 id="technology-used">technology used</h4>
         <p >
             <a  target='_blank' href="//php.net" ><img class='image' width='250' height='200'
-                                                       src="/images/logo3.svg"></a>
+                                                       src="/static/images/logo3.svg"></a>
         </p>
         <p>
-            <a  target='_blank' href="//mysql" ><img width='250' height='100' src="/images/logo5-min.png"></a>
+            <a  target='_blank' href="//mysql" ><img width='250' height='100' src="/static/images/logo5-min.png"></a>
         </p>
         <em><b>and Javascript, HTML, CSS.</b></em>
         <br>

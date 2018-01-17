@@ -1,5 +1,5 @@
 <template>
-    <div class="inner-item" style="margin-top:-2em">
+    <div class="inner-item">
         <div class="columns">
             <div class="column is-4-desktop">
                 <h4>Contact Me</h4>

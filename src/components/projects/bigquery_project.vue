@@ -1,5 +1,5 @@
 <template>
-    <div class="inner-item" style="margin-top:-2em">
+    <div class="inner-item">
         <p class="ap-heading"><span style="font-size:2em">CarWale BigQuery</span></p>
         <p style="font-size:1em">BigQuery Project has following components -</p>
         <p style="font-size:1em">

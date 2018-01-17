@@ -15,7 +15,7 @@
                 <router-link to="/contact">Contact</router-link>
             </li>
             <li>
-                <a href="/cv_ashishpatel.info.pdf" target="_blank">download cv</a>
+                <a href="https://drive.google.com/open?id=1duTbSZt5nYyc2ZDHs2dV7N-p_wP-E7Ca" target="_blank">download cv</a>
             </li>
         </ul>
     </div>

@@ -1,7 +1,9 @@
 <template>
-    <div class="inner-item" style="margin-top:-2em">
-        <span style="font-size:2em">Grabpustak <span class="tag is-primary" style="font-size:0.4em;"><a href="//grabpustak.in" target="_blank" style="color:white">Visit Website</a></span></span>
-        <p align="center"><img src="/images/grabpustak-big.jpg"></p>
+    <div class="inner-item">
+        <span style="font-size:2em">Grabpustak
+            <!--<span class="tag is-primary" style="font-size:0.4em;"><a href="//grabpustak.in" target="_blank" style="color:white">Visit Website</a></span>-->
+        </span>
+        <p align="center"><img src="/static/images/grabpustak-big.jpg"></p>
         <br>
 
         <h4 id="about-kisanmitra">About Grabpustak</h4>
@@ -17,10 +19,10 @@
 
         <h4 id="technology-used">technology used</h4>
         <p >
-            <a  target='_blank' href="//codeigniter.com/" ><img class='image' width='250' height='120' src="/images/logo4-min.png"></a>
+            <a  target='_blank' href="//codeigniter.com/" ><img class='image' width='250' height='120' src="/static/images/logo4-min.png"></a>
         </p>
         <p>
-            <a  target='_blank' href="//jquery.com" ><img width='180' height='100' src="/images/logo13-min.png"></a>
+            <a  target='_blank' href="//jquery.com" ><img width='180' height='100' src="/static/images/logo13-min.png"></a>
         </p><br>
         <em><b>and PHP, MySQL, Javascript, Ajax</b></em>. <br><br>
         <h4 >Say Something about Grabpustak  </h4>

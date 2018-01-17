@@ -1,10 +1,10 @@
 <template>
     <!--<div class="columns">-->
     <!--<div class="column">-->
-    <div class="inner-item" style="margin-top:-2em">
+    <div class="inner-item">
         <span style="font-size:2em">manit moodle <span class="tag is-primary" style="font-size:0.4em;"><a href="//manitmoodle.tk" target="_blank" style="color:white;">Visit Website</a></span></span>
         <br>
-        <p align="left"><img class="image"  width="50%" height="40%" src="/images/moodle-big.gif"></p>
+        <p align="left"><img class="image"  width="50%" height="40%" src="/static/images/moodle-big.gif"></p>
         <br>
         <h4 id="about-manitmoodle">About&nbsp;MANIT MOODLE</h4>
         <p>
@@ -23,10 +23,10 @@
         <h4 id="technology-used">technology used</h4>
         <p >
             <a  target='_blank' href="//php.net" ><img class='image' width='250' height='200'
-                                                       src="/images/logo3.svg"></a>
+                                                       src="/static/images/logo3.svg"></a>
         </p>
         <p>
-            <a  target='_blank' href="//mysql" ><img width='250' height='100' src="/images/logo5-min.png"></a>
+            <a  target='_blank' href="//mysql" ><img width='250' height='100' src="/static/images/logo5-min.png"></a>
         </p>
         <em><b>and Javascript, HTML, CSS.</b></em>
         <br>

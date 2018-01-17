@@ -15,7 +15,9 @@
 /*//template specific styles*/
 @import "linea.scss";
 
-@import "~bulma"; /* TODO: fix problem with bulma styling in all components*/
+/*
+@import "~bulma"; !* TODO: why this is not working like this and have to add manually cdn
+*/
 
 @import "et-line-icons.scss";
 

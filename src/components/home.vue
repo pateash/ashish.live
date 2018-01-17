@@ -4,11 +4,11 @@
 			<h4>Hello , I'm Ashish Patel</h4>
 			<div>
 				<div class="columns" style="font-family: Quicksand;">
-					<div class="column is-4" style="margin-top:2em;">
+					<div class="column is-4" style="margin-top:1em;">
 						<div class="card">
 							<div class="card-image">
 								<figure class="image">
-									<img src="/static/images/me.jpg"  alt="Image">
+									<img src="/static/images/me1.jpeg"  alt="Image">
 								</figure>
 							</div>
 							<div class="card-content">
