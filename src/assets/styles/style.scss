@@ -1117,9 +1117,9 @@ body{
 
 //overriding to keep font-size with bulma for desktop site
 @media screen and (min-width: 480px) {
-    .fa-4x{
-      font-size:4em;
-    }
+  .fa-4x{
+    font-size:4em;
+  }
 }
 @media screen and (max-width: 480px) {
   .fa-4x {
@@ -1136,4 +1136,11 @@ body{
 }
 .inner-item{
   margin-top:-2.5em;
+}
+@media screen and (max-width:760px){
+  .inner-item{
+    margin-left:-1.5em;
+    margin-right:-1.5em;
+
+  }
 }
