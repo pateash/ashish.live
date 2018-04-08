@@ -2,7 +2,7 @@
     <!--<div class="columns">-->
     <!--<div class="column">-->
     <div class="inner-item">
-        <span style="font-size:2em;">Kisanmitra <span class="tag is-primary" style="font-size:0.4em;"><a href="//github.com/ashishpatel0720/kisanmitra" target="_blank" style="color:white">Project at Github</a></span></span>
+        <span style="font-size:2em;">Kisanmitra <span class="tag is-primary" style="font-size:0.4em;"><a href="////kisanmitra.herokuapp.com" target="_blank" style="color:white">View Live</a></span></span>
         <p align="center" style="margin-top:1em"><img src="http://www.indiawaterportal.org/sites/indiawaterportal.org/files/KSY.jpg"></p>
         <br>
         <p align="center">
