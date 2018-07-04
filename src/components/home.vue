@@ -26,28 +26,41 @@
 					</div>
 					<div class="column is-8">
 						<p style="margin-top:0.7em;font-family: Quicksand;">
-							Hello everybody, i am Ashish Patel,
-							a Final Year Computer Science student at <a target='_blank' href="//manit.ac.in">Maulana Azad National Institute of Technology, Bhopal(India).</a><br>
-							<br> I love to learn new technologies and try to learn them as soon as possible.
-							I love Playing Chess and Cricket and reading a good piece of work from any novelist.
+							Hello everybody, I am Ashish Patel,
+							I am working as Technical Analyst in <a target='_blank' href="//db.com"> Deutsche Bank.</a><br>
+							<br> I love to learn new technologies and try to find what is interesting happening with these technologies.
+                            I love Playing Chess and Cricket and reading a good piece of work from any novelist.
 						</p>
 						<p style="font-family: Quicksand;">
-							I have worked in Web Developnment with PHP and Python Backends. I have worked in three Web developnment Frameworks including <a target='_blank' href="//laravel.com">Laravel</a>,
-							<a target='_blank' href="//codeigniter.com">Codeignitor</a> and <a target='_blank' href="//flask.pocoo.org">Flask.</a>
-							<br>
-							I also came to Know Javascript and I have worked in <a target='_blank' href="//vuejs.org">Vue Javascript Framework</a> and <a
-								href="//jquery.com">Jquery API.</a>
+							I have worked on a few Projects on Web Developnment with Backend as PHP, Python; most of them have been develped using some web framework like,
+                            <a target='_blank' href="//laravel.com">Laravel</a> or
+                            <a target='_blank' href="//codeigniter.com">Codeignitor</a> for PHP and
+                            <a target='_blank' href="//flask.pocoo.org">Flask.</a> for Python.<br><br>
+
+                            I came to know that Frameworks forces us to write better and secure code and prevents us from any chaos in future.<br>
+                            <br>
+
+                            On frontend side, I have worked with <a target='_blank' href="//vuejs.org">JQuery</a> with some of my Projects and this website is itself made with <a target='_blank' href="//vuejs.org">Vue Javascript Framework</a> and
+                            I am also a beginner in <a href="//angular.io" target="_blank">Angular2</a> and <a href="//reactjs.org" target="_blank">React</a>
+
 						</p>
 						<p style="font-family: Quicksand;">
-							In Desktop App Developnment, I know Java and <a target='_blank' href="//docs.oracle.com/javafx">JavaFX API.</a>.
+							In Desktop App Developnment, I know Java and  I have created Simple Apps like Calculators etc. with <a target='_blank' href="https://en.wikipedia.org/wiki/Swing_(Java)">Java Swing API.</a> and <a target='_blank' href="//docs.oracle.com/javafx">JavaFX API.</a>.
 							<br>
-							As I have already mentioned I love Linux(especially Ubuntu) , so have some experience in Bash Scripting and Regex(extended PERL based).
+							</p>
+						<p style="font-family: Quicksand;">
+							I have to say  I love Unix(especially Ubuntu and MacOS) , so have some experience in Bash Scripting and Regex(extended PERL based).
 							<br>
 							I also know basic Programming languages like C, C++, Python and Markups like HTML, CSS.
+
 						</p>
 						<p style="font-family: Quicksand;">
-							I know it is a lot to take in, but  As Last Note My Internship was in <a target='_blank' href="//carwale.com">CarWale</a> and I have worked on BigData with Scala and Spark Stream Processing.
+							 As Last Note My Internship was in <a target='_blank' href="//carwale.com">CarWale</a> and I have worked on BigData with Scala and Spark Stream Processing.
 							and my Minor Project was on Machine Learning with python Scikit-learn library.<br><br>
+                            You can always find all projects mentioned above in my <a href="//github.com/ashishpatel0720">Github Account</a> and detailed information for all my projects
+                            is also available at <b>Projects </b> section of this website.<br>
+                            Please feel free to comment you opinions on any project and contact me for any help on any forum
+                            <b>@ashishpatel0720</b>
 						</p>
 					</div>
 				</div>
