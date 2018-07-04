@@ -27,9 +27,9 @@
 					<div class="column is-8">
 						<p style="margin-top:0.7em;font-family: Quicksand;">
 							Hello everybody, I am Ashish Patel,
-							I am working as Technical Analyst in <a target='_blank' href="//db.com"> Deutsche Bank.</a><br>
+							I am working as Technical Analyst in <a target='_blank' href="//db.com"> Deutsche Bank.</a>
 							<br> I love to learn new technologies and try to find what is interesting happening with these technologies.
-                            I love Playing Chess and Cricket and reading a good piece of work from any novelist.
+                            I love Playing Chess and Cricket and reading as timepass.
 						</p>
 						<p style="font-family: Quicksand;">
 							I have worked on a few Projects on Web Developnment with Backend as PHP, Python; most of them have been develped using some web framework like,
@@ -97,5 +97,8 @@
 
 
 <style>
+    p{
+        padding:0px 20px;
+    }
 
 </style>
