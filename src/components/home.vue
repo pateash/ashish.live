@@ -8,21 +8,19 @@
 						<div class="card">
 							<div class="card-image">
 								<figure class="image">
-									<img src="/static/images/me1.jpeg"  alt="Image">
+									<img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/36668211_1859968677429720_5330079209182199808_n.jpg?_nc_cat=0&oh=e16d1afb1677256f161136bd37d6aea2&oe=5BE3D527"  alt="Image">
 								</figure>
 							</div>
 							<div class="card-content">
 								<div class="media">
 									<div class="media-content">
 										<p style="font-family: Quicksand;" class="title is-4">Ashish Patel
-										<span class="subtitle is-6">@ashishpatel0720</span>
+										<span class="subtitle is-6"><a href="//twitter.com/ashishpatel0720" target="_blank">@ashishpatel0720</a></span>
 									</p>
 									</div>
 								</div>
 								<div class="content">
-									Final Year Student at MANIT, Bhopal,
-									Persuing Bechelor in Computer Science and Engineering.
-								</div>
+                                    Technical Analyst at <span class="subtitle is-6"><a href="//twitter.com/DeutscheBank" target="_blank">@DeutscheBank</a></span>, Pune, India.</div>
 							</div>
 						</div>
 					</div>
