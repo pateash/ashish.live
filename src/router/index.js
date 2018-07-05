@@ -4,7 +4,7 @@ import Router from 'vue-router'
 //main routes
 import Home from '@/components/home'
 import Education from '@/components/education'
-import Work from '@/components/work'
+import Experience from '@/components/experience'
 import Contact from '@/components/contact'
 import Projects from '@/components/projects'
 
@@ -25,8 +25,8 @@ let routes=[
         component:Education
     },
     {
-        path:"/work",
-        component:Work
+        path:"/experience",
+        component:Experience
     },
     {
         path:"/contact",
