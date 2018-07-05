@@ -1,5 +1,7 @@
 <template>
     <div class="inner-item">
+        <gallery :images="images" :index="index" @close="index = null"></gallery>
+
         <p class="ap-heading"><span style="font-size:2em">CarWale BigQuery</span></p>
         <p style="font-size:1em">BigQuery Project has following components -</p>
         <p style="font-size:1em">
@@ -22,12 +24,12 @@
             <li>Job facing error ( Number of jobs which are not able to execute successfully)</li>
         </ul>
         <p style="font-size:1em">on clicking view history link corresponding to every panel, we can see history of corresponding job category.</p>
-        <p style="font-size:1em"><img style='margin:1em;' align="left"  src="https://imgd.aeplcdn.com/0x0/bigquery/dashboard.png" alt="Carwale System Archictecture" /></p>
+        <p style="font-size:1em"><img  style='margin:1em; cursor: pointer' :src="images[0]" @click="index = 0" align="left"  alt="Carwale System Archictecture" /></p>
 
         <h4 style='margin-top:1em'  id="submit-job">Submit Job</h4>
         <p style="font-size:1em">
         <p style="font-size:1em">Submit Job Page allows user to get quick result for smaller jobs, the result of these small jobs will be store in file system, so maximum number of rows which will be returned is 5000, so if you wanted to get big result you have to Submit Job which will be discussed in next section.</p>
-        <p style="font-size:1em"><img style='margin:1em;'  src="https://imgd.aeplcdn.com/0x0/bigquery/submit_job.png" alt="Carwale System Archictecture" /></p>
+        <p style="font-size:1em"><img  style='margin:1em; cursor: pointer'  :src="images[1]" @click="index = 1" alt="Carwale System Archictecture" /></p>
         <div class="admonition note">
             <dl>
                 <dt>file having result stored in files will be cleaned after certain period of time, so try to analyse your data</dt>
@@ -48,14 +50,14 @@
         <p style="font-size:1em">Schedule Job Page allows you to run big job (even more than 5000 lines) , the result will be stored in Mysql database and result can be fetched any time. User will also be able to store its data where he want (existing table or create new table)</p>
         <p style="font-size:1em">User could also able to decide the interval of schedule job execution, So he could be able to decide after how many days certain job will be executed again.</p>
         <p style="font-size:1em">Using this User will able able to create Daily,Weekly and monthy reports easily.</p>
-        <p style="font-size:1em"><img style='margin:1em;'  src="https://imgd.aeplcdn.com/0x0/bigquery/schedule_job.png" alt="Carwale System Archictecture" /></p>
+        <p style="font-size:1em"><img  style='margin:1em; cursor: pointer' :src="images[2]" @click="index = 2"  alt="Carwale System Archictecture" /></p>
 
         <h4 style='margin-top:1em'  id="job-result">Job Result</h4>
         <p style="font-size:1em">
         <p style="font-size:1em">Job Result Page allows you to see result of small job (not more than 5000 lines) , the result will be stored in a JSON file in  and result can be fetched any time.
-        but after certain interval of time, the data will be removed. </p>
+            but after certain interval of time, the data will be removed. </p>
         <p>Use can also be able to export data in CSV formate.</p>
-        <p style="font-size:1em"><img style='margin:1em;'  src="https://imgd.aeplcdn.com/0x0/bigquery/job_result.png" alt="Carwale System Archictecture" /></p>
+        <p style="font-size:1em"><img  style='margin:1em; cursor: pointer' :src="images[3]" @click="index = 3"   alt="Carwale System Archictecture" /></p>
 
 
         <h4 style='margin-top:1em' id="job-history">Job History</h4>
@@ -66,7 +68,7 @@
             As in Realtime most of the jobs remain same, so this feature supposed to be very helpful to user.
         </p>
         <p><strong>filters with status</strong> in all history pages provides functionality for searching through all jobs and getting only jobs associated with particular filter. you can also check more than one status to get desired job result.</p>
-        <p><img  style='margin:1em;' src="https://imgd.aeplcdn.com/0x0/bigquery/job_history.png" alt="Carwale System Archictecture" /></p>
+        <p><img  style='margin:1em; cursor: pointer' :src="images[4]" @click="index = 4" alt="Carwale System Archictecture" /></p>
         <h4 style='margin-top:1em' id="admin-panel">Admin Panel</h4>
         <p>
         <p>Admin Panel is available to users having admin privileges , admin will have his dedicated dashboard where he/she could be able to see all job data (like simple user do for himself).</p>
@@ -81,15 +83,35 @@
 </template>
 
 <script>
+    import VueGallery from 'vue-gallery';
+
     export default {
+        data: function () {
+            return {
+                images: [
+                    'https://imgd.aeplcdn.com/0x0/bigquery/dashboard.png',
+                    'https://imgd.aeplcdn.com/0x0/bigquery/submit_job.png',
+                    'https://imgd.aeplcdn.com/0x0/bigquery/schedule_job.png',
+                    'https://imgd.aeplcdn.com/0x0/bigquery/job_result.png',
+                    'https://imgd.aeplcdn.com/0x0/bigquery/job_history.png',
+                ],
+                index: null
+            };
+        },
+
+        components: {
+            'gallery': VueGallery
+        },
 
     };
-
 </script>
 
-<style>
+<style scoped>
     <!--adding top margin for all h4 elements in this page-->
 
+    img{
+        cursor: pointer;
+    }
     h4{
         margin-top:2em;
     }
