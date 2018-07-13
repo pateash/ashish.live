@@ -6,6 +6,7 @@ import Home from '@/components/home'
 import Education from '@/components/education'
 import Experience from '@/components/experience'
 import Contact from '@/components/contact'
+import Activities from '@/components/activities'
 import Projects from '@/components/projects'
 
 //projects
@@ -27,6 +28,10 @@ let routes=[
     {
         path:"/experience",
         component:Experience
+    },
+    {
+        path:"/activities",
+        component:Activities
     },
     {
         path:"/contact",

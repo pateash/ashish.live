@@ -2,7 +2,9 @@
     <!--<div class="columns">-->
     <!--<div class="column">-->
     <div class="inner-item">
-        <span style="font-size:2em">manit moodle <span class="tag is-primary" style="font-size:0.4em;"><a href="//manitmoodle.tk" target="_blank" style="color:white;">Visit Website</a></span></span>
+        <span style="font-size:2em">ManitMoodle
+            <!--<span class="tag is-primary" style="font-size:0.4em;"><a href="//manitmoodle.tk" target="_blank" style="color:white;">Visit Website</a></span>-->
+        </span>
         <br>
         <p align="left"><img class="image"  width="50%" height="40%" src="/static/images/moodle-big.gif"></p>
         <br>

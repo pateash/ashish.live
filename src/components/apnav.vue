@@ -7,11 +7,14 @@
             <li >
                 <router-link to="/experience">Experience</router-link>
             </li>
+            <li>
+                <router-link to="/projects">Projects</router-link>
+            </li>
             <li >
                 <router-link to="/education">Education</router-link>
             </li>
-            <li>
-                <router-link to="/projects">Projects</router-link>
+            <li >
+                <router-link to="/activities">Activities</router-link>
             </li>
             <li>
                 <router-link to="/contact">Contact</router-link>
@@ -27,7 +30,7 @@
 <script>
     export default {
         name:'ap-hav'
-  }
+    }
 </script>
 
 <style>
