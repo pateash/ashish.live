@@ -10,9 +10,27 @@ import "./assets/scripts/owl.carousel"
 import "./assets/scripts/main"
 
 import VueRouter from 'vue-router'
+import VueProgressBar from 'vue-progressbar';
+
 Vue.use(VueRouter); //telling vue to use this object for routing
 
-Vue.config.productionTip = false
+const options = {
+  color: '#bffaf3',
+  failedColor: '#874b4b',
+  thickness: '5px',
+  transition: {
+    speed: '0.2s',
+    opacity: '0.6s',
+    termination: 300
+  },
+  autoRevert: true,
+  location: 'top',
+  inverse: false
+};
+
+Vue.use(VueProgressBar, options);
+
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({

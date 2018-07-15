@@ -10,6 +10,7 @@
         <h3><a href="/">AP</a></h3>
       </div>
       <ap-nav></ap-nav>
+
       <div class="social-icons">
         <a target='_blank' title='linkedin' href=https://linkedin.com/in/ashishpatel0720  style="color:#006699"><i
                 class="fa fa-linkedin-square fa-2x"></i></a>
@@ -25,7 +26,7 @@
         <p><span class="icon"><i class="fa fa-code"></i></span> by <b>
           <a target='_blank' href="//github.com/ashishpatel0720" style="color:#ff7018">Ashish</a></b> in
           <span class="icon"><i class="fa fa-heart" style="color:#ff4d44"></i></span> with <br>
-          <!--<a target='_blank' href="//laravel.com"><img src="/static/images/laravel-icon.png"></a>--> 
+          <!--<a target='_blank' href="//laravel.com"><img src="/static/images/laravel-icon.png"></a>-->
           <a target='_blank' href="//vuejs.org"><img src="/static/images/vue-icon.png"></a>.</p>
         <p>Copyright &copy; 2017 <a target='_blank' href="//github.com/ashishpatel0720">@ashishpatel0720</a></p>
       </div>
@@ -33,6 +34,7 @@
     <div class="wrapper">
       <div class="about" style="margin:-1.7em;">
         <router-view></router-view>
+        <vue-progress-bar></vue-progress-bar>
       </div>
     </div>
   </div>
@@ -40,11 +42,41 @@
 </template>
 
 <script>
-  import apNav from '@/components/apnav';
+    import apNav from '@/components/apnav';
 
     export default {
         name: 'app',
-        components:{apNav}
+        components:{apNav},
+
+        mounted() {
+            this.$Progress.finish()
+        },
+        created () {
+            //  [App.vue specific] When App.vue is first loaded start the progress bar
+            this.$Progress.start()
+
+            //  hook the progress bar to start before we move router-view
+            // each time route is changed
+            this.$router.beforeEach((to, from, next) => {
+                //  does the page we want to go to have a meta.progress object
+                if (to.meta.progress !== undefined) {
+                    let meta = to.meta.progress;
+                    // parse meta tags
+                    this.$Progress.parseMeta(meta)
+                }
+                //  start the progress bar
+                this.$Progress.start();
+                //  continue to next page
+                next()
+            });
+
+            //  hook the progress bar to finish after we've finished moving router-view
+            this.$router.afterEach((to, from) => {
+                window.scrollTo(0,0);
+                //  finish the progress bar
+                this.$Progress.finish()
+            })
+        },
     }
 </script>
 
