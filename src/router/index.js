@@ -6,7 +6,7 @@ import Home from '@/components/home'
 import Education from '@/components/education'
 import Experience from '@/components/experience'
 import Contact from '@/components/contact'
-import Activities from '@/components/activities'
+import Timeline from '@/components/timeline'
 import Projects from '@/components/projects'
 
 //projects
@@ -30,8 +30,8 @@ let routes=[
         component:Experience
     },
     {
-        path:"/activities",
-        component:Activities
+        path:"/timeline",
+        component:Timeline
     },
     {
         path:"/contact",

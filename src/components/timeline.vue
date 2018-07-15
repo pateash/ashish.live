@@ -1,43 +1,22 @@
 <template>
 
+    <div class="inner-item">
+        <h4 style="margin-bottom: 0.5em;">Timeline (2011-Present)</h4>
 
-    <ul class="timeline">
-        <!-- Item 1 -->
-        <li>
-            <div class="direction-r">
-                <div class="flag-wrapper">
-                    <span class="hexa"></span>
-                    <span class="flag">Lorem ipsum.</span>
-                    <span class="time-wrapper"><span class="time">Feb 2015</span></span>
-                </div>
-                <div class="desc">Lorem ipsum Nisi labore aute do aute culpa magna nulla voluptate exercitation deserunt proident.</div>
-            </div>
-        </li>
+        <ul class="timeline">
+            <li v-for="tdata,i in tlist">
+                <div :class="{'direction-l':i%2==0,'direction-r':i%2!=0}">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span><!--hexa symbol-->
 
-        <!-- Item 2 -->
-        <li>
-            <div class="direction-l">
-                <div class="flag-wrapper">
-                    <span class="hexa"></span>
-                    <span class="flag">Lorem ipsum Anim.</span>
-                    <span class="time-wrapper"><span class="time">Dec 2014</span></span>
+                        <span class="flag">{{tdata.title}}</span>
+                        <span class="time-wrapper"><span class="time">{{tdata.date}}</span></span>
+                    </div>
+                    <div class="desc" v-html="tdata.desc" style="text-align: left"></div>
                 </div>
-                <div class="desc">Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore aliquip enim cupidatat laborum dolore.</div>
-            </div>
-        </li>
-
-        <!-- Item 3 -->
-        <li>
-            <div class="direction-r">
-                <div class="flag-wrapper">
-                    <span class="hexa"></span>
-                    <span class="flag">Lorem Occaecat.</span>
-                    <span class="time-wrapper"><span class="time">July 2014</span></span>
-                </div>
-                <div class="desc">Lorem ipsum Minim labore Ut cupidatat quis qui deserunt proident fugiat pariatur cillum cupidatat reprehenderit sit id dolor consectetur ut.</div>
-            </div>
-        </li>
-    </ul>
+            </li>
+            </ul>
+    </div>
 </template>
 <style type="text/scss" scoped>
     /*@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);*/
@@ -112,12 +91,12 @@
         width: 2px;
         height: 100%;
         margin-left: -1px;
-        background: rgb(213,213,213);
-        background: -moz-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
-        background: -webkit-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-        background: -o-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-        background: -ms-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+        /*background: rgb(213,213,213);*/
+        /*background: -moz-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);*/
+        /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));*/
+        /*background: -webkit-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);*/
+        /*background: -o-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);*/
+        /*background: -ms-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);*/
         background: linear-gradient(to bottom, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
         z-index: 5;
     }
@@ -361,6 +340,31 @@
 </style>
 <script>
     export default {
+
+        mounted(){
+            this.tlist=this.tlist.reverse();
+        },
+
+        data(){
+            return {
+                isLeft:true,
+                tlist:[
+                        {title:"Completed High School",date:"April,2011",desc:"Completed <b>High School</b> from Ideal Public School with <b>81.30%</b> marks."},
+                        {title:"Debate Competition",date:"Sept,2011",desc:"Won <b>third</b> Prize in <b>District&nbsp;debate&nbsp;competition</b> on School Bags."},
+                        {title:"Article Writing Competition",date:"Nov,2012",desc:"Won <b>Second</b> Prize in <b>District Article writing competition</b>."},
+                        {title:"Completed Higher Secondary",date:"April,2013",desc:"Completed <b>Higher Secondary</b> from Ideal Public School with <b>90.0%</b> marks."},
+                        {title:"Appointy Hackathon",date:"July,2017",desc:"Won <b>Second Prize</b> and Internship in Appointy Hackathon organized by <b>Appointy Software Inc</b>."},
+                        {title:"Placed in Deutsche Bank",date:"August,2017",desc:"Placed in <b>Deutsche Bank</b> as Technical Analyst."},
+                        {title:"Hack In The North",date:"March,2018",desc:"Participated and came in top 20 out of 50 teams in <b>Hack In The North</b> hackathon organized by <b>IIIT, Allahabad</b>."},
+                        {title:"Joined Deutsche Bank",date:"July,2018",desc:"Joined <b>Deutsche Bank</b> as Technical Analyst."},
+                        // {title:"t5",date:"july,2012",desc:"this is description"},
+                ]
+            };
+        },
+        methods:{
+
+        }
+
 
     }
 </script>

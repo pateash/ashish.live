@@ -20,7 +20,7 @@
                                        <span style="font-size:1.4em">Bachelor of Technology <span style="font-size:0.6em"> , Computer Science & Engineering (2014 - 2018)</span></span>
                                        <br>
                                        MANIT Bhopal<br>
-                                       <b>CGPA : 8.45/10</b>
+                                       <b>GGPA : 8.4/10</b>
                                    </p>
                                </div><!--font-awesome icons-->
                            </div>

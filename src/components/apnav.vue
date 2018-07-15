@@ -5,6 +5,9 @@
                 <router-link to="/" exact>Home</router-link>
             </li>
             <li >
+                <router-link to="/timeline">Timeline</router-link>
+            </li>
+            <li >
                 <router-link to="/experience">Experience</router-link>
             </li>
             <li>
@@ -12,9 +15,6 @@
             </li>
             <li >
                 <router-link to="/education">Education</router-link>
-            </li>
-            <li >
-                <router-link to="/activities">Activities</router-link>
             </li>
             <li>
                 <router-link to="/contact">Contact</router-link>
