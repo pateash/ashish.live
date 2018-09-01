@@ -349,14 +349,15 @@
             return {
                 isLeft:true,
                 tlist:[
-                        {title:"Completed High School",date:"April,2011",desc:"Completed <b>High School</b> from Ideal Public School with <b>81.30%</b> marks."},
-                        {title:"Debate Competition",date:"Sept,2011",desc:"Won <b>third</b> Prize in <b>District&nbsp;debate&nbsp;competition</b> on School Bags."},
-                        {title:"Article Writing Competition",date:"Nov,2012",desc:"Won <b>Second</b> Prize in <b>District Article writing competition</b>."},
-                        {title:"Completed Higher Secondary",date:"April,2013",desc:"Completed <b>Higher Secondary</b> from Ideal Public School with <b>90.0%</b> marks."},
-                        {title:"Appointy Hackathon",date:"July,2017",desc:"Won <b>Second Prize</b> and Internship in Appointy Hackathon organized by <b>Appointy Software Inc</b>."},
-                        {title:"Placed in Deutsche Bank",date:"August,2017",desc:"Placed in <b>Deutsche Bank</b> as Technical Analyst."},
-                        {title:"Hack In The North",date:"March,2018",desc:"Participated and came in top 20 out of 50 teams in <b>Hack In The North</b> hackathon organized by <b>IIIT, Allahabad</b>."},
-                        {title:"Joined Deutsche Bank",date:"July,2018",desc:"Joined <b>Deutsche Bank</b> as Technical Analyst."},
+                        {title:"Completed High School",date:"April, 2011",desc:"Completed <b>High School</b> from Ideal Public School with <b>81.30%</b> marks."},
+                        {title:"Debate Competition",date:"Sept, 2011",desc:"Won <b>third</b> Prize in <b>District&nbsp;debate&nbsp;competition</b> on School Bags."},
+                        {title:"Article Writing Competition",date:"Nov, 2012",desc:"Won <b>Second</b> Prize in <b>District Article writing competition</b>."},
+                        {title:"Completed Higher Secondary",date:"April, 2013",desc:"Completed <b>Higher Secondary</b> from Ideal Public School with <b>90.0%</b> marks."},
+                        {title:"Appointy Hackathon",date:"July, 2017",desc:"Won <b>Second Prize</b> and Internship in Appointy Hackathon organized by <b>Appointy Software Inc</b>."},
+                        {title:"Placed in Deutsche Bank",date:"August, 2017",desc:"Placed in <b>Deutsche Bank</b> as Technical Analyst."},
+                        {title:"Hack In The North",date:"March, 2018",desc:"Participated and came in top 20 out of 50 teams in <b>Hack In The North</b> hackathon organized by <b>IIIT, Allahabad</b>."},
+                        {title:"Joined Deutsche Bank",date:"July, 2018",desc:"Joined <b>Deutsche Bank</b> as Technical Analyst."},
+                        {title:"Global Swaps Reporting",date:"August, 2018",desc:"Joined <b> Global Swaps Reporting</b> team in Deutsche Bank."},
                         // {title:"t5",date:"july,2012",desc:"this is description"},
                 ]
             };
