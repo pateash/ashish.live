@@ -8,7 +8,9 @@
 						<div class="card">
 							<div class="card-image">
 								<figure class="image">
-									<img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/36668211_1859968677429720_5330079209182199808_n.jpg?_nc_cat=0&oh=e16d1afb1677256f161136bd37d6aea2&oe=5BE3D527"  alt="Image">
+									<img
+                    src="https://scontent.fnag1-2.fna.fbcdn.net/v/t1.0-9/36668211_1859968677429720_5330079209182199808_n.jpg?_nc_cat=107&_nc_ht=scontent.fnag1-2.fna&oh=6848f585dbf1332bb5da06678329dbe0&oe=5CA99627"
+                    alt="Image">
 								</figure>
 							</div>
 							<div class="card-content">
