@@ -16,6 +16,7 @@ import GrabPustak from "@/components/projects/grabpustak.vue"
 import RegExplore from "@/components/projects/regexplore.vue"
 import ManitMoodle from "@/components/projects/manitmoodle.vue"
 import Captcha from "@/components/projects/captcha.vue"
+import Research from "@/components/research.vue"
 import BigQueryProject from "@/components/projects/bigquery_project.vue"
 let routes=[
     {
@@ -41,6 +42,10 @@ let routes=[
     {
         path:"/projects",
         component:Projects
+    },
+    {
+        path:"/research",
+        component:Research
     },
     {
         path:"/projects/kisanmitra",

@@ -8,8 +8,8 @@
 						<div class="card">
 							<div class="card-image">
 								<figure class="image">
-									<img
-                    src="https://scontent.fnag1-2.fna.fbcdn.net/v/t1.0-9/36668211_1859968677429720_5330079209182199808_n.jpg?_nc_cat=107&_nc_ht=scontent.fnag1-2.fna&oh=6848f585dbf1332bb5da06678329dbe0&oe=5CA99627"
+                  <img
+                    src="/static/images/profile-min.jpg"
                     alt="Image">
 								</figure>
 							</div>
