@@ -20,7 +20,7 @@
                                     <p><!--title-->
                                         <span style="font-size:1.4em">RegExplore <span style="font-size:0.7em"> , OpenSource Project </span></span>
                                         <router-link to="/projects/regexplore"><span
-                                                class="tag is-primary"> Know More </span></router-link>
+                                                class="tag is-info"> <b>Know More</b> </span></router-link>
 
                                         <br>
                                         regexplore.github.com , October 2017 - Present<br>
@@ -44,7 +44,7 @@
                                     <p><!--title-->
                                         <span style="font-size:1.4em">ReviewDeck <span style="font-size:0.7em"> , Ethereum Blockchain Project </span></span>
                                         <a href="https://github.com/ReviewDeck" target="_blank"><span
-                                                class="tag is-primary"> Know More </span></a>
+                                                class="tag is-info"> <b>Know More</b> </span></a>
 
                                         <br>
                                         Hackathon Project, HackInTheNorth , March 2018<br>
@@ -68,7 +68,7 @@
                                     <p><!--title-->
                                         <span style="font-size:1.4em">Cassandra BigQuery <span style="font-size:0.7em"> , Internship Project </span></span>
                                         <router-link to="/projects/bigquery"><span
-                                                class="tag is-primary"> Know More </span></router-link>
+                                                class="tag is-info"> <b>Know More</b> </span></router-link>
 
                                         <br>
                                         Carwale.com , May - June 2017<br>
@@ -91,7 +91,7 @@
                                 <div class="content">
                                     <p><!--title-->
                                         <span style="font-size:1.4em">Kisan Mitra <span style="font-size:0.7em"> , Minor Project </span>
-                                           <router-link to="/projects/kisanmitra"><span class="tag is-primary"> Know More </span></router-link>
+                                           <router-link to="/projects/kisanmitra"><span class="tag is-info"> <b>Know More</b> </span></router-link>
                                        </span>
                                         <br>
                                         MANIT , Jan - March, 2017<br>
@@ -117,8 +117,8 @@
                                     <p><!--title-->
                                         <span style="font-size:1.4em"> GrabPustak <span style="font-size:0.7em"> , Online Library </span>
                                          <router-link to="/projects/grabpustak"><span
-                                                 class="tag is-primary"> Know More </span></router-link>
-   
+                                                 class="tag is-info"> <b>Know More</b> </span></router-link>
+
                                        </span>
                                         <br>
                                         Online Library for sharing Notes and Free Books<br>
@@ -142,7 +142,7 @@
                                     <p><!--title-->
                                         <span style="font-size:1.4em"> ManitMoodle <span style="font-size:0.7em"> , Software Engineering Assignment Project </span>
                                          <router-link to="/projects/manitmoodle"><span
-                                                 class="tag is-primary"> Know More </span></router-link>
+                                                 class="tag is-info"> <b>Know More</b> </span></router-link>
                                        </span>
                                         <br>
                                         Online Assignment Submission and Discussion WebApp<br>
@@ -167,7 +167,7 @@
                                     <p><!--title-->
                                         <span style="font-size:1.4em"> Captcha Validation <span style="font-size:0.7em"> , PHP/Android Assignment Project </span>
                                          <router-link to="/projects/captcha"><span
-                                                 class="tag is-primary"> Know More </span></router-link>
+                                                 class="tag is-info"> <b>Know More</b> </span></router-link>
                                        </span>
                                         <br>
                                         Online Captcha Validation Application<br>

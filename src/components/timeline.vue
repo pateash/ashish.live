@@ -355,6 +355,7 @@
                         {title:"Completed Higher Secondary",date:"April, 2013",desc:"Completed <b>Higher Secondary</b> from Ideal Public School with <b>90.0%</b> marks."},
                         {title:"Appointy Hackathon",date:"July, 2017",desc:"Won <b>Second Prize</b> and Internship in Appointy Hackathon organized by <b>Appointy Software Inc</b>."},
                         {title:"Placed in Deutsche Bank",date:"August, 2017",desc:"Placed in <b>Deutsche Bank</b> as Technical Analyst."},
+                        {title:"IEEE Research Paper",date:"February, 2018",desc:"Published Research Paper on <b>Music Recommendation Systems</b> in IEEE Conference 2018."},
                         {title:"Hack In The North",date:"March, 2018",desc:"Participated and came in top 20 out of 50 teams in <b>Hack In The North</b> hackathon organized by <b>IIIT, Allahabad</b>."},
                         {title:"Joined Deutsche Bank",date:"July, 2018",desc:"Joined <b>Deutsche Bank</b> as Technical Analyst."},
                         {title:"Global Swaps Reporting",date:"August, 2018",desc:"Joined <b> Global Swaps Reporting</b> team in Deutsche Bank."},
