@@ -8,10 +8,13 @@
         <router-link to="/experience">Experience</router-link>
       </li>
       <li>
-        <router-link to="/research">Research work</router-link>
+        <router-link to="/opensource">Opensource</router-link>
       </li>
       <li>
         <router-link to="/projects">Projects</router-link>
+      </li>
+      <li>
+        <router-link to="/research">Research</router-link>
       </li>
       <li >
         <router-link to="/education">Education</router-link>

@@ -8,6 +8,7 @@ import Experience from '@/components/experience'
 import Contact from '@/components/contact'
 import Timeline from '@/components/timeline'
 import Projects from '@/components/projects'
+import OpenSource from '@/components/opensource'
 
 //projects
 import Kisanmitra from '@/components/projects/kisanmitra.vue'
@@ -42,6 +43,10 @@ let routes=[
     {
         path:"/projects",
         component:Projects
+    },
+    {
+        path:"/opensource",
+        component:OpenSource
     },
     {
         path:"/research",

@@ -1,6 +1,6 @@
-# portfolio
+# ashish.live
 
-> Portfolio website for ashishpatel.info
+> Portfolio website for ashish.live
 
 ## Build Setup
 
