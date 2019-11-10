@@ -23,8 +23,8 @@
                       &nbsp;&nbsp;<span class="tag is-info"><b>Know More</b> </span></a>
 
                     <br>
-                    regexplore.github.com , October 2017 - Present<br>
-                    <b> Angular and Angular-Material</b>
+                    github.com/codingtools, October 2019 - Present<br>
+                    <b> OClif Framework and Typescript</b>
                   </p>
                 </div><!--font-awesome icons-->
               </div>
