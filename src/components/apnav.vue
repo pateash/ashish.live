@@ -27,7 +27,7 @@
         <router-link to="/contact">Contact</router-link>
       </li>
       <li>
-        <a href="https://drive.google.com/open?id=1syAW8LKtjt-_2PBUctfecM-eDtzaucfV" target="_blank">download cv</a>
+        <a href="https://drive.google.com/file/d/14ntop5ZkrvWc7_GY9J8zlCVBATR98SpZ/view?usp=sharing" target="_blank">download cv</a>
       </li>
     </ul>
   </div>
