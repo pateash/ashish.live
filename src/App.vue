@@ -10,7 +10,6 @@
         <h3><a href="/">AP</a></h3>
       </div>
       <ap-nav></ap-nav>
-
       <div class="social-icons">
         <a target='_blank' title='linkedin' href=https://linkedin.com/in/ashishpatel0720  style="color:#006699"><i
                 class="fa fa-linkedin-square fa-2x"></i></a>
@@ -26,9 +25,8 @@
         <p><span class="icon"><i class="fa fa-code"></i></span> by <b>
           <a target='_blank' href="//github.com/ashishpatel0720" style="color:#ff7018">Ashish</a></b> in
           <span class="icon"><i class="fa fa-heart" style="color:#ff4d44"></i></span> with <br>
-          <!--<a target='_blank' href="//laravel.com"><img src="/static/images/laravel-icon.png"></a>-->
           <a target='_blank' href="//vuejs.org"><img src="/static/images/vue-icon.png"></a>.</p>
-        <p>Copyright &copy; {{ new Date().getFullYear() }} <a target='_blank' href="//github.com/ashishpatel0720">@ashishpatel0720</a></p>
+<!--        <p>Copyright &copy; {{ new Date().getFullYear() }} <a target='_blank' href="//github.com/ashishpatel0720">@ashishpatel0720</a></p>-->
       </div>
     </header>
     <div class="wrapper">
