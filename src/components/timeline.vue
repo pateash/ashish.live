@@ -358,7 +358,8 @@
                         {title:"IEEE Research Paper",date:"February, 2018",desc:"Published Research Paper on <b>Music Recommendation Systems</b> in IEEE Conference 2018."},
                         {title:"Hack In The North",date:"March, 2018",desc:"Participated and came in top 20 out of 50 teams in <b>Hack In The North</b> hackathon organized by <b>IIIT, Allahabad</b>."},
                         {title:"Joined Deutsche Bank",date:"July, 2018",desc:"Joined <b>Deutsche Bank</b> as Technical Analyst."},
-                        {title:"Global Swaps Reporting",date:"August, 2018",desc:"Joined <b> Global Swaps Reporting</b> team in Deutsche Bank."},
+                        {title:"Technical Analyst",date:"August, 2018",desc:"Joined <b> Global Swaps Reporting</b> team in Deutsche Bank."},
+                        {title:"Senior Technical Analyst",date:"July, 2019",desc:"Joined <b> Volcker Reporting</b> team in Deutsche Bank."},
                         // {title:"t5",date:"july,2012",desc:"this is description"},
                 ]
             };

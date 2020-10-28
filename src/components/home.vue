@@ -22,48 +22,74 @@
 									</div>
 								</div>
 								<div class="content">
-                                    Technical Analyst at <span class="subtitle is-6"><a href="//twitter.com/DeutscheBank" target="_blank">@DeutscheBank</a></span>, Pune, India.</div>
+                  <b>Senior Technical Analyst</b> at <span class="subtitle is-6">
+                  <a href="//twitter.com/DeutscheBank" target="_blank">@DeutscheBank</a>
+                </span>, Pune, India.</div>
 							</div>
 						</div>
 					</div>
 					<div class="column is-8">
 						<p style="margin-top:0.7em;font-family: Quicksand;">
 							Hello everybody, I am Ashish Patel,
-							I am working as Technical Analyst in <a target='_blank' href="//db.com"> Deutsche Bank.</a>
-							<br> I love to learn new technologies and try to find what is interesting happening with these technologies.
-                            I love Playing Chess and Cricket and reading as timepass.
+							I am working as Senior Technical Analyst in <a target='_blank' href="//db.com"> Deutsche Bank.</a>
+               I am currently working as <b>Apache Spark/Hadoop + Java Spring developer</b> in Investment Banking division.
+              <br><br>
+              We created and maintaining Data pipelines for our Reporting Batch jobs handling Terabytes of data
+              every day across hundreds of <b>Spark and Hadoop ETL</b> jobs.
+              <br> I am also working on <B>Google Cloud Platform</B> to plan and migrate our On-Premise Cluster and Jobs
+              to GCP as per strategic partnership between <b>Deutsche Bank</b> and <b>Google.</b>
+              <br><br>
+              We also Developed Platform simplification for Informatica jobs using <b>Java8 and Spring +
+              Reactor Framework with Oracle Database</b>.
+              <br>
 						</p>
-						<p style="font-family: Quicksand;">
-							I have worked on a few Projects on Web Developnment with Backend as PHP, Python; most of them have been develped using some web framework like,
-                            <a target='_blank' href="//laravel.com">Laravel</a> or
-                            <a target='_blank' href="//codeigniter.com">Codeignitor</a> for PHP and
-                            <a target='_blank' href="//flask.pocoo.org">Flask.</a> for Python.<br><br>
 
-                            I came to know that Frameworks forces us to write better and secure code and prevents us from any chaos in future.<br>
-                            <br>
+            <p style="font-family: Quicksand;">
+              On the Research Front, I worked as <b>Research Assistant</b> and
+              Co-written <b>A Comparative Study of Music Recommendation Systems</b> with <b>Prof. Rajesh
+              Wadhvani</b>.
+              This paper describes different recommendation strategies and compares their
+              practicality on mobile devices.
 
-                            On frontend side, I have worked with <a target='_blank' href="//vuejs.org">JQuery</a> with some of my Projects and this website is itself made with <a target='_blank' href="//vuejs.org">Vue Javascript Framework</a> and
-                            I am also a beginner in <a href="//angular.io" target="_blank">Angular2</a> and <a href="//reactjs.org" target="_blank">React</a>
+              read full paper  <a href="//ieeexplore.ieee.org/document/8546852" target="_blank">here.</a>
+            </p>
 
-						</p>
-						<p style="font-family: Quicksand;">
-							In Desktop App Developnment, I know Java and  I have created Simple Apps like Calculators etc. with <a target='_blank' href="https://en.wikipedia.org/wiki/Swing_(Java)">Java Swing API.</a> and <a target='_blank' href="//docs.oracle.com/javafx">JavaFX API.</a>.
-							<br>
-							</p>
-						<p style="font-family: Quicksand;">
-							I have to say  I love Unix(especially Ubuntu and MacOS) , so have some experience in Bash Scripting and Regex(extended PERL based).
-							<br>
-							I also know basic Programming languages like C, C++, Python and Markups like HTML, CSS.
 
-						</p>
-						<p style="font-family: Quicksand;">
-							 As Last Note My Internship was in <a target='_blank' href="//carwale.com">CarWale</a> and I have worked on BigData with Scala and Spark Stream Processing.
-							and my Minor Project was on Machine Learning with python Scikit-learn library.<br><br>
-                            You can always find all projects mentioned above in my <a href="//github.com/ashishpatel0720">Github Account</a> and detailed information for all my projects
-                            is also available at <b>Projects </b> section of this website.<br>
-                            Please feel free to comment you opinions on any project and contact me for any help on any forum
-                            <b>@ashishpatel0720</b>
-						</p>
+            <p style="font-family: Quicksand;">
+              Prior to DeustcheBank, I did my internship in <a target='_blank' href="//carwale.com">CarWale</a>
+              and I have worked on BigData with Scala and Spark Stream Processing, We created
+              <router-link to="/projects/bigquery">CWBigQuery</router-link> Application.
+              <b>CWBigQuery</b> is a service that enables interactive analysis of massively large datasets
+              stored in Cassandra Storage.
+              It allows users to submit and schedule Spark Job, just using SQL like syntax using <b>Spark
+              SQL.</b>
+              <br><br>
+              I am fluent in <b>Java, Scala, Python,C/C++</b> and <b>Bash Scripting</b>. <br><br>
+
+              You can always find all projects mentioned above in my <a href="//github.com/ashishpatel0720">Github Account</a>
+              and detailed information for all my projects
+              is also  <router-link to="/projects/">here</router-link>. <br>
+              Please feel free to leave comment and your opinions on any project and contact me for any help on any forum
+              <b>@ashishpatel0720</b>
+            </p>
+
+            <!--						<p style="font-family: Quicksand;">-->
+<!--							I have worked on a few Projects on Web Developnment with Backend as PHP, Python; most of them have been develped using some web framework like,-->
+<!--                            <a target='_blank' href="//laravel.com">Laravel</a> or-->
+<!--                            <a target='_blank' href="//codeigniter.com">Codeignitor</a> for PHP and-->
+<!--                            <a target='_blank' href="//flask.pocoo.org">Flask.</a> for Python.<br><br>-->
+
+<!--                            I came to know that Frameworks forces us to write better and secure code and prevents us from any chaos in future.<br>-->
+<!--                            <br>-->
+
+<!--                            On frontend side, I have worked with <a target='_blank' href="//vuejs.org">JQuery</a> with some of my Projects and this website is itself made with <a target='_blank' href="//vuejs.org">Vue Javascript Framework</a> and-->
+<!--                            I am also a beginner in <a href="//angular.io" target="_blank">Angular2</a> and <a href="//reactjs.org" target="_blank">React</a>-->
+
+<!--						</p>-->
+<!--						<p style="font-family: Quicksand;">-->
+<!--							In Desktop App Developnment, I know Java and  I have created Simple Apps like Calculators etc. with <a target='_blank' href="https://en.wikipedia.org/wiki/Swing_(Java)">Java Swing API.</a> and <a target='_blank' href="//docs.oracle.com/javafx">JavaFX API.</a>.-->
+<!--							<br>-->
+<!--							</p>-->
 					</div>
 				</div>
 
