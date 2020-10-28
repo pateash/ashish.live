@@ -11,7 +11,7 @@
                        <article class="media">
                            <div class="media-left">
                                <figure class="image is-64x64">
-                                   <img src="http://sites.ieee.org/sb-wayne/files/2016/03/cropped-IEEE-Icon.png" alt="Image">
+                                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3X95p0qgyHwHlDuEkfRPeJqMpNYIj6vTD3g&usqp=CAU" alt="Image">
                                </figure>
                            </div>
                            <div class="media-content">
