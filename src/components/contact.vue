@@ -15,8 +15,8 @@
                 </div>
 
                 <hr></hr>
-                You Can Mail me at <span style="color:#5bc0de"><a href="mailto:ashishpatel0720@gmail.com">ashishpatel0720@gmail.com</a></span>
-                <br>or call me at <br><span style="color:#985f0d"><a href="tel:+917705047900">+91-7705047900</a></span>
+                You Can Mail me directly at <span style="color:#5bc0de"><a href="mailto:ashishpatel0720@gmail.com">ashishpatel0720@gmail.com</a></span>
+<!--                <br>or call me at <br><span style="color:#985f0d"><a href="tel:+917705047900">+91-7705047900</a></span>-->
             </div>
             <div class="column is-8-desktop ">
                 <div class="contact-form ">
@@ -62,7 +62,7 @@
                          console.log("success");
                          console.log(response.data);
 
-                          
+
                     })
                     .catch(function (response) {
                        console.error("Error Occured");

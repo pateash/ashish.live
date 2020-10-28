@@ -26,7 +26,7 @@
           <a target='_blank' href="//github.com/ashishpatel0720" style="color:#ff7018">Ashish</a></b> in
           <span class="icon"><i class="fa fa-heart" style="color:#ff4d44"></i></span> with <br>
           <a target='_blank' href="//vuejs.org"><img src="/static/images/vue-icon.png"></a>.</p>
-<!--        <p>Copyright &copy; {{ new Date().getFullYear() }} <a target='_blank' href="//github.com/ashishpatel0720">@ashishpatel0720</a></p>-->
+        <p>Copyright &copy; {{ new Date().getFullYear() }}</p>
       </div>
     </header>
     <div class="wrapper">
