@@ -11,7 +11,7 @@
               <div class="media-left">
                 <figure class="image is-64x64">
                   <img style="border-radius: 0.5em"
-                       src="http://www.androidos.in/wp-content/uploads/2013/12/carwale-logo.png"
+                       src="../assets/logo/carwale.png"
                        alt="Image">
                 </figure>
               </div>
@@ -36,7 +36,7 @@
             <article class="media">
               <div class="media-left">
                 <figure class="image is-64x64">
-                  <img style="border-radius: 0.5em" src="http://i.imgur.com/RxaZWYI.jpg" alt="Image">
+                  <img style="border-radius: 0.5em" src="../assets/logo/kisanmitra.jpg" alt="Image">
                 </figure>
               </div>
               <div class="media-content">

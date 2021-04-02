@@ -6,17 +6,48 @@
           <h4 style="margin-bottom: 0.5em;">Experience</h4>
 
           <!--one element representing one education qualification-->
+
+          <!--Walmart Global tech-->
+          <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="../assets/logo/walmart.jpg" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <span style="font-size:1.4em">Software Engineer III (Big Data) <span style="font-size:0.6em"> , <b>Walmart Global Tech</b> (Feb 2021 - Present)</span></span>
+                  <br>
+                  Bangalore, India<br>
+                  <i><b>"Walmart Global Tech (aka. WalmartLabs) is the technology arm of Walmart reimagining retail for over 260 million daily shoppers. ."</b></i>
+                  <ul>
+                    <li> Part of the supply chain technology team, and working on cutting edge forecasting solutions to enable the everyday low-cost philosophy of Walmart. </li>
+                    <li>Building High-Quality Scalable ETL Frameworks to build our Forecasting Pipelines.</li>
+
+                    <li> Migrating our On-Prem Hadoop Clusters to Google Cloud Platform as part of a strategic partnership with Google.
+                    </li>
+                    <li> Reduced Dataproc cluster cost by 60% via optimizing Airflow DAG workflows having sensors and report generation Tasks.
+                    </li>
+                    <li> Tech Stack - Apache Spark, Java, PySpark, Apache Airflow, GCP DataProc, Bigquery, Astronomer.
+                    </li>
+                  </ul>
+                </div><!--font-awesome icons-->
+              </div>
+            </article>
+          </div>
+
           <!--Deutsche Bank-->
           <div class="box">
             <article class="media">
               <div class="media-left">
                 <figure class="image is-64x64">
-                  <img src="https://pbs.twimg.com/profile_images/876811250038169601/E7IRmBr2_400x400.jpg" alt="Image">
+                  <img src="../assets/logo/db.png" alt="Image">
                 </figure>
               </div>
               <div class="media-content">
                 <div class="content">
-                  <span style="font-size:1.4em">Senior Technical Analyst <span style="font-size:0.6em"> , <b>Deutsche Bank</b> (July 2018 - Present)</span></span>
+                  <span style="font-size:1.4em">Senior Technical Analyst <span style="font-size:0.6em"> , <b>Deutsche Bank</b> (July 2018 - Jan 2021)</span></span>
                   <br>
                   Pune, India<br>
                   <i><b>"Deutsche bank is a universal bank with a large presence in Europe, the Americas and Asia."</b></i>
@@ -37,7 +68,7 @@
                       Spring +
                       Reactor Framework with Oracle Database.
                     </li>
-                    <li> <b>Tech Stack </b>- Apache Spark, Hadoop MapReduce, Hive, Impala, Beeline, Cloudera CDH,
+                    <li> Tech Stack - Apache Spark, Hadoop MapReduce, Hive, Impala, Beeline, Cloudera CDH,
                       Java, Spring Framework,, Spring Boot, Scala, Linux, GCP.
                     </li>
                   </ul>
@@ -51,7 +82,7 @@
             <article class="media">
               <div class="media-left">
                 <figure class="image is-64x64">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3X95p0qgyHwHlDuEkfRPeJqMpNYIj6vTD3g&usqp=CAU" alt="Image">
+                  <img src="../assets/logo/ieee.png" alt="Image">
                 </figure>
               </div>
               <div class="media-content">
@@ -83,7 +114,7 @@
             <article class="media">
               <div class="media-left">
                 <figure class="image is-64x64">
-                  <img src="https://avatars0.githubusercontent.com/u/9958991?s=200&v=4" alt="Image">
+                  <img src="../assets/logo/carwale.png" alt="Image">
                 </figure>
               </div>
               <div class="media-content">
@@ -118,26 +149,25 @@
             </article>
           </div>
 
-          <!--high school-->
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img src="https://media.licdn.com/dms/image/C4E0BAQErCnBzYHwD5A/company-logo_200_200/0?e=2130105600&v=beta&t=M2SacYosViVOTpVgLgr_cPZtxORk_COEN_LUX9neOGE" alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p><!--title-->
-                    <span style="font-size:1.4em">Full Stack Engineer<span style="font-size:0.6em">, <b>GrabPustak</b>(January 2017 - April 2017)</span></span>
-                    <br>
-                    Bhopal, India<br>
-                    <i><b>"Grabpustak is a platform for providing the free E-Books/Material for everyone."</b></i>
-                  </p>
-                </div><!--font-awesome icons-->
-              </div>
-            </article>
-          </div>
+<!--          <div class="box">-->
+<!--            <article class="media">-->
+<!--              <div class="media-left">-->
+<!--                <figure class="image is-64x64">-->
+<!--                  <img src="https://media.licdn.com/dms/image/C4E0BAQErCnBzYHwD5A/company-logo_200_200/0?e=2130105600&v=beta&t=M2SacYosViVOTpVgLgr_cPZtxORk_COEN_LUX9neOGE" alt="Image">-->
+<!--                </figure>-->
+<!--              </div>-->
+<!--              <div class="media-content">-->
+<!--                <div class="content">-->
+<!--                  <p>&lt;!&ndash;title&ndash;&gt;-->
+<!--                    <span style="font-size:1.4em">Full Stack Engineer<span style="font-size:0.6em">, <b>GrabPustak</b>(January 2017 - April 2017)</span></span>-->
+<!--                    <br>-->
+<!--                    Bhopal, India<br>-->
+<!--                    <i><b>"Grabpustak is a platform for providing the free E-Books/Material for everyone."</b></i>-->
+<!--                  </p>-->
+<!--                </div>&lt;!&ndash;font-awesome icons&ndash;&gt;-->
+<!--              </div>-->
+<!--            </article>-->
+<!--          </div>-->
         </div>
       </div>
     </div>
