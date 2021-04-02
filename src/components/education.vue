@@ -11,7 +11,7 @@
                        <article class="media">
                            <div class="media-left">
                                <figure class="image is-64x64">
-                                   <img src="https://img.collegepravesh.com/2015/08/MANIT-Logo.png" alt="Image">
+                                   <img src="../assets/logo/manit_logo.png" alt="Image">
                                </figure>
                            </div>
                            <div class="media-content">
@@ -32,7 +32,7 @@
                        <article class="media">
                            <div class="media-left">
                                <figure class="image is-64x64">
-                                   <img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Board_of_Secondary_Education%2C_Madhya_Pradesh_logo.jpg" alt="Image">
+                                   <img src="../assets/logo/mp_board.jpg" alt="Image">
                                </figure>
                            </div>
                            <div class="media-content">
@@ -53,7 +53,7 @@
                        <article class="media">
                            <div class="media-left">
                                <figure class="image is-64x64">
-                                   <img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Board_of_Secondary_Education%2C_Madhya_Pradesh_logo.jpg" alt="Image">
+                                   <img src="../assets/logo/mp_board.jpg" alt="Image">
                                </figure>
                            </div>
                            <div class="media-content">
