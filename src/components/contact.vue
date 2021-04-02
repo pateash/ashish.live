@@ -20,7 +20,8 @@
             </div>
             <div class="column is-8-desktop ">
                 <div class="contact-form ">
-                    <form action="https://formspree.io/ashishpatel0720@gmail.com" method="post" >
+
+                  <form action="https://formspree.io/f/xbjqjjwz" method="post" >
                         <div class="columns">
                             <div class="column is-half">
                                 <label>Name</label> <input name="name" v-model='name' type="text" placeholder="your name" required>
