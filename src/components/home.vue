@@ -22,55 +22,62 @@
 									</div>
 								</div>
 								<div class="content">
-                  <b>Senior Technical Analyst</b> at <span class="subtitle is-6">
-                  <a href="//twitter.com/DeutscheBank" target="_blank">@DeutscheBank</a>
-                </span>, Pune, India.</div>
+                  <b>Software Engineer III (Big Data)</b> at <span class="subtitle is-6">
+                  <a href="https://twitter.com/Walmarttech" target="_blank">@WalmartGlobalTech</a>
+                </span></div>
 							</div>
 						</div>
 					</div>
 					<div class="column is-8">
-						<p style="margin-top:0.7em;font-family: Quicksand;">
-							Hello everybody, I am Ashish Patel,
-							I am working as Senior Technical Analyst in <a target='_blank' href="//db.com"> Deutsche Bank.</a>
-               I am currently working as <b>Apache Spark/Hadoop + Java Spring developer</b> in Investment Banking division.
+						<p style="font-family: Quicksand;margin: 1em 3em 1em 1em;">
+							Hi, I am <b>Ashish,</b><br>
+              I am a Software Engineer with <b>3+ years</b> of total experience in <b>BigData, Java, Scala and Python,</b><br>
+                I have expertise in
+              <b>Apache Spark</b>,
+              <b>Hadoop MapReduce</b>,
+              <b>Airflow</b>,
+              <b>Cloudera</b>,
+              <b>Google Cloud Platform</b>,
+              <b>Hive</b>,
+              <b>Impala</b>,
+              <b>Docker</b>
+              and <b>Spring</b>.
               <br><br>
-              We created and maintaining Data pipelines for our Reporting Batch jobs handling Terabytes of data
-              every day across hundreds of <b>Spark and Hadoop ETL</b> jobs.
-              <br> I am also working on <B>Google Cloud Platform</B> to plan and migrate our On-Premise Cluster and Jobs
-              to GCP as per strategic partnership between <b>Deutsche Bank</b> and <b>Google.</b>
-              <br><br>
-              We also Developed Platform simplification for Informatica jobs using <b>Java8 and Spring +
-              Reactor Framework with Oracle Database</b>.
-              <br>
+							I am currently working as <b>Software Engineer III (Big Data)</b> at
+              <a target='_blank' href="https://www.linkedin.com/company/walmartglobaltech">Walmart Global Tech,</a> <br>
+              Previously I was working as <b>Senior Technical Analyst</b> in <a target='_blank' href="//db.com"> Deutsche Bank.</a>
+<!--               I am currently working as <b>Apache Spark/Hadoop + Java Spring developer</b> in Investment Banking division.-->
+<!--              <br><br>-->
+<!--              We created and maintaining Data pipelines for our Reporting Batch jobs handling Terabytes of data-->
+<!--              every day across hundreds of <b>Spark and Hadoop ETL</b> jobs.-->
+<!--              <br> I am also working on <B>Google Cloud Platform</B> to plan and migrate our On-Premise Cluster and Jobs-->
+<!--              to GCP as per strategic partnership between <b>Deutsche Bank</b> and <b>Google.</b>-->
+<!--              <br><br>-->
+<!--              We also Developed Platform simplification for Informatica jobs using <b>Java8 and Spring +-->
+<!--              Reactor Framework with Oracle Database</b>.-->
+<!--              <br>-->
 						</p>
 
-            <p style="font-family: Quicksand;">
+            <p style="font-family: Quicksand;margin: 1em 3em 1em 1em;">
               On the Research Front, I worked as <b>Research Assistant</b> and
               Co-written <b>A Comparative Study of Music Recommendation Systems</b> with <b>Prof. Rajesh
-              Wadhvani</b>.
-              This paper describes different recommendation strategies and compares their
-              practicality on mobile devices.
-
-              read full paper  <a href="//ieeexplore.ieee.org/document/8546852" target="_blank">here.</a>
+              Wadhvani</b>. read more <router-link to="/research">here</router-link>.
             </p>
 
 
-            <p style="font-family: Quicksand;">
-              Prior to DeustcheBank, I did my internship in <a target='_blank' href="//carwale.com">CarWale</a>
+            <p style="font-family: Quicksand;margin: 1em 3em 1em 1em;">
+              I did my internship in <a target='_blank' href="//carwale.com">CarWale</a>
               and I have worked on BigData with Scala and Spark Stream Processing, We created
               <router-link to="/projects/bigquery">CWBigQuery</router-link> Application.
-              <b>CWBigQuery</b> is a service that enables interactive analysis of massively large datasets
-              stored in Cassandra Storage.
-              It allows users to submit and schedule Spark Job, just using SQL like syntax using <b>Spark
-              SQL.</b>
+              read more about this project   <router-link to="/projects/bigquery">here</router-link>.
+
               <br><br>
-              I am fluent in <b>Java, Scala, Python,C/C++</b> and <b>Bash Scripting</b>. <br><br>
 
               You can always find all projects mentioned above in my <a href="//github.com/ashishpatel0720">Github Account</a>
               and detailed information for all my projects
-              is also  <router-link to="/projects/">here</router-link>. <br>
-              Please feel free to leave comment and your opinions on any project and contact me for any help on any forum
-              <b>@ashishpatel0720</b>
+              is also  <router-link to="/projects/">here</router-link>. <br> <br>
+              Please feel free to leave comment and your opinions on any project using <b>Disqus</b>
+              please contact me for any help  <router-link to="/contact">here</router-link>.
             </p>
 
             <!--						<p style="font-family: Quicksand;">-->
