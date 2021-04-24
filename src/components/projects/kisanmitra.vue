@@ -23,7 +23,7 @@
                         </figure>
                     </div>
                     <div class="media-content">
-                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/ashishpatel0720/kisanmitra">Web Application Part</a> </span>
+                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/pateash/kisanmitra">Web Application Part</a> </span>
                     </div>
                 </div>
                 <div class="content">
@@ -41,7 +41,7 @@
                         </figure>
                     </div>
                     <div class="media-content">
-                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/ashishpatel0720/kisanmitra-python">Machine learning Application Part</a> </span>
+                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/pateash/kisanmitra-python">Machine learning Application Part</a> </span>
                     </div>
                 </div>
                 <div class="content">

@@ -73,7 +73,7 @@
 
               <br><br>
 
-              You can always find all projects mentioned above in my <a href="//github.com/ashishpatel0720">Github Account</a>
+              You can always find all projects mentioned above in my <a href="//github.com/pateash">Github Account</a>
               and detailed information for all my projects
               is also  <router-link to="/projects/">here</router-link>. <br> <br>
               Please feel free to leave comment and your opinions on any project using <b>Disqus</b>
@@ -112,7 +112,7 @@
 										<a target='_blank' href="mailto:ashishpatel0720@gmail.com" ><i class="fa fa-envelope-o fa-3x"></i></a>
 										<a target='_blank' href=https://instagram.com/ashishpatel0720 style="color: #cd486b"><i class="fa fa-instagram fa-3x"></i></a>
 										<a target='_blank' href=https://stackoverflow.com/users/6178783/ashish-patel style="color:#f48024"><i class="fa fa-stack-overflow fa-3x"></i></a>
-										<a target='_blank' href=https://github.com/ashishpatel0720 style="color:#5d2973"><i class="fa fa-github fa-3x"></i></a>
+										<a target='_blank' href=https://github.com/pateash style="color:#5d2973"><i class="fa fa-github fa-3x"></i></a>
 										<a target='_blank' href=https://twitter.com/ashishpatel0720 style="color:#32cdfd"><i class="fa fa-twitter fa-3x"></i></a>
 									</div>
 								</div>

@@ -45,7 +45,7 @@
                         </figure>
                     </div>
                     <div class="media-content">
-                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/ashishpatel0720/moodle">Moodle</a> </span>
+                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/pateash/moodle">Moodle</a> </span>
                     </div>
                 </div>
                 <div class="content">

@@ -3,7 +3,7 @@
     <!--<div class="column">-->
     <div class="inner-item">
         <span style="font-size:2em">Captcha
-            <span class="tag is-primary" style="font-size:0.4em;"><a href="//github.com/ashishpatel0720/mycaptcha" target="_blank" style="color:white;">Project at Github</a></span>
+            <span class="tag is-primary" style="font-size:0.4em;"><a href="//github.com/pateash/mycaptcha" target="_blank" style="color:white;">Project at Github</a></span>
         </span>
         <br>
         <p align="left" style="margin-top:1em"><img class="image"  width="40%" height="40%" src="/static/images/captcha.jpg"></p>
@@ -44,7 +44,7 @@
                         </figure>
                     </div>
                     <div class="media-content">
-                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/ashishpatel0720/mycaptcha">MyCaptcha</a> </span>
+                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/pateash/mycaptcha">MyCaptcha</a> </span>
                     </div>
                 </div>
                 <div class="content">

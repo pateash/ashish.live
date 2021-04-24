@@ -6,7 +6,7 @@
                 You can reach me to any of these platforms,<br><br>
                 <div class="social-icons">
                     <a target='_blank' title='linkedin' href=https://linkedin.com/in/ashishpatel0720 style="color:#006699"><i class="fa fa-2x fa-linkedin-square "></i></a>
-                    <a target='_blank' title='github' href=https://github.com/ashishpatel0720 style="color:#5d2973"><i class="fa fa-2x fa-github "></i></a>
+                    <a target='_blank' title='github' href=https://github.com/pateash style="color:#5d2973"><i class="fa fa-2x fa-github "></i></a>
                     <a target='_blank' title='Facebook' href=https://facebook.com/ashishpatel0720 style="color:#3b5998"><i class="fa fa-2x fa-facebook-square "></i></a>
                     <a target='_blank' title='Email' href="mailto:ashishpatel0720@gmail.com" ><i class="fa fa-2x fa-envelope-o "></i></a>
                     <a target='_blank' title='Instagram' href=https://instagram.com/ashishpatel0720 style="color: #cd486b"><i class="fa fa-2x fa-instagram "></i></a>
