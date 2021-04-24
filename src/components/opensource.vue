@@ -3,8 +3,34 @@
     <div class="columns">
       <div class="column">
         <div class="inner-item">
-          <h4 style="margin-bottom: 0.5em;">Opensource Projects</h4>
+          <h4 style="margin-bottom: 0.5em;">Opensource Contributions</h4>
           <!--one element representing one Project-->
+
+          <!--Apache/Airflow-->
+          <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img
+                       src="https://www.techbrace.com/wp-content/uploads/2018/12/Apache_PoweredBy.png"
+                       alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p><!--title-->
+                    <span style="font-size:1.4em">Apache Airflow<span style="font-size:0.7em">, Platform for author, schedule and monitor workflows. </span></span>
+                    <a href="https://github.com/pateash/pateash" target="_blank">
+                      &nbsp;&nbsp;<span class="tag is-info"><b>Know More</b> </span></a>
+                    <br>
+                    Contributor, April 2021- Present<br>
+                  </p>
+                </div><!--font-awesome icons-->
+              </div>
+            </article>
+          </div>
+
+
           <!--@codingtools/cdt-->
           <div class="box">
             <article class="media">
@@ -23,13 +49,13 @@
                       &nbsp;&nbsp;<span class="tag is-info"><b>Know More</b> </span></a>
 
                     <br>
-                    github.com/codingtools, October 2019 - Present<br>
-                    <b> OClif Framework and Typescript</b>
+                    Creator and Maintainer, October 2019 - Present<br>
                   </p>
                 </div><!--font-awesome icons-->
               </div>
             </article>
           </div>
+
           <!--RegExplore-->
           <div class="box">
             <article class="media">
@@ -48,8 +74,7 @@
                       class="tag is-info"> <b>Know More</b> </span></router-link>
 
                     <br>
-                    regexplore.github.com , October 2017 - Present<br>
-                    <b> Angular and Angular-Material</b>
+                   Creator and Maintainer, October 2017 - Present<br>
                   </p>
                 </div><!--font-awesome icons-->
               </div>
@@ -74,8 +99,7 @@
                       class="tag is-info"> <b>Know More</b> </span></a>
 
                     <br>
-                    Hackathon Project, HackInTheNorth , March 2018<br>
-                    <b> ReactJS and Solidity</b>
+                    Hackathon Project (HackInTheNort, IIIT Allahabad), March 2018<br>
                   </p>
                 </div><!--font-awesome icons-->
               </div>

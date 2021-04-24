@@ -13,7 +13,7 @@
       <div class="social-icons">
         <a target='_blank' title='linkedin' href=https://linkedin.com/in/ashishpatel0720  style="color:#006699"><i
                 class="fa fa-linkedin-square fa-2x"></i></a>
-        <a target='_blank' title='github' href=https://github.com/ashishpatel0720  style="color:#5d2973"><i
+        <a target='_blank' title='github' href=https://github.com/pateash  style="color:#5d2973"><i
                 class="fa fa-github fa-2x"></i></a>
         <a target='_blank' title='Facebook' href=https://facebook.com/ashishpatel0720  style="color:#3b5998"><i
                 class="fa fa-facebook-square fa-2x"></i></a>
@@ -23,7 +23,7 @@
         <a target='_blank' title='twitter' href=https://twitter.com/ashishpatel0720  style="color:#32cdfd"><i
                 class="fa fa-twitter fa-2x"></i></a>
         <p><span class="icon"><i class="fa fa-code"></i></span> by <b>
-          <a target='_blank' href="//github.com/ashishpatel0720" style="color:#ff7018">Ashish</a></b> in
+          <a target='_blank' href="//github.com/pateash" style="color:#ff7018">Ashish</a></b> in
           <span class="icon"><i class="fa fa-heart" style="color:#ff4d44"></i></span> with <br>
           <a target='_blank' href="//vuejs.org"><img src="/static/images/vue-icon.png"></a>.</p>
         <p>Copyright &copy; {{ new Date().getFullYear() }}</p>
