@@ -3,7 +3,7 @@
     <!--<div class="column">-->
     <div class="inner-item">
         <span style="font-size:2em;">Kisanmitra <span class="tag is-primary" style="font-size:0.4em;"><a href="//kisanmitra.herokuapp.com" target="_blank" style="color:white">View Live</a></span></span>
-        <p align="center" style="margin-top:1em"><img src="http://www.indiawaterportal.org/sites/indiawaterportal.org/files/KSY.jpg"></p>
+        <p align="center" style="margin-top:1em"><img src="../../assets/logo/kisanmitra.jpg"></p>
         <br>
         <p align="center">
             <a  target='_blank' href="https://packagist.org/packages/ashishpatel0720/kisanmitra"><img src="https://poser.pugx.org/ashishpatel0720/kisanmitra/v/unstable.svg" alt="Latest UnStable Version"></a>
