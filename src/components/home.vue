@@ -22,8 +22,8 @@
 									</div>
 								</div>
 								<div class="content">
-                  <b>Software Engineer III (Big Data)</b> at <span class="subtitle is-6">
-                  <a href="https://twitter.com/Walmarttech" target="_blank">@WalmartGlobalTech</a>
+                  Software Engineer<span class="subtitle is-6">
+                  <a href="https://twitter.com/skyscanner" target="_blank">  @Skyscanner</a>
                 </span></div>
 							</div>
 						</div>
@@ -31,10 +31,11 @@
 					<div class="column is-8">
 						<p style="font-family: Quicksand;margin: 1em 3em 1em 1em;">
 							Hi, I am <b>Ashish,</b><br>
-              I am a Software Engineer with <b>3+ years</b> of total experience in <b>BigData, Java, Scala and Python,</b><br>
+              I am a Software Engineer with <b>3.5+ years</b> of total experience in <b>BigData, Java, Scala and Python,</b><br>
                 I have expertise in
               <b>Apache Spark</b>,
               <b>Hadoop MapReduce</b>,
+              <b>Databricks</b>,
               <b>Airflow</b>,
               <b>Cloudera</b>,
               <b>Google Cloud Platform</b>,
@@ -43,9 +44,10 @@
               <b>Docker</b>
               and <b>Spring</b>.
               <br><br>
-							I am currently working as <b>Software Engineer III (Big Data)</b> at
-              <a target='_blank' href="https://www.linkedin.com/company/walmartglobaltech">Walmart Global Tech,</a> <br>
-              Previously I was working as <b>Senior Technical Analyst</b> in <a target='_blank' href="//db.com"> Deutsche Bank.</a>
+							I am currently working as <b>Software Engineer</b> at <b>Skyscanner London.</b><br>
+              Previously I had worked as <b>Software Engineer III</b> at
+              <a target='_blank' href="https://www.linkedin.com/company/walmartglobaltech">Walmart Global Tech,</a> and as <b>Senior Technical Analyst</b>
+              at <a target='_blank' href="//db.com"> Deutsche Bank.</a>
 <!--               I am currently working as <b>Apache Spark/Hadoop + Java Spring developer</b> in Investment Banking division.-->
 <!--              <br><br>-->
 <!--              We created and maintaining Data pipelines for our Reporting Batch jobs handling Terabytes of data-->
