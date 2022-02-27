@@ -7,6 +7,29 @@
 
           <!--one element representing one education qualification-->
 
+          <!--Skyscanner-->
+          <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="../assets/logo/skyscanner.png" class="is-rounded" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <span style="font-size:1.4em">Software Engineer<span style="font-size:0.6em"> , <b>Skyscanner</b> (Dec 2021 - Present)</span></span>
+                  <br>London, UK<br>
+                  <i><b>"Skyscanner brings over 100 million users all the options they need to plan and book their perfect trip."</b></i>
+                  <ul>
+                    <li> Part of the Data platform team, and working on cutting edge revenue aggregation solutions to enable the Data Analysts, analyze, manage and forecast revenue for company.</li>
+                    <li>Building High-Quality Scalable ETL Frameworks to build our Forecasting Pipelines.</li>
+                    <li> Tech Stack - Apache Spark, Python, PySpark, Apache Airflow, Databricks.</li>
+                  </ul>
+                </div><!--font-awesome icons-->
+              </div>
+            </article>
+          </div>
+
           <!--Walmart Global tech-->
           <div class="box">
             <article class="media">
@@ -17,7 +40,7 @@
               </div>
               <div class="media-content">
                 <div class="content">
-                  <span style="font-size:1.4em">Software Engineer III (Big Data) <span style="font-size:0.6em"> , <b>Walmart Global Tech</b> (Feb 2021 - Present)</span></span>
+                  <span style="font-size:1.4em">Software Engineer III (Big Data) <span style="font-size:0.6em"> , <b>Walmart Global Tech</b> (Feb 2021 - Nov 2021)</span></span>
                   <br>
                   Bangalore, India<br>
                   <i><b>"Walmart Global Tech (aka. WalmartLabs) is the technology arm of Walmart reimagining retail for over 260 million daily shoppers. ."</b></i>
