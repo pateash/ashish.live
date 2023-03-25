@@ -7,6 +7,28 @@
 
           <!--one element representing one education qualification-->
 
+          <!--Prophecy.io-->
+          <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="../assets/logo/prophecy.png" class="is-rounded" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <span style="font-size:1.4em">Senior Data Engineer<span style="font-size:0.6em"> , <b>Prophecy</b> (Jan 2023 - Present)</span></span>
+                  <br>London, UK<br>
+                  <i><b>"Prophecy makes all your teams successful & productive on Apache Spark & Apache Airflow with Low-Code Development, Scheduling & Metadata."</b></i>
+                  <ul>
+                    <li> Part of the Data Engineering team, and working on cutting edge Big Data technologies to build and deploy big data pipelines.</li>
+                    <li> Tech Stack - Apache Spark, Scala, Python, PySpark, Apache Airflow, Databricks, DBT.</li>
+                  </ul>
+                </div><!--font-awesome icons-->
+              </div>
+            </article>
+          </div>
+
           <!--Skyscanner-->
           <div class="box">
             <article class="media">
@@ -17,7 +39,7 @@
               </div>
               <div class="media-content">
                 <div class="content">
-                  <span style="font-size:1.4em">Software Engineer<span style="font-size:0.6em"> , <b>Skyscanner</b> (Dec 2021 - Present)</span></span>
+                  <span style="font-size:1.4em">Senior Software Engineer<span style="font-size:0.6em"> , <b>Skyscanner</b> (Dec 2021 - Jan 2023)</span></span>
                   <br>London, UK<br>
                   <i><b>"Skyscanner brings over 100 million users all the options they need to plan and book their perfect trip."</b></i>
                   <ul>
