@@ -361,6 +361,7 @@
                         {title:"Promoted to Senior Technical Analyst",date:"July, 2019",desc:"Joined <b> Volcker Reporting</b> team in <b>Deutsche Bank</b>."},
                         {title:"Joined Walmart",date:"Feb, 2021",desc:"Joined <b> Replenishment</b> team in <b>Walmart Global Tech</b>."},
                         {title:"Moved to London",date:"Dec, 2021",desc:"Joined <b>Skyscanner</b> London Office."},
+                        {title:"Moved back Bangalore",date:"Jan, 2023",desc:"Joined <b>Prophecy.io</b> Bangalore Office."},
                         // {title:"t5",date:"july,2012",desc:"this is description"},
                 ]
             };

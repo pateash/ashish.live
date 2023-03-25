@@ -9,7 +9,7 @@
 							<div class="card-image">
 								<figure class="image">
                   <img
-                    src="/static/images/profile-min.jpg"
+                    src="/static/images/ashish_2.jpg"
                     alt="Image">
 								</figure>
 							</div>
@@ -22,8 +22,8 @@
 									</div>
 								</div>
 								<div class="content">
-                  Software Engineer<span class="subtitle is-6">
-                  <a href="https://twitter.com/skyscanner" target="_blank">  @Skyscanner</a>
+                  Senior Data Engineer<span class="subtitle is-6">
+                  <a href="https://www.linkedin.com/company/prophecy-io/mycompany/" target="_blank">  @Prophecy</a>
                 </span></div>
 							</div>
 						</div>
@@ -31,7 +31,7 @@
 					<div class="column is-8">
 						<p style="font-family: Quicksand;margin: 1em 3em 1em 1em;">
 							Hi, I am <b>Ashish,</b><br>
-              I am a Software Engineer with <b>3.5+ years</b> of total experience in <b>BigData, Java, Scala and Python,</b><br>
+              I am a Senior Data Engineer with around <b>5 years</b> of total experience in <b>BigData, Java, Scala and Python</b><br>
                 I have expertise in
               <b>Apache Spark</b>,
               <b>Hadoop MapReduce</b>,
@@ -44,9 +44,9 @@
               <b>Docker</b>
               and <b>Spring</b>.
               <br><br>
-							I am currently working as <b>Software Engineer</b> at <b>Skyscanner London.</b><br>
-              Previously I had worked as <b>Software Engineer III</b> at
-              <a target='_blank' href="https://www.linkedin.com/company/walmartglobaltech">Walmart Global Tech,</a> and as <b>Senior Technical Analyst</b>
+							I am currently working as <b>Senior Data Engineer</b> at <a target='_blank' href="https://www.linkedin.com/company/prophecy-io">Prophecy,</a><br>
+              Previously I had worked as <b>Senior Software engineer</b> at Skyscanner and as <b>Software Engineer III</b> at
+              <a target='_blank' href="https://www.linkedin.com/company/walmartglobaltech">Walmart Global Tech,</a>as <b>Senior Technical Analyst</b>
               at <a target='_blank' href="//db.com"> Deutsche Bank.</a>
 <!--               I am currently working as <b>Apache Spark/Hadoop + Java Spring developer</b> in Investment Banking division.-->
 <!--              <br><br>-->
