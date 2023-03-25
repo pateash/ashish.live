@@ -12,7 +12,7 @@
             <article class="media">
               <div class="media-left">
                 <figure class="image is-64x64">
-                  <img src="../assets/logo/prophecy.png" class="is-rounded" alt="Image">
+                  <img src="../assets/logo/img.png" class="is-rounded" alt="Image">
                 </figure>
               </div>
               <div class="media-content">
