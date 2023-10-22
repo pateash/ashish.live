@@ -17,11 +17,11 @@
               </div>
               <div class="media-content">
                 <div class="content">
-                  <span style="font-size:1.4em">Senior Data Engineer<span style="font-size:0.6em"> , <b>Prophecy</b> (Jan 2023 - Present)</span></span>
+                  <span style="font-size:1.4em">Senior Software Engineer(Data)<span style="font-size:0.6em"> , <b>Prophecy</b> (Jan 2023 - Present)</span></span>
                   <br>London, UK<br>
                   <i><b>"Prophecy makes all your teams successful & productive on Apache Spark & Apache Airflow with Low-Code Development, Scheduling & Metadata."</b></i>
                   <ul>
-                    <li> Part of the Data Engineering team, and working on cutting edge Big Data technologies to build and deploy big data pipelines.</li>
+                    <li> Part of the Engineering team, and working on cutting edge Big Data technologies to build and deploy big data pipelines.</li>
                     <li> Tech Stack - Apache Spark, Scala, Python, PySpark, Apache Airflow, Databricks, DBT.</li>
                   </ul>
                 </div><!--font-awesome icons-->
@@ -97,7 +97,7 @@
                   Pune, India<br>
                   <i><b>"Deutsche bank is a universal bank with a large presence in Europe, the Americas and Asia."</b></i>
                   <ul>
-                    <li> Working As Data engineer in CIB division for Volcker Project. </li>
+                    <li> Working As Senior Software engineer in CIB division for Volcker Project. </li>
                     <li>We Developed Data pipelines for our Reporting Batch jobs handling Terabytes of
                       data
                       every day across hundreds of Spark and Hadoop ETL jobs.
@@ -174,7 +174,7 @@
                     <i><b>"CarWale grown to become the largest automotive portal in India."</b></i>
 
                   <ul>
-                  <li> Worked as Data Engineering Intern in the R&D division of CarWale.
+                  <li> Worked as Software Engineering(Big Data) Intern in the R&D division of CarWale.
                   </li>
                   <li>CW BigQuery is a service that enables interactive analysis of massively large datasets
                     stored in Cassandra Storage.
