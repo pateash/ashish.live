@@ -1,5 +1,5 @@
 # ashish.live
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cff6261a-1215-4fc6-9542-ce4296d34d9e/deploy-status)](https://app.netlify.com/sites/pateash/deploys)
 > Portfolio website for ashish.live
 
 ## Build Setup
