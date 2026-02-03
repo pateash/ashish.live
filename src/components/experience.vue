@@ -6,6 +6,30 @@
           <h4 style="margin-bottom: 0.5em;">Experience</h4>
 
           <!--one element representing one education qualification-->
+          <!--Oracle-->
+          <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="../assets/logo/oracle.png" class="is-rounded" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <span style="font-size:1.4em">Principal Software Engineer(PMTS)<span style="font-size:0.6em"> , <b>Oracle</b> (Jan 2025 - Present)</span></span>
+                  <br>Bengaluru, India<br>
+                  <i><b>"Oracle enables secure cloud, data, and AI for mission-critical enterprises."</b></i>
+                  <ul>
+
+                   <li> Building Oracle Datashare, a Spark-based data publishing service to move datasets from Oracle Cloud (OCI) to different sinks(Delta/Iceberg/Azure etc.)
+                     including schema evolution, compaction, partitioning, and job observability via Oracle’s Job Management Console (JMC).</li>
+                    <li> Enabling huge data movement across (Several Petabyte scale) Oracle Cloud and external systems like AWS, Azure, Snowflake and GCP.</li>
+                    <li> Tech Stack - Apache Spark, Scala, Java, Delta Lake, Iceberg, Parquet.</li>
+                  </ul>
+                </div><!--font-awesome icons-->
+              </div>
+            </article>
+          </div>
 
           <!--Prophecy.io-->
           <div class="box">
@@ -17,7 +41,7 @@
               </div>
               <div class="media-content">
                 <div class="content">
-                  <span style="font-size:1.4em">Senior Software Engineer(Data)<span style="font-size:0.6em"> , <b>Prophecy</b> (Jan 2023 - Present)</span></span>
+                  <span style="font-size:1.4em">Senior Software Engineer(Data)<span style="font-size:0.6em"> , <b>Prophecy</b> (Jan 2023 - Dec 2024)</span></span>
                   <br>London, UK<br>
                   <i><b>"Prophecy makes all your teams successful & productive on Apache Spark & Apache Airflow with Low-Code Development, Scheduling & Metadata."</b></i>
                   <ul>
