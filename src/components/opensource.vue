@@ -9,8 +9,7 @@
       <div class="glass-card os-card" v-for="item in contributions" :key="item.name">
         <div class="os-card-header">
           <div class="os-icon-box" :style="{ '--icon-color': item.color }" :title="item.iconLabel">
-            <i :class="item.icon || 'fa fa-github'" aria-hidden="true"></i>
-            <span class="sr-only">{{ item.iconLabel }}</span>
+            <img :src="item.image" :alt="item.iconLabel" class="os-project-logo">
           </div>
           <div class="os-meta-badges">
             <span class="os-role-badge">{{ item.role }}</span>
@@ -47,6 +46,7 @@ export default {
           icon: 'fa fa-cogs',
           iconLabel: 'Apache Airflow workflow icon',
           color: '#017cee',
+          image: '/static/images/opensource/apache-airflow.png',
           description: 'A platform created by the Apache Software Foundation to programmatically author, schedule, and monitor data workflows.',
           link: 'https://github.com/apache/airflow'
         },
@@ -57,6 +57,7 @@ export default {
           icon: 'fa fa-terminal',
           iconLabel: 'Command-line tools icon',
           color: '#0ea5e9',
+          image: '/static/images/opensource/codingtools.png',
           description: 'A suite of lightning-fast command-line developer tools designed to streamline everyday software engineering workflows.',
           link: 'https://github.com/codingtools/cdt'
         },
@@ -67,6 +68,7 @@ export default {
           icon: 'fa fa-code',
           iconLabel: 'Regular expression code icon',
           color: '#8b5cf6',
+          image: '/static/images/regexplore-img.png',
           description: 'An interactive regular expression matcher and visualizer for testing complex regex patterns in real-time.',
           link: 'https://github.com/pateash/RegExplore',
           internalRoute: '/projects/regexplore'
@@ -78,6 +80,7 @@ export default {
           icon: 'fa fa-cubes',
           iconLabel: 'ReviewDeck blockchain icon',
           color: '#10b981',
+          image: '/static/images/opensource/reviewdeck.png',
           description: 'Decentralized review ledger platform built on the Ethereum blockchain during HackInTheNorth at IIIT Allahabad.',
           link: 'https://github.com/ReviewDeck'
         }
@@ -138,6 +141,13 @@ export default {
     font-size: 1.45rem;
   }
 
+  .os-project-logo {
+    display: block;
+    height: 40px;
+    object-fit: contain;
+    width: 40px;
+  }
+
   .os-role-badge {
     font-size: 0.8rem;
     font-weight: 600;
@@ -176,15 +186,4 @@ export default {
   }
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
 </style>

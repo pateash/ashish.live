@@ -8,7 +8,7 @@
     <div class="glass-card paper-card">
       <div class="paper-header-row">
         <div class="ieee-badge-box">
-          <i class="fa fa-book"></i>
+          <img :src="ieeeLogo" alt="IEEE logo" class="ieee-logo">
         </div>
         <div class="paper-meta">
           <span class="pub-tag">IEEE Xplore Published</span>
@@ -40,8 +40,13 @@
 </template>
 
 <script>
+import ieeeLogo from '../assets/logo/ieee.png';
+
 export default {
-  name: 'Research'
+  name: 'Research',
+  data() {
+    return { ieeeLogo };
+  }
 };
 </script>
 
@@ -81,11 +86,16 @@ export default {
     height: 52px;
     border-radius: 12px;
     background: rgba(56, 189, 248, 0.15);
-    color: var(--accent-blue);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+  }
+
+  .ieee-logo {
+    display: block;
+    height: 38px;
+    object-fit: contain;
+    width: 38px;
   }
 
   .pub-tag {
@@ -140,4 +150,3 @@ export default {
   }
 }
 </style>
-

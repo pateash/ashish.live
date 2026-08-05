@@ -17,6 +17,11 @@
         </router-link>
       </li>
       <li class="nav-item">
+        <router-link to="/education" @click="$emit('nav-click')">
+          <i class="fa fa-graduation-cap"></i> <span>Education</span>
+        </router-link>
+      </li>
+      <li class="nav-item">
         <router-link to="/projects" @click="$emit('nav-click')">
           <i class="fa fa-code-fork"></i> <span>Projects</span>
         </router-link>
@@ -24,11 +29,6 @@
       <li class="nav-item">
         <router-link to="/research" @click="$emit('nav-click')">
           <i class="fa fa-flask"></i> <span>Research</span>
-        </router-link>
-      </li>
-      <li class="nav-item">
-        <router-link to="/education" @click="$emit('nav-click')">
-          <i class="fa fa-graduation-cap"></i> <span>Education</span>
         </router-link>
       </li>
       <li class="nav-item">
@@ -110,4 +110,3 @@
     }
   }
 </style>
-

@@ -28,7 +28,7 @@
           </h1>
 
           <p class="hero-subtitle">
-            Principal Software Engineer building resilient data publishing systems, specializing in <strong>Apache Spark, Scala, Java, Delta Lake, Iceberg</strong>, and <strong>OCI</strong> data infrastructure.
+            Principal Software Engineer building resilient data publishing systems, specializing in <strong>Apache Spark, Scala, Java, Delta Lake, Iceberg</strong>, and <strong>Cloud</strong> data infrastructure.
           </p>
 
           <div class="hero-cta">
@@ -65,7 +65,7 @@
     <!-- Career Snapshot & Highlights -->
     <section class="section-container">
       <h2 class="section-title"><i class="fa fa-bolt gradient-text"></i> Career Highlights & Achievements</h2>
-      
+
       <div class="grid-2">
         <!-- Experience Snapshot -->
         <div class="glass-card highlight-card">

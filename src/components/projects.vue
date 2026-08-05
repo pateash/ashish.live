@@ -29,7 +29,7 @@
       <div class="project-card glass-card" v-for="proj in filteredProjects" :key="proj.id">
         <div class="project-card-header">
           <div class="project-icon-wrapper">
-            <i :class="proj.icon || 'fa fa-folder-o'"></i>
+            <img :src="proj.image" :alt="proj.imageAlt" class="project-logo">
           </div>
           <span class="project-category-badge">{{ proj.category }}</span>
         </div>
@@ -61,6 +61,9 @@
 </template>
 
 <script>
+import carwaleLogo from '../assets/logo/carwale.png';
+import kisanmitraLogo from '../assets/logo/kisanmitra.jpg';
+
 export default {
   name: 'Projects',
   data() {
@@ -75,7 +78,8 @@ export default {
           category: 'Big Data',
           org: 'CarWale Internship',
           period: 'May - June 2017',
-          icon: 'fa fa-database',
+          image: carwaleLogo,
+          imageAlt: 'CarWale logo',
           desc: 'Interactive Big Data querying service that executes scheduled Spark SQL jobs over massive Cassandra datasets via a web UI.',
           techStack: ['Python', 'Flask', 'Scala', 'Apache Spark', 'Cassandra'],
           route: '/projects/bigquery'
@@ -86,7 +90,8 @@ export default {
           category: 'Machine Learning',
           org: 'MANIT Minor Project',
           period: 'Jan - March 2017',
-          icon: 'fa fa-leaf',
+          image: kisanmitraLogo,
+          imageAlt: 'KisanMitra logo',
           desc: 'Smart agricultural advisory platform leveraging Machine Learning algorithms to predict crop yield and optimal farming recommendations.',
           techStack: ['Laravel', 'Python', 'Scikit-Learn', 'PHP', 'jQuery'],
           route: '/projects/kisanmitra'
@@ -97,7 +102,8 @@ export default {
           category: 'Web Apps',
           org: 'Open Web Project',
           period: '2017',
-          icon: 'fa fa-book',
+          image: '/static/images/grabpustak.png',
+          imageAlt: 'GrabPustak logo',
           desc: 'Online digital repository and book-sharing platform for students to access lecture notes, reference material, and free e-books.',
           techStack: ['CodeIgniter', 'PHP', 'MySQL', 'JavaScript', 'Ajax'],
           route: '/projects/grabpustak'
@@ -108,7 +114,8 @@ export default {
           category: 'Web Apps',
           org: 'MANIT Academic Project',
           period: '2017',
-          icon: 'fa fa-graduation-cap',
+          image: '/static/images/projects/manitmoodle.png',
+          imageAlt: 'Moodle logo',
           desc: 'Custom educational discussion board and online assignment submission management system built for university coursework.',
           techStack: ['PHP', 'MySQL', 'JavaScript', 'CSS3'],
           route: '/projects/manitmoodle'
@@ -119,7 +126,8 @@ export default {
           category: 'Web Apps',
           org: 'Security Assignment',
           period: '2017',
-          icon: 'fa fa-shield',
+          image: '/static/images/captcha.jpg',
+          imageAlt: 'Captcha project artwork',
           desc: 'Interactive image & text captcha security module for protecting web applications and mobile forms against automated bot scripts.',
           techStack: ['PHP', 'Bootstrap', 'JavaScript'],
           route: '/projects/captcha'
@@ -253,11 +261,17 @@ export default {
     height: 46px;
     border-radius: 12px;
     background: rgba(56, 189, 248, 0.15);
-    color: var(--accent-blue);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
+    overflow: hidden;
+  }
+
+  .project-logo {
+    display: block;
+    height: 38px;
+    object-fit: contain;
+    width: 38px;
   }
 
   .project-category-badge {

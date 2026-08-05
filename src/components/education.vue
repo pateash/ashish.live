@@ -12,9 +12,6 @@
         </div>
         <div class="glass-card edu-card">
         <div class="edu-card-header">
-          <div class="edu-icon-box" :style="{ '--icon-color': edu.color }">
-            <img :src="edu.logo" alt="" class="edu-logo edu-logo-card">
-          </div>
           <span class="score-badge">
             <i :class="edu.scoreIcon" aria-hidden="true"></i> {{ edu.score }}
           </span>
@@ -166,23 +163,6 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .edu-icon-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: color-mix(in srgb, var(--icon-color) 12%, transparent);
-    border: 1px solid color-mix(in srgb, var(--icon-color) 20%, transparent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-  }
-
-  .edu-logo-card {
-    height: 34px;
-    width: 34px;
   }
 
   .score-badge {
