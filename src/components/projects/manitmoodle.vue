@@ -1,75 +1,87 @@
 <template>
-    <!--<div class="columns">-->
-    <!--<div class="column">-->
-    <div class="inner-item">
-        <span style="font-size:2em">ManitMoodle
-            <!--<span class="tag is-primary" style="font-size:0.4em;"><a href="//manitmoodle.tk" target="_blank" style="color:white;">Visit Website</a></span>-->
-        </span>
-        <br>
-        <p align="left"><img class="image"  width="50%" height="40%" src="/static/images/moodle-big.gif"></p>
-        <br>
-        <h4 id="about-manitmoodle">About&nbsp;MANIT MOODLE</h4>
-        <p>
-            Manit Moodle is online assignment and discussion website
-            which allows students and teachers to share assignment online and also posts and discuss about given
-            projects and activities going on in
-            campus.
-
-        </p><br>
-        <ul style="list-style-type:disc;margin-left:2em;">
-            <li>Simple, Easy to use.</li>
-            <li>Expressive, intuitive Website Designed using HTML and CSS. </li>
-            <li>Robust backend developnmet using Precedural PHP.</li>
-        </ul><br>
-
-        <h4 id="technology-used">technology used</h4>
-        <p >
-            <a  target='_blank' href="//php.net" ><img class='image' width='250' height='200'
-                                                       src="/static/images/logo3.svg"></a>
-        </p>
-        <p>
-            <a  target='_blank' href="//mysql" ><img width='250' height='100' src="/static/images/logo5-min.png"></a>
-        </p>
-        <em><b>and Javascript, HTML, CSS.</b></em>
-        <br>
-        <br>
-
-        <h4 id="project">Project at Github  </h4>
-        <div class="card" style="margin-left:2em;margin-right:2em;margin:1em 1em;">
-            <div class="card-content">
-
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="https://h5p.org/sites/default/files/moodle-icon-page_0.png">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/pateash/moodle">Moodle</a> </span>
-                    </div>
-                </div>
-                <div class="content">
-                    If you like this project, or want to use it for your work or want to contribute,
-                    <router-link to="/contact">contact</router-link>
-                </div>
-            </div>
-        </div>
-        <h4 >Say Something about ManitMoodle  </h4>
-        <div id="disqus_thread"></div>
+  <div class="project-detail-page">
+    <div class="back-nav">
+      <router-link to="/projects" class="btn-secondary">
+        <i class="fa fa-arrow-left"></i> Back to Projects
+      </router-link>
     </div>
+
+    <div class="glass-card detail-card">
+      <div class="detail-header">
+        <h1 class="project-title gradient-text">MANIT Moodle</h1>
+        <div class="tech-stack-row">
+          <span class="tech-badge">PHP</span>
+          <span class="tech-badge">MySQL</span>
+          <span class="tech-badge">HTML/CSS</span>
+          <span class="tech-badge">JavaScript</span>
+        </div>
+      </div>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-graduation-cap"></i> About MANIT Moodle</h2>
+        <p>
+          MANIT Moodle is a web-based learning management system and assignment discussion portal created for MANIT Bhopal campus students and professors.
+        </p>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-list-check"></i> Platform features</h2>
+        <ul class="feature-list">
+          <li>Simple, easy-to-use assignment and discussion workflow.</li>
+          <li>Expressive, intuitive interface built with HTML and CSS.</li>
+          <li>Procedural PHP backend for campus learning activity.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-code"></i> Project source</h2>
+        <p>The project uses PHP, MySQL, JavaScript, HTML, and CSS. Explore the <a href="https://github.com/pateash/moodle" target="_blank" rel="noreferrer">Moodle repository on GitHub</a>, or <router-link to="/contact">get in touch</router-link> to discuss use or contribution.</p>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-
-    };
+export default {
+  name: 'ManitMoodle'
+};
 </script>
 
+<style lang="scss" scoped>
+.project-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-<style>
-    <!--adding top margin for all h4 elements in this page-->
+.detail-card {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-    h4{
-        margin-top:2em;
-    }
+.project-title {
+  font-size: 2.2rem;
+  margin: 0 0 10px 0;
+}
+
+.detail-section {
+  h2 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.feature-list { color: var(--text-secondary); margin: 0; padding-left: 20px; }
+.feature-list li { margin-bottom: 8px; }
 </style>

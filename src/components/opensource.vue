@@ -1,121 +1,189 @@
 <template>
-  <div class="inner-item">
-    <div class="columns">
-      <div class="column">
-        <div class="inner-item">
-          <h4 style="margin-bottom: 0.5em;">Opensource Contributions</h4>
-          <!--one element representing one Project-->
+  <div class="opensource-page">
+    <div class="page-header">
+      <h1 class="page-title"><i class="fa fa-github-alt gradient-text"></i> Open Source Contributions</h1>
+      <p class="page-subtitle">Open-source packages, CLI developer tools, and framework contributions I actively maintain or contribute to.</p>
+    </div>
 
-          <!--Apache/Airflow-->
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img
-                       src="https://www.techbrace.com/wp-content/uploads/2018/12/Apache_PoweredBy.png"
-                       alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p><!--title-->
-                    <span style="font-size:1.4em">Apache Airflow<span style="font-size:0.7em">, Platform for author, schedule and monitor workflows. </span></span>
-                    <a href="https://github.com/pateash/pateash" target="_blank">
-                      &nbsp;&nbsp;<span class="tag is-info"><b>Know More</b> </span></a>
-                    <br>
-                    Contributor, April 2021- Present<br>
-                  </p>
-                </div><!--font-awesome icons-->
-              </div>
-            </article>
+    <div class="grid-2 opensource-grid">
+      <div class="glass-card os-card" v-for="item in contributions" :key="item.name">
+        <div class="os-card-header">
+          <div class="os-icon-box" :style="{ '--icon-color': item.color }" :title="item.iconLabel">
+            <img :src="item.image" :alt="item.iconLabel" class="os-project-logo">
           </div>
-
-
-          <!--@codingtools/cdt-->
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img style="border-radius: 0.5em"
-                       src="https://avatars3.githubusercontent.com/u/56801671?s=400&u=efd08f94fc84d3e591ec998eb1884b3241f5c82b&v=4"
-                       alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p><!--title-->
-                    <span style="font-size:1.4em">@codingtools/cdt <span style="font-size:0.7em">, Command Line Tools for Developers </span></span>
-                    <a href="https://github.com/codingtools/cdt" target="_blank">
-                      &nbsp;&nbsp;<span class="tag is-info"><b>Know More</b> </span></a>
-
-                    <br>
-                    Creator and Maintainer, October 2019 - Present<br>
-                  </p>
-                </div><!--font-awesome icons-->
-              </div>
-            </article>
+          <div class="os-meta-badges">
+            <span class="os-role-badge">{{ item.role }}</span>
+            <span class="os-period-badge"><i class="fa fa-clock-o"></i> {{ item.period }}</span>
           </div>
+        </div>
 
-          <!--RegExplore-->
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img style="border-radius: 0.5em"
-                       src="/static/images/regexplore-img.png"
-                       alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p><!--title-->
-                    <span style="font-size:1.4em">RegExplore <span style="font-size:0.7em"> , Regular Expression Matcher</span></span>
-                    <router-link to="/projects/regexplore"> &nbsp;&nbsp;<span
-                      class="tag is-info"> <b>Know More</b> </span></router-link>
+        <h2 class="os-title">{{ item.name }}</h2>
+        <p class="os-desc">{{ item.description }}</p>
 
-                    <br>
-                   Creator and Maintainer, October 2017 - Present<br>
-                  </p>
-                </div><!--font-awesome icons-->
-              </div>
-            </article>
-          </div>
-
-          <!--ReviewDeck-->
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img style="border-radius: 0.5em"
-                       src="https://avatars2.githubusercontent.com/u/37457770?s=200&v=4"
-                       alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p><!--title-->
-                    <span style="font-size:1.4em">ReviewDeck <span style="font-size:0.7em"> , Ethereum Blockchain Review Ledger </span></span>
-                    <a href="https://github.com/ReviewDeck" target="_blank"> &nbsp;&nbsp;<span
-                      class="tag is-info"> <b>Know More</b> </span></a>
-
-                    <br>
-                    Hackathon Project (HackInTheNort, IIIT Allahabad), March 2018<br>
-                  </p>
-                </div><!--font-awesome icons-->
-              </div>
-            </article>
-          </div>
+        <div class="os-actions">
+          <a :href="item.link" target="_blank" class="btn-primary" v-if="item.link">
+            <i class="fa fa-github"></i> View Repo
+          </a>
+          <router-link :to="item.internalRoute" class="btn-secondary" v-if="item.internalRoute">
+            Details <i class="fa fa-arrow-right"></i>
+          </router-link>
         </div>
       </div>
     </div>
   </div>
 </template>
-<script>
-    export default {
 
-    }
+<script>
+export default {
+  name: 'OpenSource',
+  data() {
+    return {
+      contributions: [
+        {
+          name: 'Apache Airflow',
+          role: 'Contributor',
+          period: 'April 2021 - Present',
+          icon: 'fa fa-cogs',
+          iconLabel: 'Apache Airflow workflow icon',
+          color: '#017cee',
+          image: '/static/images/opensource/apache-airflow.png',
+          description: 'A platform created by the Apache Software Foundation to programmatically author, schedule, and monitor data workflows.',
+          link: 'https://github.com/apache/airflow'
+        },
+        {
+          name: '@codingtools/cdt',
+          role: 'Creator & Maintainer',
+          period: 'October 2019 - Present',
+          icon: 'fa fa-terminal',
+          iconLabel: 'Command-line tools icon',
+          color: '#0ea5e9',
+          image: '/static/images/opensource/codingtools.png',
+          description: 'A suite of lightning-fast command-line developer tools designed to streamline everyday software engineering workflows.',
+          link: 'https://github.com/codingtools/cdt'
+        },
+        {
+          name: 'RegExplore',
+          role: 'Creator & Maintainer',
+          period: 'October 2017 - Present',
+          icon: 'fa fa-code',
+          iconLabel: 'Regular expression code icon',
+          color: '#8b5cf6',
+          image: '/static/images/regexplore-img.png',
+          description: 'An interactive regular expression matcher and visualizer for testing complex regex patterns in real-time.',
+          link: 'https://github.com/pateash/RegExplore',
+          internalRoute: '/projects/regexplore'
+        },
+        {
+          name: 'ReviewDeck',
+          role: 'Hackathon Project',
+          period: 'March 2018',
+          icon: 'fa fa-cubes',
+          iconLabel: 'ReviewDeck blockchain icon',
+          color: '#10b981',
+          image: '/static/images/opensource/reviewdeck.png',
+          description: 'Decentralized review ledger platform built on the Ethereum blockchain during HackInTheNorth at IIIT Allahabad.',
+          link: 'https://github.com/ReviewDeck'
+        }
+      ]
+    };
+  }
+};
 </script>
 
-<style>
+<style lang="scss" scoped>
+.opensource-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.page-header {
+  .page-title {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+  .page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin: 0;
+  }
+}
+
+.os-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  .os-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .os-meta-badges {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .os-icon-box {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--icon-color) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--icon-color) 24%, transparent);
+    color: var(--icon-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+  }
+
+  .os-project-logo {
+    display: block;
+    height: 40px;
+    object-fit: contain;
+    width: 40px;
+  }
+
+  .os-role-badge {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-emerald);
+    background: rgba(52, 211, 153, 0.1);
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(52, 211, 153, 0.2);
+  }
+
+  .os-period-badge {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .os-title {
+    font-size: 1.35rem;
+    margin: 0;
+  }
+
+  .os-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .os-actions {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 16px;
+  }
+}
 
 </style>

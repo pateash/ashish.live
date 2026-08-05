@@ -1,375 +1,187 @@
 <template>
-
-    <div class="inner-item">
-        <h4 style="margin-bottom: 0.5em;">Timeline (2011-Present)</h4>
-
-        <ul class="timeline">
-            <li v-for="tdata,i in tlist">
-                <div :class="{'direction-l':i%2==0,'direction-r':i%2!=0}">
-                    <div class="flag-wrapper">
-                        <span class="hexa"></span><!--hexa symbol-->
-
-                        <span class="flag">{{tdata.title}}</span>
-                        <span class="time-wrapper"><span class="time">{{tdata.date}}</span></span>
-                    </div>
-                    <div class="desc" v-html="tdata.desc" style="text-align: left"></div>
-                </div>
-            </li>
-            </ul>
+  <div class="timeline-page">
+    <div class="page-header">
+      <h1 class="page-title"><i class="fa fa-clock-o gradient-text"></i> Milestones & Career Timeline</h1>
+      <p class="page-subtitle">A chronological record of key academic achievements, hackathons, research publications, and career progression.</p>
     </div>
+
+    <div class="timeline-container">
+      <div class="timeline-spine"></div>
+
+      <div 
+        v-for="(item, index) in items" 
+        :key="index" 
+        :class="['timeline-row', index % 2 === 0 ? 'left' : 'right']"
+      >
+        <div class="timeline-node">
+          <i class="fa fa-star"></i>
+        </div>
+
+        <div class="timeline-content glass-card">
+          <div class="time-pill glass-pill">{{ item.date }}</div>
+          <h2 class="milestone-title">{{ item.title }}</h2>
+          <p class="milestone-desc" v-html="item.desc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
-<style type="text/scss" scoped>
-    /*@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);*/
 
-    body{
-        /*font-family: 'Raleway', sans-serif;*/
-        color: #333;
-    }
-
-    header h1{
-        text-align: center;
-        font-weight: bold;
-        margin-top: 0;
-    }
-
-    header p{
-        text-align: center;
-        margin-bottom: 0;
-    }
-
-    .hexa{
-        border: 0px;
-        float: left;
-        text-align: center;
-        height: 35px;
-        width: 60px;
-        font-size: 22px;
-        background: #f0f0f0;
-        color: #3c3c3c;
-        position: relative;
-        margin-top: 15px;
-    }
-
-    .hexa:before{
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-bottom: 15px solid #f0f0f0;
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        top: -15px;
-    }
-
-    .hexa:after{
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-top: 15px solid #f0f0f0;
-        bottom: -15px;
-    }
-
-    .timeline {
-        position: relative;
-        padding: 0;
-        width: 100%;
-        margin-top: 20px;
-        list-style-type: none;
-    }
-
-    .timeline:before {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        content: ' ';
-        display: block;
-        width: 2px;
-        height: 100%;
-        margin-left: -1px;
-        /*background: rgb(213,213,213);*/
-        /*background: -moz-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);*/
-        /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));*/
-        /*background: -webkit-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);*/
-        /*background: -o-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);*/
-        /*background: -ms-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);*/
-        background: linear-gradient(to bottom, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-        z-index: 5;
-    }
-
-    .timeline li {
-        padding: 2em 0;
-    }
-
-    .timeline .hexa{
-        width: 16px;
-        height: 10px;
-        position: absolute;
-        background: #00c4f3;
-        z-index: 5;
-        left: 0;
-        right: 0;
-        margin-left:auto;
-        margin-right:auto;
-        top: -30px;
-        margin-top: 0;
-    }
-
-    .timeline .hexa:before {
-        border-bottom: 4px solid #00c4f3;
-        border-left-width: 8px;
-        border-right-width: 8px;
-        top: -4px;
-    }
-
-    .timeline .hexa:after {
-        border-left-width: 8px;
-        border-right-width: 8px;
-        border-top: 4px solid #00c4f3;
-        bottom: -4px;
-    }
-
-    .direction-l,
-    .direction-r {
-        float: none;
-        width: 100%;
-        text-align: center;
-    }
-
-    .flag-wrapper {
-        text-align: center;
-        position: relative;
-    }
-
-    .flag {
-        position: relative;
-        display: inline;
-        background: rgb(255,255,255);
-        font-weight: 600;
-        z-index: 15;
-        padding: 6px 10px;
-        text-align: left;
-        border-radius: 5px;
-    }
-
-    .direction-l .flag:after,
-    .direction-r .flag:after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: -15px;
-        height: 0;
-        width: 0;
-        margin-left: -8px;
-        border: solid transparent;
-        border-bottom-color: rgb(255,255,255);
-        border-width: 8px;
-        pointer-events: none;
-    }
-
-    .direction-l .flag {
-        -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-        -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-        box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    }
-
-    .direction-r .flag {
-        -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-        -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-        box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    }
-
-    .time-wrapper {
-        display: block;
-        position: relative;
-        margin: 4px 0 0 0;
-        z-index: 14;
-        line-height: 1em;
-        vertical-align: middle;
-        color: #fff;
-    }
-
-    .direction-l .time-wrapper {
-        float: none;
-    }
-
-    .direction-r .time-wrapper {
-        float: none;
-    }
-
-    .time {
-        background: #00c4f3;
-        display: inline-block;
-        padding: 8px;
-    }
-
-    .desc {
-        position: relative;
-        margin: 1em 0 0 0;
-        padding: 1em;
-        background: rgb(254,254,254);
-        -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-        -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-        box-shadow: 0 0 1px rgba(0,0,0,0.20);
-        z-index: 15;
-    }
-
-    .direction-l .desc,
-    .direction-r .desc {
-        position: relative;
-        margin: 1em 1em 0 1em;
-        padding: 1em;
-        z-index: 15;
-    }
-
-    @media(min-width: 768px){
-        .timeline {
-            width: 660px;
-            margin: 0 auto;
-            margin-top: 20px;
-        }
-
-        .timeline li:after {
-            content: "";
-            display: block;
-            height: 0;
-            clear: both;
-            visibility: hidden;
-        }
-
-        .timeline .hexa {
-            left: -28px;
-            right: auto;
-            top: 8px;
-        }
-
-        .timeline .direction-l .hexa {
-            left: auto;
-            right: -28px;
-        }
-
-        .direction-l {
-            position: relative;
-            width: 310px;
-            float: left;
-            text-align: right;
-        }
-
-        .direction-r {
-            position: relative;
-            width: 310px;
-            float: right;
-            text-align: left;
-        }
-
-        .flag-wrapper {
-            display: inline-block;
-        }
-
-        .flag {
-            font-size: 18px;
-        }
-
-        .direction-l .flag:after {
-            left: auto;
-            right: -16px;
-            top: 50%;
-            margin-top: -8px;
-            border: solid transparent;
-            border-left-color: rgb(254,254,254);
-            border-width: 8px;
-        }
-
-        .direction-r .flag:after {
-            top: 50%;
-            margin-top: -8px;
-            border: solid transparent;
-            border-right-color: rgb(254,254,254);
-            border-width: 8px;
-            left: -8px;
-        }
-
-        .time-wrapper {
-            display: inline;
-            vertical-align: middle;
-            margin: 0;
-        }
-
-        .direction-l .time-wrapper {
-            float: left;
-        }
-
-        .direction-r .time-wrapper {
-            float: right;
-        }
-
-        .time {
-            padding: 5px 10px;
-        }
-
-        .direction-r .desc {
-            margin: 1em 0 0 0.75em;
-        }
-    }
-
-    @media(min-width: 992px){
-        .timeline {
-            width: 800px;
-            margin: 0 auto;
-            margin-top: 20px;
-        }
-
-        .direction-l {
-            position: relative;
-            width: 380px;
-            float: left;
-            text-align: right;
-        }
-
-        .direction-r {
-            position: relative;
-            width: 380px;
-            float: right;
-            text-align: left;
-        }
-    }
-</style>
 <script>
-    export default {
-
-        mounted(){
-            this.tlist=this.tlist.reverse();
-        },
-
-        data(){
-            return {
-                isLeft:true,
-                tlist:[
-                        {title:"Completed High School",date:"April, 2011",desc:"Completed <b>High School</b> from Ideal Public School with <b>81.30%</b> marks."},
-                        {title:"Debate Competition",date:"Sept, 2011",desc:"Won <b>third</b> Prize in <b>District&nbsp;debate&nbsp;competition</b> on School Bags."},
-                        {title:"Article Writing Competition",date:"Nov, 2012",desc:"Won <b>Second</b> Prize in <b>District Article writing competition</b>."},
-                        {title:"Completed Higher Secondary",date:"April, 2013",desc:"Completed <b>Higher Secondary</b> from Ideal Public School with <b>90.0%</b> marks."},
-                        {title:"Won Appointy Hackathon",date:"July, 2017",desc:"Won <b>Second Prize</b> and Internship in Appointy Hackathon organized by <b>Appointy Software Inc</b>."},
-                        {title:"Placed at Deutsche Bank",date:"August, 2017",desc:"Placed in <b>Deutsche Bank</b> as Technical Analyst."},
-                        {title:"IEEE Research Paper",date:"February, 2018",desc:"Published Research Paper on <b>Music Recommendation Systems</b> in IEEE Conference 2018."},
-                        {title:"Hack In The North",date:"March, 2018",desc:"Participated and came in top 20 out of 50 teams in <b>Hack In The North</b> hackathon organized by <b>IIIT, Allahabad</b>."},
-                        {title:"Joined Deutsche Bank",date:"July, 2018",desc:"Joined <b>Deutsche Bank</b> as Technical Analyst."},
-                        {title:"Promoted to Senior Technical Analyst",date:"July, 2019",desc:"Joined <b> Volcker Reporting</b> team in <b>Deutsche Bank</b>."},
-                        {title:"Joined Walmart",date:"Feb, 2021",desc:"Joined <b> Replenishment</b> team in <b>Walmart Global Tech</b>."},
-                        {title:"Moved to London",date:"Dec, 2021",desc:"Joined <b>Skyscanner</b> London Office."},
-                        {title:"Moved back Bangalore",date:"Jan, 2023",desc:"Joined <b>Prophecy.io</b> Bangalore Office."},
-                        // {title:"t5",date:"july,2012",desc:"this is description"},
-                ]
-            };
-        },
-        methods:{
-
-        }
-
-
-    }
+export default {
+  name: 'Timeline',
+  data() {
+    return {
+      items: [
+        { title: "Principal Software Engineer @ Oracle", date: "Jan 2025", desc: "Joined Oracle Cloud Infrastructure (OCI) Datashare engineering team in Bengaluru." },
+        { title: "Senior Software Engineer @ Prophecy.io", date: "Jan 2023", desc: "Joined Prophecy.io to build enterprise low-code Spark & Airflow data pipeline tooling." },
+        { title: "Senior Software Engineer @ Skyscanner", date: "Dec 2021", desc: "Relocated to London, UK to join Skyscanner's Data Platform & Revenue Aggregation team." },
+        { title: "Software Engineer III @ Walmart Global Tech", date: "Feb 2021", desc: "Joined Supply Chain Technology team at Walmart Labs, driving GCP Dataproc cost reduction." },
+        { title: "Promoted to Senior Technical Analyst @ Deutsche Bank", date: "July 2019", desc: "Led Volcker regulatory reporting batch pipelines handling terabyte-scale Spark jobs." },
+        { title: "Joined Deutsche Bank", date: "July 2018", desc: "Started full-time role as Technical Analyst at Deutsche Bank Pune." },
+        { title: "HackInTheNorth 2018", date: "March 2018", desc: "Placed in Top 20 out of 50+ teams in IIIT Allahabad's Ethereum blockchain hackathon with ReviewDeck." },
+        { title: "IEEE Research Paper Publication", date: "Feb 2018", desc: "Published co-written research paper on <i>Music Recommendation Systems</i> in IEEE." },
+        { title: "Deutsche Bank Offer & Appointy Hackathon", date: "July 2017", desc: "Secured placement at Deutsche Bank & 2nd Prize in Appointy Hackathon." },
+        { title: "CarWale Big Data Internship", date: "April 2017", desc: "Developed Spark SQL & Cassandra stream processing application <b>CWBigQuery</b> at CarWale Mumbai." },
+        { title: "Completed Higher Secondary (90.0%)", date: "April 2013", desc: "Graduated with 90% in Higher Secondary Education at Ideal Public School." },
+        { title: "Completed High School (81.3%)", date: "April 2011", desc: "Graduated High School with distinction." }
+      ]
+    };
+  }
+};
 </script>
+
+<style lang="scss" scoped>
+.timeline-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.page-header {
+  .page-title {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+  .page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin: 0;
+  }
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.timeline-spine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent-blue), var(--accent-purple), transparent);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timeline-row {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+  position: relative;
+  width: 50%;
+
+  &.right {
+    align-self: flex-end;
+    margin-left: 50%;
+    justify-content: flex-start;
+  }
+
+  &.left {
+    margin-right: 50%;
+
+    .timeline-content {
+      text-align: right;
+
+      .time-pill {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.timeline-node {
+  position: absolute;
+  top: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent-blue);
+  box-shadow: 0 0 12px var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-blue);
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+.timeline-row.left .timeline-node {
+  right: -16px;
+}
+
+.timeline-row.right .timeline-node {
+  left: -16px;
+}
+
+.timeline-content {
+  padding: 22px;
+  width: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.milestone-title {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.milestone-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .timeline-spine {
+    left: 20px;
+  }
+
+  .timeline-row {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 50px;
+
+    &.left .timeline-content {
+      text-align: left;
+      .time-pill {
+        margin-left: 0;
+      }
+    }
+
+    .timeline-node {
+      left: 4px !important;
+    }
+  }
+}
+</style>
+

@@ -1,92 +1,323 @@
 <template>
-  <!--<div id="app">-->
-  <!--<img src="./assets/logo.png">-->
-  <!--<router-view/>-->
-  <!--</div>-->
-  <!-- Latest compiled and minified JS -->
-  <div>
-    <header>
-      <div class="logo">
-        <h3><a href="/">AP</a></h3>
-      </div>
-      <ap-nav></ap-nav>
-      <div class="social-icons">
-        <a target='_blank' title='linkedin' href=https://linkedin.com/in/ashishpatel0720  style="color:#006699"><i
-                class="fa fa-linkedin-square fa-2x"></i></a>
-        <a target='_blank' title='github' href=https://github.com/pateash  style="color:#5d2973"><i
-                class="fa fa-github fa-2x"></i></a>
-        <a target='_blank' title='Facebook' href=https://facebook.com/ashishpatel0720  style="color:#3b5998"><i
-                class="fa fa-facebook-square fa-2x"></i></a>
-        <a target='_blank' title='Email' href="mailto:ashishpatel0720@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
-        <a target='_blank' title='stackoverflow' href=https://stackoverflow.com/users/6178783/ashish-patel
-           style="color:#f48024"><i class="fa fa-stack-overflow fa-2x"></i></a>
-        <a target='_blank' title='twitter' href=https://twitter.com/ashishpatel0720  style="color:#32cdfd"><i
-                class="fa fa-twitter fa-2x"></i></a>
-        <p><span class="icon"><i class="fa fa-code"></i></span> by <b>
-          <a target='_blank' href="//github.com/pateash" style="color:#ff7018">Ashish</a></b> in
-          <span class="icon"><i class="fa fa-heart" style="color:#ff4d44"></i></span> with <br>
-          <a target='_blank' href="//vuejs.org"><img src="/static/images/vue-icon.png"></a>.</p>
-        <p>Copyright &copy; {{ new Date().getFullYear() }}</p>
+  <div id="app" class="app-container">
+    <!-- Top Route Loading Progress Bar -->
+    <div class="top-progress-bar" :class="{ loading: isLoading }"></div>
+
+    <!-- Sticky Glassmorphic Header -->
+    <header class="header-glass">
+      <div class="header-container">
+        <router-link to="/" class="brand-logo" aria-label="Ashish Patel Home">
+          <div class="brand-badge">
+            <span aria-hidden="true">AP</span>
+          </div>
+          <span class="brand-copy">
+            <span class="logo-text">Ashish Patel</span>
+            <span class="brand-role">Principal Data &amp; Platform Engineer</span>
+          </span>
+        </router-link>
+
+        <div class="nav-wrapper" :class="{ 'mobile-open': mobileMenuOpen }" id="main-nav">
+          <ap-nav @nav-click="mobileMenuOpen = false"></ap-nav>
+        </div>
+
+        <div class="header-actions">
+          <button class="theme-toggle-btn" @click="toggleTheme" :title="theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'" :aria-label="theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'" :aria-pressed="theme === 'dark'">
+            <i :class="theme === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o'"></i>
+          </button>
+
+          <button class="mobile-toggle-btn" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle navigation menu" :aria-expanded="mobileMenuOpen" aria-controls="main-nav">
+            <i :class="mobileMenuOpen ? 'fa fa-times' : 'fa fa-bars'"></i>
+          </button>
+        </div>
       </div>
     </header>
-    <div class="wrapper">
-      <div class="about" style="margin:-1.7em;">
-        <router-view></router-view>
-        <vue-progress-bar></vue-progress-bar>
-      </div>
-    </div>
-  </div>
 
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <router-view v-slot="{ Component }">
+        <transition name="fade-slide" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-glass">
+      <div class="footer-container">
+        <div class="footer-socials">
+          <a target="_blank" title="LinkedIn" href="https://linkedin.com/in/ashishpatel0720" class="social-link linkedin"><i class="fa fa-linkedin"></i></a>
+          <a target="_blank" title="GitHub" href="https://github.com/pateash" class="social-link github"><i class="fa fa-github"></i></a>
+          <a target="_blank" title="Twitter" href="https://twitter.com/ashishpatel0720" class="social-link twitter"><i class="fa fa-twitter"></i></a>
+          <a target="_blank" title="StackOverflow" href="https://stackoverflow.com/users/6178783/ashish-patel" class="social-link stackoverflow"><i class="fa fa-stack-overflow"></i></a>
+          <a target="_blank" title="Email" href="mailto:ashishpatel0720@gmail.com" class="social-link email"><i class="fa fa-envelope-o"></i></a>
+        </div>
+        <p class="footer-text">
+          Crafted with <i class="fa fa-heart text-rose"></i> by <strong>Ashish Patel</strong> &bull; {{ new Date().getFullYear() }}
+        </p>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
-    import apNav from '@/components/apnav';
+import apNav from '@/components/apnav.vue';
 
-    export default {
-        name: 'app',
-        components:{apNav},
-
-        mounted() {
-            this.$Progress.finish()
-        },
-        created () {
-            //  [App.vue specific] When App.vue is first loaded start the progress bar
-            this.$Progress.start()
-
-            //  hook the progress bar to start before we move router-view
-            // each time route is changed
-            this.$router.beforeEach((to, from, next) => {
-                //  does the page we want to go to have a meta.progress object
-                if (to.meta.progress !== undefined) {
-                    let meta = to.meta.progress;
-                    // parse meta tags
-                    this.$Progress.parseMeta(meta)
-                }
-                //  start the progress bar
-                this.$Progress.start();
-                //  continue to next page
-                next()
-            });
-
-            //  hook the progress bar to finish after we've finished moving router-view
-            this.$router.afterEach((to, from) => {
-                window.scrollTo(0,0);
-                //  finish the progress bar
-                this.$Progress.finish()
-            })
-        },
+export default {
+  name: 'App',
+  components: { apNav },
+  data() {
+    return {
+      theme: 'dark',
+      mobileMenuOpen: false,
+      isLoading: false
+    };
+  },
+  methods: {
+    toggleTheme() {
+      this.theme = this.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', this.theme);
+      localStorage.setItem('portfolio-theme', this.theme);
     }
+  },
+  mounted() {
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    this.theme = savedTheme;
+    document.documentElement.setAttribute('data-theme', this.theme);
+
+    this.$router.beforeEach((to, from, next) => {
+      this.isLoading = true;
+      this.mobileMenuOpen = false;
+      next();
+    });
+
+    this.$router.afterEach(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 300);
+    });
+  }
+};
 </script>
 
-<style>
-  @import "./assets/styles/app.scss";
 
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+<style lang="scss">
+  @import "./assets/styles/design-system.scss";
+
+  .top-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--accent-gradient);
+    z-index: 9999;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+
+    &.loading {
+      width: 75%;
+      opacity: 1;
+    }
+  }
+
+  /* Header Glass Styles */
+
+  .header-glass {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 1000;
+    background: var(--bg-surface);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .header-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    .brand-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-emerald));
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      box-shadow: 0 6px 16px rgba(14, 165, 233, 0.25);
+      transition: var(--transition-smooth);
+    }
+
+    &:hover .brand-badge {
+      transform: scale(1.06);
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text {
+      font-family: 'Outfit', sans-serif;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+    }
+
+    .brand-role {
+      margin-top: 3px;
+      color: var(--text-muted);
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mobile-toggle-btn {
+    display: none;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  /* Transition Effects */
+  .fade-slide-enter-active, .fade-slide-leave-active {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .fade-slide-enter {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  .fade-slide-leave-to {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  /* Footer Glass */
+  .footer-glass {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    padding: 30px 24px;
+    margin-top: auto;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 16px;
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: var(--transition-smooth);
+
+      &:hover {
+        color: #ffffff;
+        background: var(--accent-blue);
+        border-color: var(--accent-blue);
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+
+    .text-rose {
+      color: var(--accent-rose);
+    }
+  }
+
+  @media (max-width: 880px) {
+    .brand-role {
+      display: none;
+    }
+    .mobile-toggle-btn {
+      display: flex;
+    }
+
+    .theme-label {
+      display: none;
+    }
+
+    .nav-wrapper {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      padding: 20px;
+      transform: translateY(-150%);
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition-smooth);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+      &.mobile-open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
   }
 </style>

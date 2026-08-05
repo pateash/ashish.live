@@ -1,74 +1,104 @@
 <template>
-    <!--<div class="columns">-->
-    <!--<div class="column">-->
-    <div class="inner-item">
-        <span style="font-size:2em">Captcha
-            <span class="tag is-primary" style="font-size:0.4em;"><a href="//github.com/pateash/mycaptcha" target="_blank" style="color:white;">Project at Github</a></span>
-        </span>
-        <br>
-        <p align="left" style="margin-top:1em"><img class="image"  width="40%" height="40%" src="/static/images/captcha.jpg"></p>
-        <br>
-        <h4 id="about-manitmoodle">About&nbsp;Captcha</h4>
-        <p>
-            this project provides a platform for captcha validation, How websites finds validate
-            whether a user is human or bot.
-            we have implimented three types of captcha validation such as
-            image,puzzle,identipic,
-            multimodel etc.
-        </p><br>
-        <ul style="list-style-type:disc;margin-left:2em;">
-            <li><a target="_blank" href="//captcha.tk/text.php">Text Image Captcha</a></li>
-            <li><a target="_blank" href="//captcha.tk/puzzle.php">Puzzle Captcha</a></li>
-            <li><a target="_blank" href="//captcha.tk/identipic.php">Identipic Captcha</a></li>
-        </ul><br>
-
-        <h4 id="technology-used">technology used</h4>
-        <p >
-            <a  target='_blank' href="//php.net" ><img class='image' width='250' height='200'
-                                                       src="/static/images/logo3.svg"></a>
-        </p>
-        <p>
-            <a  target='_blank' href="//mysql" ><img width='250' height='100' src="/static/images/logo5-min.png"></a>
-        </p>
-        <em><b>and Javascript, HTML, CSS.</b></em>
-        <br>
-        <br>
-
-        <h4 id="project">Project at Github  </h4>
-        <div class="card" style="margin-left:2em;margin-right:2em;margin:1em 1em;">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="https://maxcdn.icons8.com/Share/icon/Security//captcha1600.png">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/pateash/mycaptcha">MyCaptcha</a> </span>
-                    </div>
-                </div>
-                <div class="content">
-                    If you like this project, or want to use it for your work or want to contribute,
-                    <router-link to="/contact">contact</router-link>
-                </div>
-            </div>
-        </div>
-        <h4 >Say Something about Captcha  </h4>
-        <div id="disqus_thread"></div>
+  <div class="project-detail-page">
+    <div class="back-nav">
+      <router-link to="/projects" class="btn-secondary">
+        <i class="fa fa-arrow-left"></i> Back to Projects
+      </router-link>
     </div>
+
+    <div class="glass-card detail-card">
+      <div class="detail-header">
+        <div class="title-row">
+          <h1 class="project-title gradient-text">MyCaptcha</h1>
+          <a href="https://github.com/pateash/mycaptcha" target="_blank" class="btn-primary btn-sm">
+            <i class="fa fa-github"></i> View GitHub
+          </a>
+        </div>
+        <div class="tech-stack-row">
+          <span class="tech-badge">PHP</span>
+          <span class="tech-badge">GD Library</span>
+          <span class="tech-badge">JavaScript</span>
+        </div>
+      </div>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-shield"></i> About MyCaptcha</h2>
+        <p>
+          MyCaptcha is a custom PHP security verification platform implementing Text, Puzzle, and Identipic CAPTCHA challenges to prevent bot automation and spam form submissions.
+        </p>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-check-square-o"></i> Challenge types</h2>
+        <ul class="feature-list">
+          <li><a href="https://captcha.tk/text.php" target="_blank" rel="noreferrer">Text image CAPTCHA</a></li>
+          <li><a href="https://captcha.tk/puzzle.php" target="_blank" rel="noreferrer">Puzzle CAPTCHA</a></li>
+          <li><a href="https://captcha.tk/identipic.php" target="_blank" rel="noreferrer">Identipic CAPTCHA</a></li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-code"></i> Project source</h2>
+        <p>MyCaptcha uses PHP, the GD Library, JavaScript, HTML, and CSS. If you would like to use or contribute to the project, visit the <a href="https://github.com/pateash/mycaptcha" target="_blank" rel="noreferrer">GitHub repository</a> or <router-link to="/contact">contact Ashish</router-link>.</p>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-
-    };
+export default {
+  name: 'Captcha'
+};
 </script>
 
+<style lang="scss" scoped>
+.project-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-<style>
-    <!--adding top margin for all h4 elements in this page-->
+.detail-card {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-    h4{
-        margin-top:2em;
-    }
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.project-title {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.detail-section {
+  h2 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.feature-list { color: var(--text-secondary); margin: 0; padding-left: 20px; }
+.feature-list li { margin-bottom: 8px; }
 </style>

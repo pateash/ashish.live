@@ -1,46 +1,87 @@
 <template>
-    <div class="inner-item">
-        <span style="font-size:2em">Grabpustak
-            <!--<span class="tag is-primary" style="font-size:0.4em;"><a href="//grabpustak.in" target="_blank" style="color:white">Visit Website</a></span>-->
-        </span>
-        <p align="center"><img src="/static/images/grabpustak-big.jpg"></p>
-        <br>
-
-        <h4 id="about-kisanmitra">About Grabpustak</h4>
-        <br><blockquote>GrabPustak is a online Store for free e-notes</blockquote>
-        <p>
-            Students can share their notes with other students.
-            It also provides online assignment submission utility,
-            Teachers can also make their account using which they can
-            post class assignment.
-            Students could be able to see these assignment and submit them.
-        </p>
-        <br>
-
-        <h4 id="technology-used">technology used</h4>
-        <p >
-            <a  target='_blank' href="//codeigniter.com/" ><img class='image' width='250' height='120' src="/static/images/logo4-min.png"></a>
-        </p>
-        <p>
-            <a  target='_blank' href="//jquery.com" ><img width='180' height='100' src="/static/images/logo13-min.png"></a>
-        </p><br>
-        <em><b>and PHP, MySQL, Javascript, Ajax</b></em>. <br><br>
-        <h4 >Say Something about Grabpustak  </h4>
-        <div id="disqus_thread"></div>
+  <div class="project-detail-page">
+    <div class="back-nav">
+      <router-link to="/projects" class="btn-secondary">
+        <i class="fa fa-arrow-left"></i> Back to Projects
+      </router-link>
     </div>
 
+    <div class="glass-card detail-card">
+      <div class="detail-header">
+        <h1 class="project-title gradient-text">GrabPustak</h1>
+        <div class="tech-stack-row">
+          <span class="tech-badge">PHP</span>
+          <span class="tech-badge">CodeIgniter</span>
+          <span class="tech-badge">MySQL</span>
+          <span class="tech-badge">jQuery</span>
+        </div>
+      </div>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-book"></i> About GrabPustak</h2>
+        <p>
+          GrabPustak is an online educational repository and digital note-sharing platform for students and faculty. It includes assignment submission portals and teacher-student collaboration tools.
+        </p>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-users"></i> Collaboration workflow</h2>
+        <ul class="feature-list">
+          <li>Students can share notes with other students.</li>
+          <li>Teachers can publish class assignments through their own accounts.</li>
+          <li>Students can view and submit assignments online.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-wrench"></i> Technology used</h2>
+        <p>Built with <a href="https://codeigniter.com/" target="_blank" rel="noreferrer">CodeIgniter</a>, <a href="https://jquery.com/" target="_blank" rel="noreferrer">jQuery</a>, PHP, MySQL, JavaScript, and Ajax.</p>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-
-    }
+export default {
+  name: 'GrabPustak'
+};
 </script>
 
-<style>
-    <!--adding top margin for all h4 elements in this page-->
+<style lang="scss" scoped>
+.project-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-    h4{
-        margin-top:2em;
-    }
+.detail-card {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-title {
+  font-size: 2.2rem;
+  margin: 0 0 10px 0;
+}
+
+.detail-section {
+  h2 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.feature-list { color: var(--text-secondary); margin: 0; padding-left: 20px; }
+.feature-list li { margin-bottom: 8px; }
 </style>

@@ -1,0 +1,350 @@
+/* Modern Design System - Dark / Light Theme & Glassmorphism */
+
+:root {
+  /* Dark Theme Default */
+  --bg-primary: #070b14;
+  --bg-secondary: #0e1523;
+  --bg-surface: rgba(10, 16, 28, 0.88);
+  --bg-card: rgba(20, 29, 46, 0.78);
+  --bg-card-hover: rgba(27, 39, 60, 0.94);
+  --bg-input: rgba(15, 23, 42, 0.78);
+  --border-color: rgba(148, 163, 184, 0.16);
+  --border-glow: rgba(56, 189, 248, 0.4);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-link: #38bdf8;
+  
+  --accent-blue: #38bdf8;
+  --accent-indigo: #67e8f9;
+  --accent-purple: #2dd4bf;
+  --accent-amber: #fbbf24;
+  --accent-emerald: #34d399;
+  --accent-rose: #fb7185;
+  
+  --accent-gradient: linear-gradient(135deg, #0ea5e9 0%, #22d3ee 50%, #34d399 100%);
+  --accent-gradient-orange: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
+  --glass-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.37);
+  --glass-blur: blur(12px);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] {
+  --bg-primary: #f6f9fc;
+  --bg-secondary: #eef4f8;
+  --bg-surface: rgba(255, 255, 255, 0.88);
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: #ffffff;
+  --bg-input: rgba(241, 245, 249, 0.92);
+  --border-color: rgba(203, 213, 225, 0.6);
+  --border-glow: rgba(2, 132, 199, 0.25);
+  
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-link: #0284c7;
+  
+  --accent-blue: #0284c7;
+  --accent-indigo: #0891b2;
+  --accent-purple: #0f766e;
+  --accent-amber: #d97706;
+  --accent-emerald: #059669;
+  --accent-rose: #e11d48;
+  
+  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #0891b2 48%, #059669 100%);
+  --accent-gradient-orange: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
+  --glass-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.06);
+  --glass-blur: blur(12px);
+}
+
+/* Global Reset & Base Typography */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-image: radial-gradient(circle at 12% 8%, rgba(56, 189, 248, 0.08), transparent 32%), radial-gradient(circle at 88% 65%, rgba(52, 211, 153, 0.06), transparent 30%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  color: var(--text-primary);
+  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(56, 189, 248, 0.7);
+  outline-offset: 3px;
+}
+
+/* Utility Classes */
+.gradient-text {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-orange {
+  background: var(--accent-gradient-orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: var(--glass-shadow);
+  transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 38px -18px rgba(56, 189, 248, 0.35);
+}
+
+.glass-pill {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.glass-pill:hover {
+  border-color: var(--accent-blue);
+  color: var(--text-primary);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent-gradient);
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
+  transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+  opacity: 0.95;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--bg-card);
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+
+  i {
+    font-size: 0.85rem;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover i {
+    transform: translateX(-3px);
+  }
+}
+
+/* Tech Badges */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--accent-blue);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.tech-badge:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: var(--accent-blue);
+  transform: scale(1.04);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--accent-blue);
+  background: var(--bg-card-hover);
+}
+
+/* Layout Container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 110px 24px 60px 24px;
+}
+
+/* Shared page rhythm for the Vue route family. */
+.page-header {
+  max-width: 760px;
+}
+
+.page-header .page-title {
+  letter-spacing: -0.035em;
+}
+
+.page-header .page-subtitle {
+  line-height: 1.65;
+}
+
+.project-detail-page .detail-card {
+  border-top: 2px solid rgba(56, 189, 248, 0.32);
+}
+
+.project-detail-page .detail-section + .detail-section {
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.back-nav .btn-secondary,
+.project-detail-page .back-nav a {
+  padding: 8px 14px;
+  border-radius: 9px;
+  font-size: 0.88rem;
+  box-shadow: none;
+}
+
+.back-nav .btn-secondary i,
+.project-detail-page .back-nav a i {
+  transition: transform 0.2s ease;
+}
+
+.back-nav .btn-secondary:hover i,
+.project-detail-page .back-nav a:hover i {
+  transform: translateX(-3px);
+}
+
+/* Responsive Grid System */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .grid-3, .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .main-content {
+    padding: 95px 16px 40px 16px;
+  }
+}

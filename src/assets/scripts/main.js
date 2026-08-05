@@ -91,19 +91,6 @@ $(document).on('ready click',function(evt){
     console.clear();
     $("#menu").slicknav();
 
-    //TODO: why we need to add disqus script
-      var disqus_config = function () {
-//        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "ashishpatel.info"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://ashishpatel0720.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-
     // TODO: fix error -> nav do not automatically fixed
     // target=evt.target;
     // ts=$('a[role="menuitem"]');
