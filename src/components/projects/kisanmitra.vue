@@ -1,112 +1,153 @@
 <template>
-    <!--<div class="columns">-->
-    <!--<div class="column">-->
-    <div class="inner-item">
-        <span style="font-size:2em;">Kisanmitra <span class="tag is-primary" style="font-size:0.4em;"><a href="//kisanmitra.herokuapp.com" target="_blank" style="color:white">View Live</a></span></span>
-        <p align="center" style="margin-top:1em"><img src="../../assets/logo/kisanmitra.jpg"></p>
-        <br>
-        <p align="center">
-            <a  target='_blank' href="https://packagist.org/packages/ashishpatel0720/kisanmitra"><img src="https://poser.pugx.org/ashishpatel0720/kisanmitra/v/unstable.svg" alt="Latest UnStable Version"></a>
-            <a  target='_blank' href="https://packagist.org/packages/ashishpatel0720/kisanmitra"><img src="https://poser.pugx.org/ashishpatel0720/kisanmitra/v/stable.svg" alt="Latest Stable Version"></a>
-            <a  target='_blank' href="https://packagist.org/packages/ashishpatel0720/kisanmitra"><img src="https://poser.pugx.org/ashishpatel0720/kisanmitra/license.svg" alt="License"></a>
-        </p>
-        <br>
-        <!--//-->
-        <h4 id="project">Project at Github  </h4>
-        <div class="card" style="margin-left:2em;margin-right:2em;margin:1em 1em;">
-            <div class="card-content">
-
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="/static/images/laravel-icon.png">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/pateash/kisanmitra">Web Application Part</a> </span>
-                    </div>
-                </div>
-                <div class="content">
-                   Web Application Part of the project written in <a  target='_blank' href="//github.com/laravel/laravel">@laravel</a> and <a  target='_blank' href="//github.com/jquery/jquery">@jquery</a>   </div>
-            </div>
-        </div>
-
-        <div class="card" style="margin-left:2em;margin-right:2em;margin:1em 1em; padding:0em;">
-            <div class="card-content">
-
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="/static/images/scikit-logo.jpg">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <span style="font-size:1.3em" ><a  target='_blank' href="//github.com/pateash/kisanmitra-python">Machine learning Application Part</a> </span>
-                    </div>
-                </div>
-                <div class="content">
-                  Machine Learning Part of the project written in <a  target='_blank' href="//github.com/ipython/ipython">@ipython </a> and <a  target='_blank' href="//github.com/scikit-learn/scikit-learn">@scikit-learn</a></div>
-            </div>
-        </div>
-
-        <h4 id="about-kisanmitra">About Kisanmitra</h4>
-        <p>Kisan is a machine learning based web application with expressive, elegant visualization of yield predictions.<br />
-            We believe development of a country is possible only with the technical advancement of farmers,<br />
-            an educated farmer can do way better than a experienced uneducated one, because he can use modern technology<br />
-            to make proper planning about his/her future.<br />
-            using kisanmitra , one can predict the crop yield for next 5 year.</p><br>
-        <ul style="list-style-type:disc;margin-left:2em;">
-            <li><a  target='_blank' href="https://kisanmitra.ml/predict">Simple, fast Algorithm</a>.</li>
-            <li>Expressive, intuitive visualization Using<a  target='_blank' href="https://kisanmitra.ml/visualize" class="uri">Charts.</a></li>
-            <li><a  target='_blank' href="https://kisanmitra.ml/about">Robust background machine learning</a>.</li>
-            <li><a  target='_blank' href="https://kisanmitra.ml/team">Hardworking Team</a>.</li>
-        </ul><br>
-        <p>kisanmitra is accessible, yet powerful tools needed for crop yeild production.<br />
-            A superb combination of simplicity, elegance, and innovation give you tools you need to properly regulate your<br />
-            farming strategies according to environment and market.</p><br>
-        <h4 id="technology-used">technology used</h4>
-        <p >
-            <a  target='_blank' href="//laravel.com" ><img class='image' width='250' height='200' src="https://camo.githubusercontent.com/5ceadc94fd40688144b193fd8ece2b805d79ca9b/68747470733a2f2f6c61726176656c2e636f6d2f6173736574732f696d672f636f6d706f6e656e74732f6c6f676f2d6c61726176656c2e737667"></a>
-        </p>
-        <p>
-            <a  target='_blank' href="//scikit-learn.org" ><img width='250' height='100' src="http://www.scipy-lectures.org/_images/scikit-learn-logo.png"></a>
-        </p>
-        <em><b>and Python, PHP, JQuery, Ajax.</b></em> <br>
-        <br>
-        <h4 id="contributing">Contributing</h4>
-        <p>You are welcome to contribute to this project,<br />
-            Thank you for considering contributing for the greater good for farmers!</p>
-        <br>
-        <h2 style="font-size:1.5em">steps</h2>
-        <ul style="list-style-type:disc;margin-left:2em;">
-            <li>fork or clone project</li>
-            <li>run <code>composer install</code></li>
-            <li>edit <code>.env.example</code> and create <code>.env</code> file for your settings</li>
-            <li>that’s it happy coding..</li>
-        </ul><br>
-        <h4 id="vulnerabilities">Vulnerabilities</h4>
-        <p>If you discover a vulnerability within kisanmitra, please send an e-mail to Ashish Patel at <a  target='_blank' href="mailto:ashishpatel0720@gmail.com">ashishpatel0720@gmail.com</a>. All vulnerabilities will be promptly addressed.</p>
-        <br>
-        <h4 id="license">License</h4>
-        <p>kisanmitra is open-sourced software licensed under the <a  target='_blank' href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
- <br>
-      <h4 >Say Something about KisanMitra  </h4>
-        <div id="disqus_thread"></div>
+  <div class="project-detail-page">
+    <div class="back-nav">
+      <router-link to="/projects" class="btn-secondary">
+        <i class="fa fa-arrow-left"></i> Back to Projects
+      </router-link>
     </div>
 
+    <div class="glass-card detail-card">
+      <div class="detail-header">
+        <div class="title-row">
+          <h1 class="project-title gradient-text">Kisanmitra</h1>
+          <a href="https://github.com/pateash/kisanmitra" target="_blank" class="btn-primary btn-sm">
+            <i class="fa fa-github"></i> View GitHub
+          </a>
+        </div>
+        <div class="tech-stack-row">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Scikit-Learn</span>
+          <span class="tech-badge">PHP</span>
+          <span class="tech-badge">Laravel</span>
+        </div>
+      </div>
 
+      <section class="detail-section">
+        <h2><i class="fa fa-leaf"></i> About Kisanmitra</h2>
+        <p>
+          Kisanmitra is an intelligent machine learning web platform providing crop yield predictions and intuitive agricultural data visualization for farmers to make data-driven planting decisions.
+        </p>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-code"></i> Repository Links</h2>
+        <div class="repo-links">
+          <a href="https://github.com/pateash/kisanmitra" target="_blank" class="repo-card">
+            <i class="fa fa-globe"></i>
+            <div>
+              <strong>Web Application (Laravel)</strong>
+              <p>Web portal and interactive visualization engine</p>
+            </div>
+          </a>
+          <a href="https://github.com/pateash/kisanmitra-python" target="_blank" class="repo-card">
+            <i class="fa fa-line-chart"></i>
+            <div>
+              <strong>Machine Learning Backend (Python)</strong>
+              <p>Scikit-Learn ML models for yield forecasting</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-file-text-o"></i> Open Source License</h2>
+        <p>Kisanmitra is open-source software licensed under the MIT License.</p>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-
-    };
+export default {
+  name: 'Kisanmitra'
+};
 </script>
 
-<style>
-    <!--adding top margin for all h4 elements in this page-->
+<style lang="scss" scoped>
+.project-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-    h4{
-        margin-top:2em;
-    }
+.detail-card {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.project-title {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.detail-section {
+  h2 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.repo-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.repo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 16px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-primary);
+  transition: var(--transition-smooth);
+
+  i {
+    font-size: 1.8rem;
+    color: var(--accent-blue);
+  }
+
+  strong {
+    font-size: 1.05rem;
+    display: block;
+  }
+
+  p {
+    font-size: 0.85rem !important;
+    color: var(--text-muted) !important;
+  }
+
+  &:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+  }
+}
 </style>
+e>

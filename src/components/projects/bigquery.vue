@@ -1,8 +1,9 @@
 <template>
   <div class="project-detail-page">
     <div class="back-nav">
-      <router-link to="/projects" class="btn-secondary">
-        <i class="fa fa-arrow-left"></i> Back to Projects
+      <router-link to="/projects" class="btn-secondary back-btn" aria-label="Back to Projects">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        <span>Back to Projects</span>
       </router-link>
     </div>
 
@@ -10,12 +11,12 @@
       <!-- Vue 3 Glassmorphic Lightbox Modal -->
       <teleport to="body">
         <div v-if="activeImageIndex !== null" class="lightbox-modal" @click.self="activeImageIndex = null">
-          <button class="lightbox-close" @click="activeImageIndex = null">&times;</button>
+          <button class="lightbox-close" @click="activeImageIndex = null" aria-label="Close lightbox">&times;</button>
           <img :src="images[activeImageIndex]" class="lightbox-img" alt="Gallery Preview">
           <div class="lightbox-nav">
-            <button @click.stop="prevImage" class="lightbox-btn"><i class="fa fa-chevron-left"></i></button>
+            <button @click.stop="prevImage" class="lightbox-btn" aria-label="Previous image"><i class="fa fa-chevron-left"></i></button>
             <span>{{ activeImageIndex + 1 }} / {{ images.length }}</span>
-            <button @click.stop="nextImage" class="lightbox-btn"><i class="fa fa-chevron-right"></i></button>
+            <button @click.stop="nextImage" class="lightbox-btn" aria-label="Next image"><i class="fa fa-chevron-right"></i></button>
           </div>
         </div>
       </teleport>
@@ -32,7 +33,7 @@
       </div>
 
       <div class="image-gallery-preview" v-if="images.length">
-        <img :src="images[0]" @click="activeImageIndex = 0" alt="CarWale BigQuery Architecture" class="gallery-thumb">
+        <img :src="images[0]" @click="activeImageIndex = 0" @keydown.enter="activeImageIndex = 0" @keydown.space.prevent="activeImageIndex = 0" alt="CarWale BigQuery Architecture" class="gallery-thumb" role="button" tabindex="0">
       </div>
 
       <section class="detail-section">

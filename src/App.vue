@@ -6,22 +6,24 @@
     <!-- Sticky Glassmorphic Header -->
     <header class="header-glass">
       <div class="header-container">
-        <router-link to="/" class="brand-logo">
+        <router-link to="/" class="brand-logo" aria-label="Ashish Patel Home">
+          <div class="brand-badge">
+            <i class="fa fa-code"></i>
+          </div>
           <span class="logo-text gradient-text">Ashish Patel</span>
-          <span class="status-dot" title="Available for technical discussions"></span>
         </router-link>
 
-        <div class="nav-wrapper" :class="{ 'mobile-open': mobileMenuOpen }">
+        <div class="nav-wrapper" :class="{ 'mobile-open': mobileMenuOpen }" id="main-nav">
           <ap-nav @nav-click="mobileMenuOpen = false"></ap-nav>
         </div>
 
         <div class="header-actions">
-          <button class="theme-toggle-btn" @click="toggleTheme" :title="theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+          <button class="theme-toggle-btn" @click="toggleTheme" :title="theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'" :aria-label="theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'" :aria-pressed="theme === 'dark'">
             <i :class="theme === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o'"></i>
             <span class="theme-label">{{ theme === 'dark' ? 'Light' : 'Dark' }}</span>
           </button>
 
-          <button class="mobile-toggle-btn" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle navigation menu">
+          <button class="mobile-toggle-btn" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle navigation menu" :aria-expanded="mobileMenuOpen" aria-controls="main-nav">
             <i :class="mobileMenuOpen ? 'fa fa-times' : 'fa fa-bars'"></i>
           </button>
         </div>
@@ -146,20 +148,31 @@ export default {
   .brand-logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     font-size: 1.3rem;
     font-weight: 800;
+    text-decoration: none;
+
+    .brand-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--accent-gradient);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+      transition: var(--transition-smooth);
+    }
+
+    &:hover .brand-badge {
+      transform: scale(1.06);
+    }
 
     .logo-text {
       font-family: 'Outfit', sans-serif;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent-emerald);
-      box-shadow: 0 0 10px var(--accent-emerald);
     }
   }
 

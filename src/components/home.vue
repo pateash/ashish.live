@@ -133,12 +133,13 @@ export default {
   padding: 48px;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-surface) 100%);
 }
 
 .hero-content {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 44px;
 }
 
 .profile-avatar-wrapper {
@@ -151,7 +152,7 @@ export default {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--border-glow);
-    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
     position: relative;
     z-index: 2;
   }
@@ -253,16 +254,18 @@ export default {
   gap: 18px;
 
   .tech-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 12px;
     border-radius: 12px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.18);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 54px;
-    height: 54px;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   }
 
   .tech-info {

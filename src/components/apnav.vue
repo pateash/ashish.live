@@ -2,42 +2,42 @@
   <nav class="nav-menu">
     <ul class="nav-list">
       <li class="nav-item">
-        <router-link to="/" exact @click.native="$emit('nav-click')">
+        <router-link to="/" exact @click="$emit('nav-click')">
           <i class="fa fa-home"></i> <span>Home</span>
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/experience" @click.native="$emit('nav-click')">
+        <router-link to="/experience" @click="$emit('nav-click')">
           <i class="fa fa-briefcase"></i> <span>Experience</span>
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/projects" @click.native="$emit('nav-click')">
+        <router-link to="/projects" @click="$emit('nav-click')">
           <i class="fa fa-code-fork"></i> <span>Projects</span>
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/opensource" @click.native="$emit('nav-click')">
+        <router-link to="/opensource" @click="$emit('nav-click')">
           <i class="fa fa-github-alt"></i> <span>Open Source</span>
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/research" @click.native="$emit('nav-click')">
+        <router-link to="/research" @click="$emit('nav-click')">
           <i class="fa fa-flask"></i> <span>Research</span>
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/education" @click.native="$emit('nav-click')">
+        <router-link to="/education" @click="$emit('nav-click')">
           <i class="fa fa-graduation-cap"></i> <span>Education</span>
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/timeline" @click.native="$emit('nav-click')">
+        <router-link to="/timeline" @click="$emit('nav-click')">
           <i class="fa fa-clock-o"></i> <span>Timeline</span>
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/contact" @click.native="$emit('nav-click')">
+        <router-link to="/contact" @click="$emit('nav-click')">
           <i class="fa fa-envelope"></i> <span>Contact</span>
         </router-link>
       </li>

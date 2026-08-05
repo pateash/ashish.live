@@ -1,42 +1,102 @@
 <template>
-    <div class="inner-item">
-        <span style="font-size:2em">RegExplore
-            <span class="tag is-primary" style="font-size:0.4em;"><a href="//regexplore.github.io" target="_blank" style="color:white">Visit Website</a></span>
-        </span>
-      <br><br>
-
-        <p align="center"><img src="/static/images/regexplore-big.png"></p>
-        <br>
-
-        <h4 id="about-kisanmitra">About RegExplore</h4>
-        <br><blockquote> RegeExplore is a simple and intuitive regex tester for dummies. </blockquote>
-        <p>
-          It is designed from Angular and Angular Material and can be easily used for creating and testing regular expression without other lot of complexities,
-          by default It is case sensitive and cases insensitive flags can be used.
-        </p>
-        <br>
-        <h4 id="technology-used">technology used</h4>
-        <p >
-            <a  target='_blank' href="//angular.io/" ><img class='image' width='250' height='120' src="/static/images/logo17-min.png"></a>
-        </p>
-        <br>
-        <em><b>and Angular Material</b></em>. <br><br>
-        <h4 >Say Something about RegExplore  </h4>
-        <div id="disqus_thread"></div>
+  <div class="project-detail-page">
+    <div class="back-nav">
+      <router-link to="/projects" class="btn-secondary">
+        <i class="fa fa-arrow-left"></i> Back to Projects
+      </router-link>
     </div>
 
+    <div class="glass-card detail-card">
+      <div class="detail-header">
+        <div class="title-row">
+          <h1 class="project-title gradient-text">RegExplore</h1>
+          <a href="https://regexplore.github.io" target="_blank" class="btn-primary btn-sm">
+            <i class="fa fa-external-link"></i> Launch Web App
+          </a>
+        </div>
+        <div class="tech-stack-row">
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">Angular</span>
+          <span class="tech-badge">Angular Material</span>
+        </div>
+      </div>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-search"></i> About RegExplore</h2>
+        <p>
+          RegExplore is a lightweight, interactive Regular Expression tester built with Angular and Angular Material. It allows developers to test regex patterns in real time with visual highlight match results.
+        </p>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-desktop"></i> Screenshot Preview</h2>
+        <img src="/static/images/regexplore-big.png" class="preview-img" alt="RegExplore Preview">
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-
-    }
+export default {
+  name: 'RegExplore'
+};
 </script>
 
-<style>
-    <!--adding top margin for all h4 elements in this page-->
+<style lang="scss" scoped>
+.project-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-    h4{
-        margin-top:2em;
-    }
+.detail-card {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.project-title {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.preview-img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+}
+
+.detail-section {
+  h2 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
 </style>
+

@@ -189,6 +189,26 @@ a:hover {
   transform: translateY(-2px);
 }
 
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+
+  i {
+    font-size: 0.85rem;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover i {
+    transform: translateX(-3px);
+  }
+}
+
 /* Tech Badges */
 .tech-badge {
   display: inline-flex;

@@ -47,6 +47,14 @@
 </template>
 
 <script>
+import oracleLogo from '../assets/logo/oracle.png';
+import prophecyLogo from '../assets/logo/prophecy.png';
+import skyscannerLogo from '../assets/logo/skyscanner.png';
+import walmartLogo from '../assets/logo/walmart.jpg';
+import dbLogo from '../assets/logo/db.png';
+import ieeeLogo from '../assets/logo/ieee.png';
+import carwaleLogo from '../assets/logo/carwale.png';
+
 export default {
   name: 'Experience',
   data() {
@@ -57,7 +65,7 @@ export default {
           role: 'Principal Software Engineer (PMTS)',
           period: 'Jan 2025 - Present',
           location: 'Bengaluru, India',
-          logo: require('../assets/logo/oracle.png'),
+          logo: oracleLogo,
           quote: 'Oracle enables secure cloud, data, and AI for mission-critical enterprises.',
           bullets: [
             'Building <strong>Oracle Datashare</strong>, a Spark-based data publishing service to move datasets from Oracle Cloud (OCI) to different sinks (Delta/Iceberg/Azure etc.) including schema evolution, compaction, partitioning, and job observability via Oracle’s Job Management Console (JMC).',
@@ -70,7 +78,7 @@ export default {
           role: 'Senior Software Engineer (Data)',
           period: 'Jan 2023 - Dec 2024',
           location: 'London, UK',
-          logo: require('../assets/logo/prophecy.png'),
+          logo: prophecyLogo,
           quote: 'Prophecy makes all your teams successful & productive on Apache Spark & Apache Airflow with Low-Code Development, Scheduling & Metadata.',
           bullets: [
             'Part of the core engineering team building and deploying high-performance Big Data pipelines and low-code data copilots.',
@@ -83,7 +91,7 @@ export default {
           role: 'Senior Software Engineer',
           period: 'Dec 2021 - Jan 2023',
           location: 'London, UK',
-          logo: require('../assets/logo/skyscanner.png'),
+          logo: skyscannerLogo,
           quote: 'Skyscanner brings over 100 million users all the options they need to plan and book their perfect trip.',
           bullets: [
             'Part of the Data Platform team, working on revenue aggregation solutions allowing analysts to manage and forecast revenue.',
@@ -96,7 +104,7 @@ export default {
           role: 'Software Engineer III (Big Data)',
           period: 'Feb 2021 - Nov 2021',
           location: 'Bangalore, India',
-          logo: require('../assets/logo/walmart.jpg'),
+          logo: walmartLogo,
           quote: 'Walmart Global Tech is the technology arm of Walmart reimagining retail for over 260 million daily shoppers.',
           bullets: [
             'Part of the supply chain technology team, building forecasting solutions to enable Walmart’s Everyday Low-Cost philosophy.',
@@ -110,7 +118,7 @@ export default {
           role: 'Senior Technical Analyst',
           period: 'July 2018 - Jan 2021',
           location: 'Pune, India',
-          logo: require('../assets/logo/db.png'),
+          logo: dbLogo,
           quote: 'Deutsche Bank is a global universal bank with a strong presence in Europe, the Americas, and Asia.',
           bullets: [
             'Developed terabyte-scale reporting batch pipelines across hundreds of Spark and Hadoop ETL jobs in CIB division for Volcker Project.',
@@ -125,7 +133,7 @@ export default {
           role: 'Research Assistant',
           period: 'Oct 2017 - Feb 2018',
           location: 'Bhopal, India',
-          logo: require('../assets/logo/ieee.png'),
+          logo: ieeeLogo,
           bullets: [
             'Co-written research paper: <em>"A Comparative Study of Music Recommendation Systems"</em> with Prof. Rajesh Wadhvani.',
             'Evaluated recommendation strategies and trained machine learning models for mobile efficiency.'
@@ -137,7 +145,7 @@ export default {
           role: 'Software Engineering Intern (Big Data)',
           period: 'April 2017 - June 2017',
           location: 'Mumbai, India',
-          logo: require('../assets/logo/carwale.png'),
+          logo: carwaleLogo,
           quote: 'CarWale has grown to become the largest automotive portal in India.',
           bullets: [
             'Created <strong>CWBigQuery</strong>, an interactive big data querying web engine allowing SQL-like Spark queries over Cassandra storage.'
