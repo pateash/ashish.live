@@ -12,7 +12,7 @@
         </div>
         <div class="paper-meta">
           <span class="pub-tag">IEEE Xplore Published</span>
-          <span class="pub-date"><i class="fa fa-calendar"></i> 24-25 Feb 2018</span>
+          <span class="pub-date"><i class="fa fa-calendar"></i> 24–25 February 2018</span>
         </div>
       </div>
 

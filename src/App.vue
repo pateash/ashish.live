@@ -12,7 +12,7 @@
           </div>
           <span class="brand-copy">
             <span class="logo-text">Ashish Patel</span>
-            <span class="brand-role">Principal Data &amp; Platform engineer</span>
+            <span class="brand-role">Principal Data &amp; Platform Engineer</span>
           </span>
         </router-link>
 

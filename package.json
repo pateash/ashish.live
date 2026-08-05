@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "node scripts/prepare-deploy.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -23,4 +24,3 @@
     "node": ">= 18.0.0"
   }
 }
-

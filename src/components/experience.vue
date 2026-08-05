@@ -71,7 +71,7 @@ export default {
           logo: oracleLogo,
           quote: 'Oracle enables secure cloud, data, and AI for mission-critical enterprises.',
           bullets: [
-            'Building <strong>Oracle Datashare</strong>, a Spark-based data publishing service to move datasets from Oracle Cloud (OCI) to different sinks (Delta/Iceberg/Azure etc.) including schema evolution, compaction, partitioning, and job observability via Oracle’s Job Management Console (JMC).',
+            'Building <strong>Oracle Datashare</strong>, a Spark-based data publishing service that moves datasets from Oracle Cloud (OCI) to multiple destinations, including Delta Lake, Iceberg, and Azure, with schema evolution, compaction, partitioning, and job observability through Oracle’s Job Management Console (JMC).',
             'Enabling massive petabyte-scale data movement across Oracle Cloud and external cloud systems including AWS, Azure, Snowflake, and GCP.'
           ],
           techStack: ['Apache Spark', 'Scala', 'Java', 'Delta Lake', 'Iceberg', 'Parquet', 'OCI']

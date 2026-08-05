@@ -74,7 +74,7 @@
           </div>
           <h3>Industry Experience</h3>
           <p>
-            Over <strong>5+ years</strong> of software engineering experience handling terabyte-scale distributed ETL pipelines, batch computing, and cloud migrations.
+            Over <strong>8 years</strong> of software engineering experience delivering terabyte-scale distributed ETL pipelines, batch computing, and cloud migrations.
           </p>
           <ul class="company-list">
             <li><strong class="text-gradient">Oracle:</strong> Principal Software Engineer building cross-cloud data publishing and observability services.</li>
