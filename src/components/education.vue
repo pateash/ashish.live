@@ -1,80 +1,136 @@
 <template>
-   <div class="inner-item">
-       <div class="columns">
-           <div class="column">
-               <div class="inner-item">
-                   <h4 style="margin-bottom: 0.5em;">Education</h4>
+  <div class="education-page">
+    <div class="page-header">
+      <h1 class="page-title"><i class="fa fa-graduation-cap gradient-text"></i> Academic Background</h1>
+      <p class="page-subtitle">Degrees, certifications, and educational milestones in Computer Science & Engineering.</p>
+    </div>
 
-                   <!--one element representing one education qualification-->
-                   <!--b.tech-->
-                   <div class="box">
-                       <article class="media">
-                           <div class="media-left">
-                               <figure class="image is-64x64">
-                                   <img src="../assets/logo/manit_logo.png" alt="Image">
-                               </figure>
-                           </div>
-                           <div class="media-content">
-                               <div class="content">
-                                   <p><!--title-->
-                                       <span style="font-size:1.4em">Bachelor of Technology <span style="font-size:0.6em"> , Computer Science & Engineering (2014 - 2018)</span></span>
-                                       <br>
-                                       MANIT Bhopal<br>
-                                       <b>GGPA : 8.4/10</b>
-                                   </p>
-                               </div><!--font-awesome icons-->
-                           </div>
-                       </article>
-                   </div>
+    <div class="grid-2">
+      <div class="glass-card edu-card" v-for="(edu, idx) in degrees" :key="idx">
+        <div class="edu-card-header">
+          <div class="edu-icon-box">
+            <i class="fa fa-university"></i>
+          </div>
+          <span class="score-badge">{{ edu.score }}</span>
+        </div>
 
-                   <!--higher secondary-->
-                   <div class="box">
-                       <article class="media">
-                           <div class="media-left">
-                               <figure class="image is-64x64">
-                                   <img src="../assets/logo/mp_board.jpg" alt="Image">
-                               </figure>
-                           </div>
-                           <div class="media-content">
-                               <div class="content">
-                                   <p><!--title-->
-                                       <span style="font-size:1.4em">XII (Higher Secondary)<span style="font-size:0.6em"> , Science (2012 - 2013)</span></span>
-                                       <br>
-                                       I.P.S. Academy, Bhind Madhya Pradesh , India<br>
-                                       <b>Percentage : 90.20%</b>
-                                   </p>
-                               </div><!--font-awesome icons-->
-                           </div>
-                       </article>
-                   </div>
-
-                   <!--high school-->
-                   <div class="box">
-                       <article class="media">
-                           <div class="media-left">
-                               <figure class="image is-64x64">
-                                   <img src="../assets/logo/mp_board.jpg" alt="Image">
-                               </figure>
-                           </div>
-                           <div class="media-content">
-                               <div class="content">
-                                   <p><!--title-->
-                                       <span style="font-size:1.4em">X ( High School )<span style="font-size:0.6em"> (2010 - 2011)</span></span>
-                                       <br>
-                                       I.P.S. Academy, Bhind Madhya Pradesh , India<br>
-                                       <b>Percentage : 81.30%</b>
-                                   </p>
-                               </div><!--font-awesome icons-->
-                           </div>
-                       </article>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
+        <h2 class="edu-degree">{{ edu.degree }}</h2>
+        <div class="edu-field">{{ edu.field }}</div>
+        <p class="edu-institution"><i class="fa fa-building-o"></i> {{ edu.institution }}</p>
+        <p class="edu-period"><i class="fa fa-calendar"></i> {{ edu.period }}</p>
+      </div>
+    </div>
+  </div>
 </template>
-<script>
-    export default {
 
-    }
+<script>
+export default {
+  name: 'Education',
+  data() {
+    return {
+      degrees: [
+        {
+          degree: 'Bachelor of Technology (B.Tech)',
+          field: 'Computer Science & Engineering',
+          institution: 'Maulana Azad National Institute of Technology (MANIT), Bhopal',
+          period: '2014 - 2018',
+          score: 'CGPA: 8.4 / 10'
+        },
+        {
+          degree: 'Higher Secondary (XII)',
+          field: 'Science & Mathematics',
+          institution: 'I.P.S. Academy, Bhind, M.P., India',
+          period: '2012 - 2013',
+          score: '90.20%'
+        },
+        {
+          degree: 'High School (X)',
+          field: 'General Science & Mathematics',
+          institution: 'I.P.S. Academy, Bhind, M.P., India',
+          period: '2010 - 2011',
+          score: '81.30%'
+        }
+      ]
+    };
+  }
+};
 </script>
+
+<style lang="scss" scoped>
+.education-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.page-header {
+  .page-title {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+  .page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin: 0;
+  }
+}
+
+.edu-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .edu-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .edu-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+  }
+
+  .score-badge {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-amber);
+    background: rgba(251, 191, 36, 0.1);
+    padding: 4px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(251, 191, 36, 0.25);
+  }
+
+  .edu-degree {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .edu-field {
+    font-size: 0.95rem;
+    color: var(--accent-blue);
+    font-weight: 600;
+  }
+
+  .edu-institution {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  .edu-period {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+}
+</style>
+

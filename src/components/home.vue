@@ -1,141 +1,392 @@
 <template>
-	<div class="inner-item">
-		<div class="text">
-			<h4>Hello , I'm Ashish Patel</h4>
-			<div>
-				<div class="columns" style="font-family: Quicksand;">
-					<div class="column is-4" style="margin-top:1em;">
-						<div class="card">
-							<div class="card-image">
-								<figure class="image">
-                  <img
-                    src="/static/images/ashish_2.jpg"
-                    alt="Image">
-								</figure>
-							</div>
-							<div class="card-content">
-								<div class="media">
-									<div class="media-content">
-										<p style="font-family: Quicksand;" class="title is-4">Ashish Patel
-										<span class="subtitle is-6"><a href="//twitter.com/ashishpatel0720" target="_blank">@ashishpatel0720</a></span>
-									</p>
-									</div>
-								</div>
-								<div class="content">
-                  Senior Software Engineer<span class="subtitle is-6">
-                  <a href="https://www.linkedin.com/company/prophecy-io/mycompany/" target="_blank">  @Prophecy</a>
-                </span></div>
-							</div>
-						</div>
-					</div>
-					<div class="column is-8">
-						<p style="font-family: Quicksand;margin: 1em 3em 1em 1em;">
-							Hi, I am <b>Ashish,</b><br>
-              I am a Senior Software Engineer with around <b>5 years</b> of total experience in <b>BigData, Java, Scala and Python</b><br>
-                I have expertise in
-              <b>Apache Spark</b>,
-              <b>Hadoop MapReduce</b>,
-              <b>Databricks</b>,
-              <b>Airflow</b>,
-              <b>Cloudera</b>,
-              <b>Google Cloud Platform</b>,
-              <b>Hive</b>,
-              <b>Impala</b>,
-              <b>Docker</b>
-              and <b>Spring</b>.
-              <br><br>
-							I am currently working as <b>Senior Software Engineer</b> at <a target='_blank' href="https://www.linkedin.com/company/prophecy-io">Prophecy,</a><br>
-              Previously I had worked as <b>Senior Software engineer</b> at Skyscanner and as <b>Software Engineer III</b> at
-              <a target='_blank' href="https://www.linkedin.com/company/walmartglobaltech">Walmart Global Tech,</a>as <b>Senior Technical Analyst</b>
-              at <a target='_blank' href="//db.com"> Deutsche Bank.</a>
-<!--               I am currently working as <b>Apache Spark/Hadoop + Java Spring developer</b> in Investment Banking division.-->
-<!--              <br><br>-->
-<!--              We created and maintaining Data pipelines for our Reporting Batch jobs handling Terabytes of data-->
-<!--              every day across hundreds of <b>Spark and Hadoop ETL</b> jobs.-->
-<!--              <br> I am also working on <B>Google Cloud Platform</B> to plan and migrate our On-Premise Cluster and Jobs-->
-<!--              to GCP as per strategic partnership between <b>Deutsche Bank</b> and <b>Google.</b>-->
-<!--              <br><br>-->
-<!--              We also Developed Platform simplification for Informatica jobs using <b>Java8 and Spring +-->
-<!--              Reactor Framework with Oracle Database</b>.-->
-<!--              <br>-->
-						</p>
+  <div class="home-page">
+    <!-- Hero Section -->
+    <section class="hero-section glass-card">
+      <div class="hero-content">
+        <div class="profile-avatar-wrapper">
+          <img src="/static/images/ashish_2.jpg" alt="Ashish Patel" class="profile-avatar">
+          <div class="avatar-backdrop"></div>
+        </div>
 
-            <p style="font-family: Quicksand;margin: 1em 3em 1em 1em;">
-              On the Research Front, I worked as <b>Research Assistant</b> and
-              Co-written <b>A Comparative Study of Music Recommendation Systems</b> with <b>Prof. Rajesh
-              Wadhvani</b>. read more <router-link to="/research">here</router-link>.
-            </p>
+        <div class="hero-text">
+          <div class="role-pill glass-pill">
+            <span class="pulse-dot"></span>
+            Senior Software Engineer @ <a href="https://www.linkedin.com/company/prophecy-io/" target="_blank" class="company-link">Prophecy</a>
+          </div>
 
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Ashish Patel</span>
+          </h1>
 
-            <p style="font-family: Quicksand;margin: 1em 3em 1em 1em;">
-              I did my internship in <a target='_blank' href="//carwale.com">CarWale</a>
-              and I have worked on BigData with Scala and Spark Stream Processing, We created
-              <router-link to="/projects/bigquery">CWBigQuery</router-link> Application.
-              read more about this project   <router-link to="/projects/bigquery">here</router-link>.
+          <p class="hero-subtitle">
+            Big Data & Distributed Systems Engineer specializing in <strong>Apache Spark, Databricks, GCP, Java, Scala</strong>, and <strong>Python</strong> data infrastructure.
+          </p>
 
-              <br><br>
+          <div class="hero-cta">
+            <router-link to="/experience" class="btn-primary">
+              <i class="fa fa-briefcase"></i> View Experience
+            </router-link>
+            <router-link to="/projects" class="btn-secondary">
+              <i class="fa fa-code"></i> Explore Projects
+            </router-link>
+            <a href="mailto:ashishpatel0720@gmail.com" class="btn-secondary">
+              <i class="fa fa-envelope-o"></i> Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-              You can always find all projects mentioned above in my <a href="//github.com/pateash">Github Account</a>
-              and detailed information for all my projects
-              is also  <router-link to="/projects/">here</router-link>. <br> <br>
-              Please feel free to leave comment and your opinions on any project using <b>Disqus</b>
-              please contact me for any help  <router-link to="/contact">here</router-link>.
-            </p>
+    <!-- Tech Stack Grid Section -->
+    <section class="section-container">
+      <h2 class="section-title"><i class="fa fa-cubes gradient-text"></i> Core Expertise & Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-card glass-card" v-for="skill in skills" :key="skill.name">
+          <div class="tech-icon" :style="{ color: skill.color }">
+            <i :class="skill.icon"></i>
+          </div>
+          <div class="tech-info">
+            <h3>{{ skill.name }}</h3>
+            <p>{{ skill.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <!--						<p style="font-family: Quicksand;">-->
-<!--							I have worked on a few Projects on Web Developnment with Backend as PHP, Python; most of them have been develped using some web framework like,-->
-<!--                            <a target='_blank' href="//laravel.com">Laravel</a> or-->
-<!--                            <a target='_blank' href="//codeigniter.com">Codeignitor</a> for PHP and-->
-<!--                            <a target='_blank' href="//flask.pocoo.org">Flask.</a> for Python.<br><br>-->
+    <!-- Career Snapshot & Highlights -->
+    <section class="section-container">
+      <h2 class="section-title"><i class="fa fa-bolt gradient-text"></i> Career Highlights & Achievements</h2>
+      
+      <div class="grid-2">
+        <!-- Experience Snapshot -->
+        <div class="glass-card highlight-card">
+          <div class="card-header-icon">
+            <i class="fa fa-building-o"></i>
+          </div>
+          <h3>Industry Experience</h3>
+          <p>
+            Over <strong>5+ years</strong> of software engineering experience handling terabyte-scale distributed ETL pipelines, batch computing, and cloud migrations.
+          </p>
+          <ul class="company-list">
+            <li><strong class="text-gradient">Prophecy:</strong> Senior Software Engineer building data copilot & pipeline builder tooling.</li>
+            <li><strong>Skyscanner:</strong> Senior Software Engineer scaling search & analytics data systems.</li>
+            <li><strong>Walmart Global Tech:</strong> Software Engineer III building resilient retail data infrastructure.</li>
+            <li><strong>Deutsche Bank:</strong> Senior Technical Analyst driving DB-to-GCP cloud migration & Spark batch ETLs.</li>
+          </ul>
+          <router-link to="/experience" class="card-link">
+            Detailed Work History <i class="fa fa-arrow-right"></i>
+          </router-link>
+        </div>
 
-<!--                            I came to know that Frameworks forces us to write better and secure code and prevents us from any chaos in future.<br>-->
-<!--                            <br>-->
-
-<!--                            On frontend side, I have worked with <a target='_blank' href="//vuejs.org">JQuery</a> with some of my Projects and this website is itself made with <a target='_blank' href="//vuejs.org">Vue Javascript Framework</a> and-->
-<!--                            I am also a beginner in <a href="//angular.io" target="_blank">Angular2</a> and <a href="//reactjs.org" target="_blank">React</a>-->
-
-<!--						</p>-->
-<!--						<p style="font-family: Quicksand;">-->
-<!--							In Desktop App Developnment, I know Java and  I have created Simple Apps like Calculators etc. with <a target='_blank' href="https://en.wikipedia.org/wiki/Swing_(Java)">Java Swing API.</a> and <a target='_blank' href="//docs.oracle.com/javafx">JavaFX API.</a>.-->
-<!--							<br>-->
-<!--							</p>-->
-					</div>
-				</div>
-
-				<div class="social-icons">
-					<div class="wrapper">
-						<div class="about">
-							<h4 style="margin-bottom:-2em">Find Me</h4>
-							<div class="inner-item">
-								<div class="our-clients" style="margin:0em;margin:-2em -2em;"> <!--here represent toolbox-->
-									<div class="row items owl-carousel" id="owl-social-icons">
-										<a target='_blank' href=https://linkedin.com/in/ashishpatel0720><i class="fa fa-linkedin-square fa-3x"></i></a>
-										<a target='_blank' href=https://facebook.com/ashishpatel0720 style="color:#3b5998"><i class="fa fa-facebook-square fa-3x"></i></a>
-										<a target='_blank' href="mailto:ashishpatel0720@gmail.com" ><i class="fa fa-envelope-o fa-3x"></i></a>
-										<a target='_blank' href=https://instagram.com/ashishpatel0720 style="color: #cd486b"><i class="fa fa-instagram fa-3x"></i></a>
-										<a target='_blank' href=https://stackoverflow.com/users/6178783/ashish-patel style="color:#f48024"><i class="fa fa-stack-overflow fa-3x"></i></a>
-										<a target='_blank' href=https://github.com/pateash style="color:#5d2973"><i class="fa fa-github fa-3x"></i></a>
-										<a target='_blank' href=https://twitter.com/ashishpatel0720 style="color:#32cdfd"><i class="fa fa-twitter fa-3x"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <!-- Research & Projects Snapshot -->
+        <div class="glass-card highlight-card">
+          <div class="card-header-icon orange">
+            <i class="fa fa-flask"></i>
+          </div>
+          <h3>Research & Open Source</h3>
+          <p>
+            Passionate about recommendation algorithms and stream processing applications.
+          </p>
+          <div class="mini-highlight">
+            <h4><i class="fa fa-book"></i> Academic Research Paper</h4>
+            <p>Co-authored <em>"A Comparative Study of Music Recommendation Systems"</em> with Prof. Rajesh Wadhvani.</p>
+            <router-link to="/research" class="card-link">Read Research Paper <i class="fa fa-arrow-right"></i></router-link>
+          </div>
+          <div class="mini-highlight" style="margin-top: 16px;">
+            <h4><i class="fa fa-line-chart"></i> Stream Processing & CWBigQuery</h4>
+            <p>Developed Spark Streaming & Scala big data processing engine during CarWale internship.</p>
+            <router-link to="/projects/bigquery" class="card-link">Explore CWBigQuery <i class="fa fa-arrow-right"></i></router-link>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
-<script>
-    export default {
 
-    }
+<script>
+export default {
+  name: 'Home',
+  data() {
+    return {
+      skills: [
+        { name: 'Apache Spark', desc: 'Distributed Data Processing & Streaming', icon: 'fa fa-fire', color: '#e25507' },
+        { name: 'Databricks', desc: 'Unified Data & Analytics Platform', icon: 'fa fa-cloud', color: '#ff3621' },
+        { name: 'Google Cloud Platform', desc: 'BigQuery, DataProc & GCP Ecosystem', icon: 'fa fa-google', color: '#4285f4' },
+        { name: 'Java & Scala', desc: 'High-performance Object & Functional Coding', icon: 'fa fa-code', color: '#f89820' },
+        { name: 'Python & Airflow', desc: 'ETL Pipeline Automation & Data Orchestration', icon: 'fa fa-cogs', color: '#3776ab' },
+        { name: 'Docker & Microservices', desc: 'Containerized Deployment & Spring Framework', icon: 'fa fa-cubes', color: '#2496ed' }
+      ]
+    };
+  }
+};
 </script>
 
+<style lang="scss" scoped>
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 
-<style>
-    p{
-        padding:0px 20px;
+/* Hero Section */
+.hero-section {
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+
+  .profile-avatar {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-glow);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+    position: relative;
+    z-index: 2;
+  }
+
+  .avatar-backdrop {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    opacity: 0.25;
+    filter: blur(15px);
+    z-index: 1;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.role-pill {
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-emerald);
+    box-shadow: 0 0 8px var(--accent-emerald);
+    animation: pulse 2s infinite;
+  }
+
+  .company-link {
+    color: var(--accent-blue);
+    font-weight: 600;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0;
+  line-height: 1.6;
+
+  strong {
+    color: var(--text-primary);
+  }
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+/* Section Title */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+/* Tech Stack Grid */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.tech-card {
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  .tech-icon {
+    font-size: 2rem;
+    padding: 12px;
+    border-radius: 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+  }
+
+  .tech-info {
+    h3 {
+      font-size: 1.15rem;
+      margin: 0 0 4px 0;
+    }
+    p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.4;
+    }
+  }
+}
+
+/* Highlight Cards */
+.highlight-card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .card-header-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+
+    &.orange {
+      background: rgba(251, 146, 60, 0.15);
+      color: var(--accent-orange);
+    }
+  }
+
+  h3 {
+    font-size: 1.35rem;
+    margin: 0;
+  }
+
+  p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .company-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      padding-left: 16px;
+      position: relative;
+
+      &::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: var(--accent-blue);
+      }
+    }
+  }
+
+  .mini-highlight {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px;
+
+    h4 {
+      font-size: 0.95rem;
+      margin: 0 0 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
+    p {
+      font-size: 0.88rem;
+    }
+  }
+
+  .card-link {
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 28px 20px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+}
 </style>
+

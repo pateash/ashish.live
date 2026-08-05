@@ -1,121 +1,158 @@
 <template>
-  <div class="inner-item">
-    <div class="columns">
-      <div class="column">
-        <div class="inner-item">
-          <h4 style="margin-bottom: 0.5em;">Opensource Contributions</h4>
-          <!--one element representing one Project-->
+  <div class="opensource-page">
+    <div class="page-header">
+      <h1 class="page-title"><i class="fa fa-github-alt gradient-text"></i> Open Source Contributions</h1>
+      <p class="page-subtitle">Open-source packages, CLI developer tools, and framework contributions I actively maintain or contribute to.</p>
+    </div>
 
-          <!--Apache/Airflow-->
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img
-                       src="https://www.techbrace.com/wp-content/uploads/2018/12/Apache_PoweredBy.png"
-                       alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p><!--title-->
-                    <span style="font-size:1.4em">Apache Airflow<span style="font-size:0.7em">, Platform for author, schedule and monitor workflows. </span></span>
-                    <a href="https://github.com/pateash/pateash" target="_blank">
-                      &nbsp;&nbsp;<span class="tag is-info"><b>Know More</b> </span></a>
-                    <br>
-                    Contributor, April 2021- Present<br>
-                  </p>
-                </div><!--font-awesome icons-->
-              </div>
-            </article>
+    <div class="grid-2">
+      <div class="glass-card os-card" v-for="item in contributions" :key="item.name">
+        <div class="os-card-header">
+          <div class="os-icon-box">
+            <i :class="item.icon || 'fa fa-github'"></i>
           </div>
+          <span class="os-role-badge">{{ item.role }}</span>
+        </div>
 
+        <h2 class="os-title">{{ item.name }}</h2>
+        <p class="os-period"><i class="fa fa-clock-o"></i> {{ item.period }}</p>
+        <p class="os-desc">{{ item.description }}</p>
 
-          <!--@codingtools/cdt-->
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img style="border-radius: 0.5em"
-                       src="https://avatars3.githubusercontent.com/u/56801671?s=400&u=efd08f94fc84d3e591ec998eb1884b3241f5c82b&v=4"
-                       alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p><!--title-->
-                    <span style="font-size:1.4em">@codingtools/cdt <span style="font-size:0.7em">, Command Line Tools for Developers </span></span>
-                    <a href="https://github.com/codingtools/cdt" target="_blank">
-                      &nbsp;&nbsp;<span class="tag is-info"><b>Know More</b> </span></a>
-
-                    <br>
-                    Creator and Maintainer, October 2019 - Present<br>
-                  </p>
-                </div><!--font-awesome icons-->
-              </div>
-            </article>
-          </div>
-
-          <!--RegExplore-->
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img style="border-radius: 0.5em"
-                       src="/static/images/regexplore-img.png"
-                       alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p><!--title-->
-                    <span style="font-size:1.4em">RegExplore <span style="font-size:0.7em"> , Regular Expression Matcher</span></span>
-                    <router-link to="/projects/regexplore"> &nbsp;&nbsp;<span
-                      class="tag is-info"> <b>Know More</b> </span></router-link>
-
-                    <br>
-                   Creator and Maintainer, October 2017 - Present<br>
-                  </p>
-                </div><!--font-awesome icons-->
-              </div>
-            </article>
-          </div>
-
-          <!--ReviewDeck-->
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img style="border-radius: 0.5em"
-                       src="https://avatars2.githubusercontent.com/u/37457770?s=200&v=4"
-                       alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p><!--title-->
-                    <span style="font-size:1.4em">ReviewDeck <span style="font-size:0.7em"> , Ethereum Blockchain Review Ledger </span></span>
-                    <a href="https://github.com/ReviewDeck" target="_blank"> &nbsp;&nbsp;<span
-                      class="tag is-info"> <b>Know More</b> </span></a>
-
-                    <br>
-                    Hackathon Project (HackInTheNort, IIIT Allahabad), March 2018<br>
-                  </p>
-                </div><!--font-awesome icons-->
-              </div>
-            </article>
-          </div>
+        <div class="os-actions">
+          <a :href="item.link" target="_blank" class="btn-primary" v-if="item.link">
+            <i class="fa fa-github"></i> View Repo
+          </a>
+          <router-link :to="item.internalRoute" class="btn-secondary" v-if="item.internalRoute">
+            Details <i class="fa fa-arrow-right"></i>
+          </router-link>
         </div>
       </div>
     </div>
   </div>
 </template>
-<script>
-    export default {
 
-    }
+<script>
+export default {
+  name: 'OpenSource',
+  data() {
+    return {
+      contributions: [
+        {
+          name: 'Apache Airflow',
+          role: 'Contributor',
+          period: 'April 2021 - Present',
+          icon: 'fa fa-cogs',
+          description: 'A platform created by the Apache Software Foundation to programmatically author, schedule, and monitor data workflows.',
+          link: 'https://github.com/apache/airflow'
+        },
+        {
+          name: '@codingtools/cdt',
+          role: 'Creator & Maintainer',
+          period: 'October 2019 - Present',
+          icon: 'fa fa-terminal',
+          description: 'A suite of lightning-fast command-line developer tools designed to streamline everyday software engineering workflows.',
+          link: 'https://github.com/codingtools/cdt'
+        },
+        {
+          name: 'RegExplore',
+          role: 'Creator & Maintainer',
+          period: 'October 2017 - Present',
+          icon: 'fa fa-code',
+          description: 'An interactive regular expression matcher and visualizer for testing complex regex patterns in real-time.',
+          link: 'https://github.com/pateash/RegExplore',
+          internalRoute: '/projects/regexplore'
+        },
+        {
+          name: 'ReviewDeck',
+          role: 'Hackathon Project',
+          period: 'March 2018',
+          icon: 'fa fa-cubes',
+          description: 'Decentralized review ledger platform built on the Ethereum blockchain during HackInTheNorth at IIIT Allahabad.',
+          link: 'https://github.com/ReviewDeck'
+        }
+      ]
+    };
+  }
+};
 </script>
 
-<style>
+<style lang="scss" scoped>
+.opensource-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
+.page-header {
+  .page-title {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+  .page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin: 0;
+  }
+}
+
+.os-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  .os-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .os-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+  }
+
+  .os-role-badge {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-emerald);
+    background: rgba(52, 211, 153, 0.1);
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(52, 211, 153, 0.2);
+  }
+
+  .os-title {
+    font-size: 1.35rem;
+    margin: 0;
+  }
+
+  .os-period {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .os-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .os-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 10px;
+  }
+}
 </style>
+

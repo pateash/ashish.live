@@ -1,80 +1,209 @@
 <template>
-    <!--<div class="columns">-->
-    <!--<div class="column">-->
-
-    <div class="inner-item">
-        <gallery :images="images" :index="index" @close="index = null"></gallery>
-
-        <p class="ap-heading"><span style="font-size:2em">CarWale BigQuery</span></p>
-        <p align="center"><img :src="images[0]" @click="index = 0" style="cursor: pointer"></p>
-
-        <h4 id="about">About</h4>
-        <p  style="font-size:1em">
-            CW BigQuery is a service that enables interactive analysis of massively large datasets stored in Cassandra Storage.
-            It allows user to submit and schedule Spark Job , just using SQL like syntax. </p>
-        <h4 id="architecture" style="margin-top:1em;">Architecture</h4>
-        <p style="font-size:1em">The Architecture of Bigquery consists of three components</p>
-        <ul style="list-style-type:disc;margin-left:2em;">
-            <li>ProxyQuery</li>
-            <li>Mist Server</li>
-            <li>Spark</li>
-        </ul><br>
-
-        <h4 id="query-proxy">Query Proxy</h4>
-        <p style="font-size:1em">Query Proxy is Most important component of our system, it acts as mediator (as the name <strong>Proxy</strong> suggests) between Web Application and the <strong>Mist Server</strong>.</p>
-        <p style="font-size:1em">It receives request from the user , validates and push the job request in queue along with returning Jobid to user, if queue is empty.</p>
-        <p style="font-size:1em ">After getting responce from Query Proxy, it save responce to file named after the <strong>job Id</strong> .</p>
-        <p style="font-size:1em">When User request for result it will generate result using pagination and return result to ther user.</p>
-        <p style="font-size:1em"><strong>Query Proxy</strong> is also responsible for cleaning response files after certain amount of time.</p>
-        <p align="center"><img style='margin:1em; cursor: pointer'  :src="images[1]" @click="index = 1"  alt="proxyQuery" /></p>
-        <br>
-        <h4 id="mist-server">Mist Server</h4>
-        <p style="font-size:1em">
-        <p style="font-size:1em;" ><img align="left" :src="images[2]" @click="index = 2" alt="proxyQuery" width="200" height="100" style="margin:1em; cursor: pointer;" /></p>
-        <p style="font-size:1em">MistServer is a full-featured, next-generation streaming media toolkit for OTT (internet streaming). It takes care of all the annoying little problems you come across in media streaming projects, allowing you to focus on what makes your product or service unique. The MistServer software and our accompanying services allow anyone to quickly gain and keep a competitive edge.</p>
-        <p style="font-size:1em">MistServer is written entirely in C++ and comes with an easy to use and integrate JSON API.</p>
-        <p style="font-size:1em">for knowing more about what is media server checkout mistserver <a href="https://mistserver.org/mistserver">documentation</a></p>
-        <br>
-        <h4 id="spark">Spark</h4>
-        <p>
-        <p ><img  align="left" :src="images[3]" @click="index = 3" style="margin:1em; cursor: pointer" alt="Spark" width="200" height="100" /></p>
-        <p>Apache Spark™ is a fast and general engine for large-scale data processing</p>
-        <p>Spark Run programs up to 100x faster than Hadoop MapReduce in memory, or 10x faster on disk.</p>
-        <p>Spark offers over 80 high-level operators that make it easy to build parallel apps. And you can use it interactively from the Scala, Python and R shells.</p>
-        <p>for more read the quick start guide <a href="https://spark.apache.org/docs/latest/quick-start.html">here</a></p>
-        <div class="btn-load-more">
-            <router-link to="/projects/bigquery/project" ><button title="BigQuery Components" class="load-more">Project</button></router-link>
-        </div>
-        <h4 >Say Something about BigQuery  </h4>
-        <div id="disqus_thread"></div>
+  <div class="project-detail-page">
+    <div class="back-nav">
+      <router-link to="/projects" class="btn-secondary">
+        <i class="fa fa-arrow-left"></i> Back to Projects
+      </router-link>
     </div>
+
+    <div class="glass-card detail-card">
+      <!-- Vue 3 Glassmorphic Lightbox Modal -->
+      <teleport to="body">
+        <div v-if="activeImageIndex !== null" class="lightbox-modal" @click.self="activeImageIndex = null">
+          <button class="lightbox-close" @click="activeImageIndex = null">&times;</button>
+          <img :src="images[activeImageIndex]" class="lightbox-img" alt="Gallery Preview">
+          <div class="lightbox-nav">
+            <button @click.stop="prevImage" class="lightbox-btn"><i class="fa fa-chevron-left"></i></button>
+            <span>{{ activeImageIndex + 1 }} / {{ images.length }}</span>
+            <button @click.stop="nextImage" class="lightbox-btn"><i class="fa fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </teleport>
+
+      <div class="detail-header">
+        <h1 class="project-title gradient-text">CarWale BigQuery</h1>
+        <div class="tech-stack-row">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Flask</span>
+          <span class="tech-badge">Scala</span>
+          <span class="tech-badge">Apache Spark</span>
+          <span class="tech-badge">Cassandra</span>
+        </div>
+      </div>
+
+      <div class="image-gallery-preview" v-if="images.length">
+        <img :src="images[0]" @click="activeImageIndex = 0" alt="CarWale BigQuery Architecture" class="gallery-thumb">
+      </div>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-info-circle"></i> About the Project</h2>
+        <p>
+          CW BigQuery is a distributed data querying service that enables interactive analysis of massively large datasets stored in Cassandra Storage. It allows engineers and analysts to submit and schedule Spark jobs using SQL-like syntax.
+        </p>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-sitemap"></i> Architecture</h2>
+        <p>The Architecture of BigQuery consists of three core components:</p>
+        <ul class="feature-list">
+          <li><strong>ProxyQuery:</strong> Acts as the mediator between the Web Application and the Mist Server.</li>
+          <li><strong>Mist Server:</strong> Spark job server managing execution and API endpoints.</li>
+          <li><strong>Spark Engine:</strong> Distributed batch and stream processing engine.</li>
+        </ul>
+      </section>
+
+      <div class="detail-actions">
+        <router-link to="/projects/bigquery/project" class="btn-primary">
+          <i class="fa fa-cogs"></i> View Detailed Components
+        </router-link>
+      </div>
+    </div>
+  </div>
 </template>
+
 <script>
-    import VueGallery from 'vue-gallery';
-    export default {
-        data: function () {
-            return {
-                images: [
-                    'https://imgd.aeplcdn.com/0x0/bigquery/bigquery_architecture.png',
-                    '/static/images/ProxyQuery.jpg',
-                    '/static/images/mist.png',
-                    '/static/images/spark.png',
-                ],
-                index: null
-            };
-        },
-
-        components: {
-            'gallery': VueGallery
-        },
-
+export default {
+  name: 'BigQuery',
+  data() {
+    return {
+      images: [
+        'https://imgd.aeplcdn.com/0x0/bigquery/bigquery_architecture.png',
+        '/static/images/ProxyQuery.jpg',
+        '/static/images/mist.png',
+        '/static/images/spark.png'
+      ],
+      activeImageIndex: null
     };
-
+  },
+  methods: {
+    nextImage() {
+      if (this.activeImageIndex !== null) {
+        this.activeImageIndex = (this.activeImageIndex + 1) % this.images.length;
+      }
+    },
+    prevImage() {
+      if (this.activeImageIndex !== null) {
+        this.activeImageIndex = (this.activeImageIndex - 1 + this.images.length) % this.images.length;
+      }
+    }
+  }
+};
 </script>
 
-<style>
-    <!--adding top margin for all h4 elements in this page-->
-    h4{
-        margin-top:2em;
+
+<style lang="scss" scoped>
+.project-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-card {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-title {
+  font-size: 2.2rem;
+  margin: 0 0 10px 0;
+}
+
+.gallery-thumb {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  background: var(--bg-card);
+}
+
+.detail-section {
+  h2 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+}
+
+.feature-list {
+  padding-left: 20px;
+  color: var(--text-secondary);
+
+  li {
+    margin-bottom: 6px;
+  }
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(11, 15, 25, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 16px;
+  color: #ffffff;
+
+  .lightbox-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+
+    &:hover {
+      background: var(--accent-blue);
     }
+  }
+}
 </style>
