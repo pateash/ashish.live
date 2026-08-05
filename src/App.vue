@@ -8,9 +8,12 @@
       <div class="header-container">
         <router-link to="/" class="brand-logo" aria-label="Ashish Patel Home">
           <div class="brand-badge">
-            <i class="fa fa-code"></i>
+            <span aria-hidden="true">AP</span>
           </div>
-          <span class="logo-text gradient-text">Ashish Patel</span>
+          <span class="brand-copy">
+            <span class="logo-text">Ashish Patel</span>
+            <span class="brand-role">Principal Data &amp; Platform engineer</span>
+          </span>
         </router-link>
 
         <div class="nav-wrapper" :class="{ 'mobile-open': mobileMenuOpen }" id="main-nav">
@@ -20,7 +23,6 @@
         <div class="header-actions">
           <button class="theme-toggle-btn" @click="toggleTheme" :title="theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'" :aria-label="theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'" :aria-pressed="theme === 'dark'">
             <i :class="theme === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o'"></i>
-            <span class="theme-label">{{ theme === 'dark' ? 'Light' : 'Dark' }}</span>
           </button>
 
           <button class="mobile-toggle-btn" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle navigation menu" :aria-expanded="mobileMenuOpen" aria-controls="main-nav">
@@ -154,16 +156,18 @@ export default {
     text-decoration: none;
 
     .brand-badge {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      background: var(--accent-gradient);
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-emerald));
       color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.95rem;
-      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      box-shadow: 0 6px 16px rgba(14, 165, 233, 0.25);
       transition: var(--transition-smooth);
     }
 
@@ -171,8 +175,24 @@ export default {
       transform: scale(1.06);
     }
 
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
     .logo-text {
       font-family: 'Outfit', sans-serif;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+    }
+
+    .brand-role {
+      margin-top: 3px;
+      color: var(--text-muted);
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
     }
   }
 
@@ -261,13 +281,16 @@ export default {
     font-size: 0.9rem;
     color: var(--text-muted);
     margin: 0;
-    
+
     .text-rose {
       color: var(--accent-rose);
     }
   }
 
   @media (max-width: 880px) {
+    .brand-role {
+      display: none;
+    }
     .mobile-toggle-btn {
       display: flex;
     }
@@ -298,4 +321,3 @@ export default {
     }
   }
 </style>
-

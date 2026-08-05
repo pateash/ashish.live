@@ -5,11 +5,15 @@
       <p class="page-subtitle">Degrees, certifications, and educational milestones in Computer Science & Engineering.</p>
     </div>
 
-    <div class="grid-2">
-      <div class="glass-card edu-card" v-for="(edu, idx) in degrees" :key="idx">
+    <div class="education-timeline">
+      <div class="edu-timeline-item" v-for="(edu, idx) in degrees" :key="idx">
+        <div class="edu-timeline-marker" :style="{ '--icon-color': edu.color }">
+          <img :src="edu.logo" :alt="edu.logoAlt" class="edu-logo">
+        </div>
+        <div class="glass-card edu-card">
         <div class="edu-card-header">
-          <div class="edu-icon-box" :style="{ color: edu.color }">
-            <i :class="edu.icon" aria-hidden="true"></i>
+          <div class="edu-icon-box" :style="{ '--icon-color': edu.color }">
+            <img :src="edu.logo" alt="" class="edu-logo edu-logo-card">
           </div>
           <span class="score-badge">
             <i :class="edu.scoreIcon" aria-hidden="true"></i> {{ edu.score }}
@@ -22,12 +26,16 @@
         <div class="edu-field">{{ edu.field }}</div>
         <p class="edu-institution"><i :class="edu.instIcon" class="meta-icon" aria-hidden="true"></i> {{ edu.institution }}</p>
         <p class="edu-period"><i :class="edu.periodIcon" class="meta-icon" aria-hidden="true"></i> {{ edu.period }}</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import manitLogo from '../assets/logo/manit_logo.png';
+import mpBoardLogo from '../assets/logo/mp_board.jpg';
+
 export default {
   name: 'Education',
   data() {
@@ -44,7 +52,9 @@ export default {
           instIcon: 'fa fa-university',
           periodIcon: 'fa fa-calendar',
           scoreIcon: 'fa fa-trophy',
-          color: 'var(--accent-blue)'
+          color: 'var(--accent-blue)',
+          logo: manitLogo,
+          logoAlt: 'Maulana Azad National Institute of Technology emblem'
         },
         {
           degree: 'Higher Secondary (XII)',
@@ -57,7 +67,9 @@ export default {
           instIcon: 'fa fa-institution',
           periodIcon: 'fa fa-calendar-check-o',
           scoreIcon: 'fa fa-percent',
-          color: 'var(--accent-indigo)'
+          color: 'var(--accent-indigo)',
+          logo: mpBoardLogo,
+          logoAlt: 'Madhya Pradesh Board of Secondary Education emblem'
         },
         {
           degree: 'High School (X)',
@@ -70,7 +82,9 @@ export default {
           instIcon: 'fa fa-institution',
           periodIcon: 'fa fa-clock-o',
           scoreIcon: 'fa fa-percent',
-          color: 'var(--accent-purple)'
+          color: 'var(--accent-purple)',
+          logo: mpBoardLogo,
+          logoAlt: 'Madhya Pradesh Board of Secondary Education emblem'
         }
       ]
     };
@@ -83,6 +97,51 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 940px;
+  position: relative;
+}
+
+.education-timeline::before {
+  background: linear-gradient(var(--accent-blue), var(--accent-emerald));
+  content: '';
+  left: 27px;
+  opacity: 0.28;
+  position: absolute;
+  top: 28px;
+  bottom: 28px;
+  width: 2px;
+}
+
+.edu-timeline-item {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 18px;
+  position: relative;
+}
+
+.edu-timeline-marker {
+  align-items: center;
+  background: var(--bg-primary);
+  border: 2px solid color-mix(in srgb, var(--icon-color) 44%, var(--border-color));
+  border-radius: 50%;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.edu-logo {
+  display: block;
+  height: 40px;
+  object-fit: contain;
+  width: 40px;
 }
 
 .page-header {
@@ -113,11 +172,17 @@ export default {
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background: rgba(56, 189, 248, 0.12);
+    background: color-mix(in srgb, var(--icon-color) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--icon-color) 20%, transparent);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
+  }
+
+  .edu-logo-card {
+    height: 34px;
+    width: 34px;
   }
 
   .score-badge {
@@ -167,5 +232,29 @@ export default {
     align-items: center;
   }
 }
-</style>
 
+@media (max-width: 640px) {
+  .education-timeline::before {
+    left: 20px;
+  }
+
+  .edu-timeline-item {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .edu-timeline-marker {
+    height: 42px;
+    width: 42px;
+  }
+
+  .edu-logo {
+    height: 30px;
+    width: 30px;
+  }
+
+  .edu-card {
+    padding: 22px;
+  }
+}
+</style>

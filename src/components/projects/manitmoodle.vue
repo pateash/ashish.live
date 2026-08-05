@@ -23,6 +23,20 @@
           MANIT Moodle is a web-based learning management system and assignment discussion portal created for MANIT Bhopal campus students and professors.
         </p>
       </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-list-check"></i> Platform features</h2>
+        <ul class="feature-list">
+          <li>Simple, easy-to-use assignment and discussion workflow.</li>
+          <li>Expressive, intuitive interface built with HTML and CSS.</li>
+          <li>Procedural PHP backend for campus learning activity.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-code"></i> Project source</h2>
+        <p>The project uses PHP, MySQL, JavaScript, HTML, and CSS. Explore the <a href="https://github.com/pateash/moodle" target="_blank" rel="noreferrer">Moodle repository on GitHub</a>, or <router-link to="/contact">get in touch</router-link> to discuss use or contribution.</p>
+      </section>
     </div>
   </div>
 </template>
@@ -67,5 +81,7 @@ export default {
     margin: 0;
   }
 }
-</style>
 
+.feature-list { color: var(--text-secondary); margin: 0; padding-left: 20px; }
+.feature-list li { margin-bottom: 8px; }
+</style>

@@ -27,6 +27,20 @@
           MyCaptcha is a custom PHP security verification platform implementing Text, Puzzle, and Identipic CAPTCHA challenges to prevent bot automation and spam form submissions.
         </p>
       </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-check-square-o"></i> Challenge types</h2>
+        <ul class="feature-list">
+          <li><a href="https://captcha.tk/text.php" target="_blank" rel="noreferrer">Text image CAPTCHA</a></li>
+          <li><a href="https://captcha.tk/puzzle.php" target="_blank" rel="noreferrer">Puzzle CAPTCHA</a></li>
+          <li><a href="https://captcha.tk/identipic.php" target="_blank" rel="noreferrer">Identipic CAPTCHA</a></li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-code"></i> Project source</h2>
+        <p>MyCaptcha uses PHP, the GD Library, JavaScript, HTML, and CSS. If you would like to use or contribute to the project, visit the <a href="https://github.com/pateash/mycaptcha" target="_blank" rel="noreferrer">GitHub repository</a> or <router-link to="/contact">contact Ashish</router-link>.</p>
+      </section>
     </div>
   </div>
 </template>
@@ -84,5 +98,7 @@ export default {
     margin: 0;
   }
 }
-</style>
 
+.feature-list { color: var(--text-secondary); margin: 0; padding-left: 20px; }
+.feature-list li { margin-bottom: 8px; }
+</style>

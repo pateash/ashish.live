@@ -2,14 +2,14 @@
 
 :root {
   /* Dark Theme Default */
-  --bg-primary: #0b0f19;
-  --bg-secondary: #111827;
-  --bg-surface: rgba(17, 24, 39, 0.85);
-  --bg-card: rgba(30, 41, 59, 0.55);
-  --bg-card-hover: rgba(30, 41, 59, 0.85);
-  --bg-input: rgba(15, 23, 42, 0.6);
-  --border-color: rgba(255, 255, 255, 0.1);
-  --border-glow: rgba(56, 189, 248, 0.35);
+  --bg-primary: #070b14;
+  --bg-secondary: #0e1523;
+  --bg-surface: rgba(10, 16, 28, 0.88);
+  --bg-card: rgba(20, 29, 46, 0.78);
+  --bg-card-hover: rgba(27, 39, 60, 0.94);
+  --bg-input: rgba(15, 23, 42, 0.78);
+  --border-color: rgba(148, 163, 184, 0.16);
+  --border-glow: rgba(56, 189, 248, 0.4);
   
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
@@ -17,13 +17,13 @@
   --text-link: #38bdf8;
   
   --accent-blue: #38bdf8;
-  --accent-indigo: #818cf8;
-  --accent-purple: #c084fc;
+  --accent-indigo: #67e8f9;
+  --accent-purple: #2dd4bf;
   --accent-amber: #fbbf24;
   --accent-emerald: #34d399;
   --accent-rose: #fb7185;
   
-  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  --accent-gradient: linear-gradient(135deg, #0ea5e9 0%, #22d3ee 50%, #34d399 100%);
   --accent-gradient-orange: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
   --glass-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.37);
   --glass-blur: blur(12px);
@@ -31,12 +31,12 @@
 }
 
 [data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-surface: rgba(255, 255, 255, 0.9);
-  --bg-card: rgba(255, 255, 255, 0.75);
-  --bg-card-hover: rgba(255, 255, 255, 0.95);
-  --bg-input: rgba(241, 245, 249, 0.8);
+  --bg-primary: #f6f9fc;
+  --bg-secondary: #eef4f8;
+  --bg-surface: rgba(255, 255, 255, 0.88);
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: #ffffff;
+  --bg-input: rgba(241, 245, 249, 0.92);
   --border-color: rgba(203, 213, 225, 0.6);
   --border-glow: rgba(2, 132, 199, 0.25);
   
@@ -46,13 +46,13 @@
   --text-link: #0284c7;
   
   --accent-blue: #0284c7;
-  --accent-indigo: #4f46e5;
-  --accent-purple: #9333ea;
+  --accent-indigo: #0891b2;
+  --accent-purple: #0f766e;
   --accent-amber: #d97706;
   --accent-emerald: #059669;
   --accent-rose: #e11d48;
   
-  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #4f46e5 50%, #9333ea 100%);
+  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #0891b2 48%, #059669 100%);
   --accent-gradient-orange: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
   --glass-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.06);
   --glass-blur: blur(12px);
@@ -72,6 +72,8 @@ body {
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
+  min-height: 100vh;
+  background-image: radial-gradient(circle at 12% 8%, rgba(56, 189, 248, 0.08), transparent 32%), radial-gradient(circle at 88% 65%, rgba(52, 211, 153, 0.06), transparent 30%);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -90,6 +92,11 @@ a {
 
 a:hover {
   opacity: 0.85;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(56, 189, 248, 0.7);
+  outline-offset: 3px;
 }
 
 /* Utility Classes */
@@ -112,7 +119,7 @@ a:hover {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
+  border-radius: 14px;
   box-shadow: var(--glass-shadow);
   transition: var(--transition-smooth);
 }
@@ -121,7 +128,7 @@ a:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-glow);
   transform: translateY(-3px);
-  box-shadow: 0 16px 36px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 18px 38px -18px rgba(56, 189, 248, 0.35);
 }
 
 .glass-pill {
@@ -215,7 +222,7 @@ a:hover {
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  border-radius: 8px;
+  border-radius: 999px;
   font-size: 0.825rem;
   font-weight: 600;
   background: rgba(56, 189, 248, 0.1);
@@ -235,12 +242,14 @@ a:hover {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
-  padding: 8px 14px;
-  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
   font-size: 0.85rem;
   font-weight: 600;
   transition: var(--transition-smooth);
@@ -260,10 +269,50 @@ a:hover {
 
 .main-content {
   flex: 1;
-  max-width: 1200px;
+  max-width: 1160px;
   width: 100%;
   margin: 0 auto;
   padding: 110px 24px 60px 24px;
+}
+
+/* Shared page rhythm for the Vue route family. */
+.page-header {
+  max-width: 760px;
+}
+
+.page-header .page-title {
+  letter-spacing: -0.035em;
+}
+
+.page-header .page-subtitle {
+  line-height: 1.65;
+}
+
+.project-detail-page .detail-card {
+  border-top: 2px solid rgba(56, 189, 248, 0.32);
+}
+
+.project-detail-page .detail-section + .detail-section {
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.back-nav .btn-secondary,
+.project-detail-page .back-nav a {
+  padding: 8px 14px;
+  border-radius: 9px;
+  font-size: 0.88rem;
+  box-shadow: none;
+}
+
+.back-nav .btn-secondary i,
+.project-detail-page .back-nav a i {
+  transition: transform 0.2s ease;
+}
+
+.back-nav .btn-secondary:hover i,
+.project-detail-page .back-nav a:hover i {
+  transform: translateX(-3px);
 }
 
 /* Responsive Grid System */

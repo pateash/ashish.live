@@ -29,6 +29,11 @@
       </section>
 
       <section class="detail-section">
+        <h2><i class="fa fa-flask"></i> How it works</h2>
+        <p>RegExplore is designed for creating and testing regular expressions without unnecessary complexity. Matching is case-sensitive by default, with a case-insensitive flag available when needed.</p>
+      </section>
+
+      <section class="detail-section">
         <h2><i class="fa fa-desktop"></i> Screenshot Preview</h2>
         <img src="/static/images/regexplore-big.png" class="preview-img" alt="RegExplore Preview">
       </section>
@@ -99,4 +104,3 @@ export default {
   }
 }
 </style>
-

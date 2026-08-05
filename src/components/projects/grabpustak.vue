@@ -23,6 +23,20 @@
           GrabPustak is an online educational repository and digital note-sharing platform for students and faculty. It includes assignment submission portals and teacher-student collaboration tools.
         </p>
       </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-users"></i> Collaboration workflow</h2>
+        <ul class="feature-list">
+          <li>Students can share notes with other students.</li>
+          <li>Teachers can publish class assignments through their own accounts.</li>
+          <li>Students can view and submit assignments online.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-wrench"></i> Technology used</h2>
+        <p>Built with <a href="https://codeigniter.com/" target="_blank" rel="noreferrer">CodeIgniter</a>, <a href="https://jquery.com/" target="_blank" rel="noreferrer">jQuery</a>, PHP, MySQL, JavaScript, and Ajax.</p>
+      </section>
     </div>
   </div>
 </template>
@@ -67,4 +81,7 @@ export default {
     margin: 0;
   }
 }
+
+.feature-list { color: var(--text-secondary); margin: 0; padding-left: 20px; }
+.feature-list li { margin-bottom: 8px; }
 </style>

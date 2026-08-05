@@ -53,6 +53,30 @@
         </ul>
       </section>
 
+      <section class="detail-section">
+        <h2><i class="fa fa-random"></i> Query Proxy</h2>
+        <p>
+          Query Proxy is the system mediator between the web application and Mist Server. It validates a request, assigns and returns a job ID, queues the query for an available Mist context, stores the response by job ID, and returns results through pagination. Response files are cleaned after a defined retention period.
+        </p>
+        <img :src="images[1]" @click="activeImageIndex = 1" @keydown.enter="activeImageIndex = 1" @keydown.space.prevent="activeImageIndex = 1" alt="Query Proxy flow" class="gallery-thumb detail-image" role="button" tabindex="0">
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-server"></i> Mist Server</h2>
+        <p>
+          MistServer is a full-featured, next-generation streaming-media toolkit for OTT (internet streaming). It is written in C++, exposes an easy-to-integrate JSON API, and serves as the job-service layer that coordinates Spark requests passed to it by Query Proxy.
+        </p>
+        <p class="detail-link-line">Learn more in the <a href="https://mistserver.org/mistserver" target="_blank" rel="noreferrer">MistServer documentation</a>.</p>
+        <img :src="images[2]" @click="activeImageIndex = 2" @keydown.enter="activeImageIndex = 2" @keydown.space.prevent="activeImageIndex = 2" alt="Mist Server flow" class="gallery-thumb detail-image" role="button" tabindex="0">
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-bolt"></i> Spark</h2>
+        <p>Apache Spark is the fast, general engine that performs the large-scale data processing for submitted jobs. It can run programs up to 100× faster than Hadoop MapReduce in memory or 10× faster on disk, and supports interactive work from Scala, Python, and R shells along with high-level parallel processing operators.</p>
+        <p class="detail-link-line">Read the Spark <a href="https://spark.apache.org/docs/latest/quick-start.html" target="_blank" rel="noreferrer">quick-start guide</a>.</p>
+        <img :src="images[3]" @click="activeImageIndex = 3" @keydown.enter="activeImageIndex = 3" @keydown.space.prevent="activeImageIndex = 3" alt="Apache Spark execution flow" class="gallery-thumb detail-image" role="button" tabindex="0">
+      </section>
+
       <div class="detail-actions">
         <router-link to="/projects/bigquery/project" class="btn-primary">
           <i class="fa fa-cogs"></i> View Detailed Components
@@ -119,6 +143,19 @@ export default {
   border: 1px solid var(--border-color);
   cursor: pointer;
   background: var(--bg-card);
+}
+
+.detail-image {
+  margin-top: 14px;
+}
+
+.detail-link-line {
+  margin-top: 10px;
+
+  a {
+    color: var(--accent-blue);
+    font-weight: 700;
+  }
 }
 
 .detail-section {

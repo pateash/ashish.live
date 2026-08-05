@@ -10,9 +10,10 @@
       <div class="detail-header">
         <div class="title-row">
           <h1 class="project-title gradient-text">Kisanmitra</h1>
-          <a href="https://github.com/pateash/kisanmitra" target="_blank" class="btn-primary btn-sm">
-            <i class="fa fa-github"></i> View GitHub
-          </a>
+          <div class="title-actions">
+            <a href="https://kisanmitra.herokuapp.com" target="_blank" rel="noreferrer" class="btn-secondary btn-sm"><i class="fa fa-external-link"></i> View live</a>
+            <a href="https://github.com/pateash/kisanmitra" target="_blank" rel="noreferrer" class="btn-primary btn-sm"><i class="fa fa-github"></i> View GitHub</a>
+          </div>
         </div>
         <div class="tech-stack-row">
           <span class="tech-badge">Python</span>
@@ -27,6 +28,16 @@
         <p>
           Kisanmitra is an intelligent machine learning web platform providing crop yield predictions and intuitive agricultural data visualization for farmers to make data-driven planting decisions.
         </p>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-line-chart"></i> Product capabilities</h2>
+        <ul class="feature-list">
+          <li>Crop-yield prediction for the next five years.</li>
+          <li>Expressive, intuitive visualisation through charts.</li>
+          <li>Machine-learning-backed forecasting designed to support farm planning.</li>
+        </ul>
+        <p>Kisanmitra combines accessible tools with planning support that helps farmers adapt strategies to environmental and market conditions.</p>
       </section>
 
       <section class="detail-section">
@@ -47,6 +58,12 @@
             </div>
           </a>
         </div>
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-code-fork"></i> Contributing &amp; security</h2>
+        <p>Contributions are welcome. To get started, fork or clone the project, run <code>composer install</code>, then copy and configure <code>.env.example</code> as <code>.env</code>.</p>
+        <p>If you discover a vulnerability, email <a href="mailto:ashishpatel0720@gmail.com">ashishpatel0720@gmail.com</a>.</p>
       </section>
 
       <section class="detail-section">
@@ -95,6 +112,8 @@ export default {
   font-size: 0.9rem;
 }
 
+.title-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
 .detail-section {
   h2 {
     font-size: 1.3rem;
@@ -109,6 +128,14 @@ export default {
     line-height: 1.6;
     margin: 0;
   }
+}
+
+.feature-list {
+  color: var(--text-secondary);
+  margin: 0 0 14px;
+  padding-left: 20px;
+
+  li { margin-bottom: 7px; }
 }
 
 .repo-links {

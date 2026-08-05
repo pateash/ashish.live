@@ -35,7 +35,10 @@
         </div>
 
         <h2 class="project-title">{{ proj.title }}</h2>
-        <p class="project-meta"><i class="fa fa-calendar"></i> {{ proj.period }} &bull; {{ proj.org }}</p>
+        <div class="project-meta-row">
+          <span class="project-meta"><i class="fa fa-calendar"></i> {{ proj.period }}</span>
+          <span class="project-org">@ {{ proj.org }}</span>
+        </div>
         <p class="project-desc">{{ proj.desc }}</p>
 
         <div class="tech-stack-row">
@@ -280,6 +283,20 @@ export default {
     margin: 0;
   }
 
+  .project-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .project-org {
+    color: var(--accent-emerald);
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
   .project-desc {
     font-size: 0.94rem;
     color: var(--text-secondary);
@@ -297,8 +314,11 @@ export default {
 
   .project-card-actions {
     display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 12px;
+    padding-top: 16px;
   }
 }
 
@@ -312,4 +332,3 @@ export default {
   }
 }
 </style>
-

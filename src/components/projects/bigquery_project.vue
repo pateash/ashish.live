@@ -24,30 +24,53 @@
       <div class="detail-header">
         <h1 class="project-title gradient-text">CarWale BigQuery - System Features</h1>
         <p class="project-subtitle">Interactive Web Portal & Job Management Components</p>
+        <ul class="component-list" aria-label="BigQuery system components">
+          <li>Dashboard</li>
+          <li>Submit Job</li>
+          <li>Schedule Job</li>
+          <li>Job Result</li>
+          <li>Job History</li>
+          <li>Admin Panel</li>
+        </ul>
       </div>
 
       <section class="detail-section">
         <h2><i class="fa fa-tachometer"></i> User Dashboard</h2>
-        <p>The Dashboard displays real-time statistics regarding your active, scheduled, and completed Spark jobs.</p>
+        <p>The dashboard provides descriptive information about activity on the BigQuery platform. It surfaces total submitted jobs, completed jobs with available results, jobs running or queued for execution, cleaned jobs, and jobs that could not complete successfully.</p>
+        <p>Each dashboard panel links to the corresponding job-category history.</p>
         <img :src="images[0]" @click="activeImageIndex = 0" @keydown.enter="activeImageIndex = 0" @keydown.space.prevent="activeImageIndex = 0" class="gallery-thumb" alt="Dashboard" role="button" tabindex="0">
       </section>
 
       <section class="detail-section">
         <h2><i class="fa fa-plus-circle"></i> Submit Job</h2>
-        <p>Submit Job Page allows users to run Spark SQL queries interactively against Cassandra storage clusters with custom limit parameters.</p>
+        <p>Submit Job provides quick results for smaller Spark SQL queries against Cassandra storage. Results are stored in the file system and capped at 5,000 returned rows.</p>
+        <aside class="callout callout-note"><strong>Retention:</strong> file-backed results are cleaned after a period of time, so they should be analysed or exported promptly.</aside>
+        <aside class="callout callout-warning"><strong>Large queries:</strong> jobs expected to return more than 5,000 rows should be scheduled instead.</aside>
         <img :src="images[1]" @click="activeImageIndex = 1" @keydown.enter="activeImageIndex = 1" @keydown.space.prevent="activeImageIndex = 1" class="gallery-thumb" alt="Submit Job" role="button" tabindex="0">
       </section>
 
       <section class="detail-section">
         <h2><i class="fa fa-calendar"></i> Schedule Job</h2>
-        <p>Schedule long-running batch jobs for automated execution. Results are saved directly into persistent MySQL / JSON sinks for automated daily and weekly report generation.</p>
+        <p>Schedule Job is intended for larger jobs, including work returning more than 5,000 rows. Results are stored in MySQL and can be fetched later; users can store output in an existing or newly created table.</p>
+        <p>Users can choose the schedule interval, making recurring daily, weekly, and monthly reports possible.</p>
         <img :src="images[2]" @click="activeImageIndex = 2" @keydown.enter="activeImageIndex = 2" @keydown.space.prevent="activeImageIndex = 2" class="gallery-thumb" alt="Schedule Job" role="button" tabindex="0">
       </section>
 
       <section class="detail-section">
+        <h2><i class="fa fa-file-text-o"></i> Job Result</h2>
+        <p>Job Result displays the result of a small job, with data held in a JSON file until the retention window expires. Results can also be exported as CSV.</p>
+        <img :src="images[3]" @click="activeImageIndex = 3" @keydown.enter="activeImageIndex = 3" @keydown.space.prevent="activeImageIndex = 3" class="gallery-thumb" alt="Job Result" role="button" tabindex="0">
+      </section>
+
+      <section class="detail-section">
         <h2><i class="fa fa-history"></i> Job History & Filtering</h2>
-        <p>Explore full query history, re-execute past jobs with one click, and filter executions by status (SUCCESS, RUNNING, FAILED).</p>
+        <p><a href="/job/history">Job History</a> lets users review and re-submit prior jobs without entering the details again. Status filters can be combined to locate the execution records that matter.</p>
         <img :src="images[4]" @click="activeImageIndex = 4" @keydown.enter="activeImageIndex = 4" @keydown.space.prevent="activeImageIndex = 4" class="gallery-thumb" alt="Job History" role="button" tabindex="0">
+      </section>
+
+      <section class="detail-section">
+        <h2><i class="fa fa-user-secret"></i> Admin Panel</h2>
+        <p>Administrators have a dedicated dashboard to review job data across users, manage users and their jobs, and inspect both aggregate and user-specific job history.</p>
       </section>
 
       <div class="detail-actions">
@@ -112,6 +135,43 @@ export default {
   color: var(--text-secondary);
   margin: 0;
   font-size: 1.05rem;
+}
+
+.component-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+
+  li {
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 5px 10px;
+  }
+}
+
+.callout {
+  border-left: 3px solid var(--accent-blue);
+  border-radius: 0 10px 10px 0;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-top: 12px;
+  padding: 10px 14px;
+}
+
+.callout-note {
+  background: color-mix(in srgb, var(--accent-blue) 8%, transparent);
+}
+
+.callout-warning {
+  border-left-color: #f59e0b;
+  background: color-mix(in srgb, #f59e0b 9%, transparent);
 }
 
 .gallery-thumb {

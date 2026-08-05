@@ -18,7 +18,10 @@
               <img :src="exp.logo" :alt="exp.company" class="company-logo" @error="handleImgError">
             </div>
             <div class="exp-title-meta">
-              <h2 class="role-title">{{ exp.role }}</h2>
+              <div class="role-row">
+                <h2 class="role-title">{{ exp.role }}</h2>
+                <span v-if="idx === 0" class="current-role">Current role</span>
+              </div>
               <div class="company-duration">
                 <span class="company-name">{{ exp.company }}</span> &bull; 
                 <span class="duration-badge">{{ exp.period }}</span>
@@ -217,7 +220,7 @@ export default {
     }
   }
 
-  .experience-body {
+.experience-body {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -251,9 +254,28 @@ export default {
 }
 
 .exp-title-meta {
+  .role-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
   .role-title {
     font-size: 1.35rem;
     margin: 0 0 4px 0;
+  }
+
+  .current-role {
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    border-radius: 999px;
+    background: rgba(52, 211, 153, 0.12);
+    color: var(--accent-emerald);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
 
   .company-duration {
@@ -323,4 +345,3 @@ export default {
   }
 }
 </style>
-

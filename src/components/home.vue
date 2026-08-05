@@ -2,24 +2,33 @@
   <div class="home-page">
     <!-- Hero Section -->
     <section class="hero-section glass-card">
+      <div class="data-flow-visual" aria-hidden="true">
+        <span class="flow-node flow-node-source"><i class="fa fa-database"></i></span>
+        <span class="flow-track"></span>
+        <span class="flow-packet packet-one"></span>
+        <span class="flow-packet packet-two"></span>
+        <span class="flow-node flow-node-destination"><i class="fa fa-cloud"></i></span>
+      </div>
       <div class="hero-content">
         <div class="profile-avatar-wrapper">
-          <img src="/static/images/ashish_2.jpg" alt="Ashish Patel" class="profile-avatar">
+          <img src="/static/images/ashish.jpg" alt="Ashish Patel" class="profile-avatar">
           <div class="avatar-backdrop"></div>
         </div>
 
         <div class="hero-text">
           <div class="role-pill glass-pill">
             <span class="pulse-dot"></span>
-            Senior Software Engineer @ <a href="https://www.linkedin.com/company/prophecy-io/" target="_blank" class="company-link">Prophecy</a>
+            Principal Software Engineer @ <span class="company-link">Oracle</span>
           </div>
+
+          <p class="hero-eyebrow"><i class="fa fa-exchange" aria-hidden="true"></i> Distributed systems · cross-cloud data movement · developer tools</p>
 
           <h1 class="hero-title">
             Hi, I'm <span class="gradient-text">Ashish Patel</span>
           </h1>
 
           <p class="hero-subtitle">
-            Big Data & Distributed Systems Engineer specializing in <strong>Apache Spark, Databricks, GCP, Java, Scala</strong>, and <strong>Python</strong> data infrastructure.
+            Principal Software Engineer building resilient data publishing systems, specializing in <strong>Apache Spark, Scala, Java, Delta Lake, Iceberg</strong>, and <strong>OCI</strong> data infrastructure.
           </p>
 
           <div class="hero-cta">
@@ -68,7 +77,8 @@
             Over <strong>5+ years</strong> of software engineering experience handling terabyte-scale distributed ETL pipelines, batch computing, and cloud migrations.
           </p>
           <ul class="company-list">
-            <li><strong class="text-gradient">Prophecy:</strong> Senior Software Engineer building data copilot & pipeline builder tooling.</li>
+            <li><strong class="text-gradient">Oracle:</strong> Principal Software Engineer building cross-cloud data publishing and observability services.</li>
+            <li><strong>Prophecy:</strong> Former Senior Software Engineer building data copilot & pipeline builder tooling.</li>
             <li><strong>Skyscanner:</strong> Senior Software Engineer scaling search & analytics data systems.</li>
             <li><strong>Walmart Global Tech:</strong> Software Engineer III building resilient retail data infrastructure.</li>
             <li><strong>Deutsche Bank:</strong> Senior Technical Analyst driving DB-to-GCP cloud migration & Spark batch ETLs.</li>
@@ -136,6 +146,61 @@ export default {
   background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-surface) 100%);
 }
 
+.data-flow-visual {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  opacity: 0.68;
+  pointer-events: none;
+  position: absolute;
+  right: 34px;
+  top: 28px;
+}
+
+.flow-node {
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glow);
+  border-radius: 10px;
+  color: var(--accent-blue);
+  display: flex;
+  font-size: 0.85rem;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+}
+
+.flow-node-destination { color: var(--accent-emerald); }
+
+.flow-track {
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-emerald));
+  height: 1px;
+  position: relative;
+  width: 104px;
+}
+
+.flow-packet {
+  background: var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-emerald);
+  height: 6px;
+  left: 48px;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 6px;
+}
+
+.packet-one { animation: flow-packet 2.6s ease-in-out infinite; }
+.packet-two { animation: flow-packet 2.6s ease-in-out 1.3s infinite; }
+
+@keyframes flow-packet {
+  0% { opacity: 0; transform: translate(0, -50%) scale(0.5); }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translate(104px, -50%) scale(0.5); }
+}
+
 .hero-content {
   display: flex;
   align-items: center;
@@ -178,6 +243,15 @@ export default {
   gap: 16px;
 }
 
+.hero-eyebrow {
+  margin: -6px 0 0;
+  color: var(--accent-emerald);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .role-pill {
   .pulse-dot {
     width: 8px;
@@ -198,6 +272,14 @@ export default {
   0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
   70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
   100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .packet-one,
+  .packet-two,
+  .role-pill .pulse-dot {
+    animation: none;
+  }
 }
 
 .hero-title {
@@ -370,6 +452,10 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .data-flow-visual {
+    display: none;
+  }
+
   .hero-section {
     padding: 28px 20px;
   }
@@ -392,4 +478,3 @@ export default {
   }
 }
 </style>
-

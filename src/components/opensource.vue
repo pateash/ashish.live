@@ -5,17 +5,20 @@
       <p class="page-subtitle">Open-source packages, CLI developer tools, and framework contributions I actively maintain or contribute to.</p>
     </div>
 
-    <div class="grid-2">
+    <div class="grid-2 opensource-grid">
       <div class="glass-card os-card" v-for="item in contributions" :key="item.name">
         <div class="os-card-header">
-          <div class="os-icon-box">
-            <i :class="item.icon || 'fa fa-github'"></i>
+          <div class="os-icon-box" :style="{ '--icon-color': item.color }" :title="item.iconLabel">
+            <i :class="item.icon || 'fa fa-github'" aria-hidden="true"></i>
+            <span class="sr-only">{{ item.iconLabel }}</span>
           </div>
-          <span class="os-role-badge">{{ item.role }}</span>
+          <div class="os-meta-badges">
+            <span class="os-role-badge">{{ item.role }}</span>
+            <span class="os-period-badge"><i class="fa fa-clock-o"></i> {{ item.period }}</span>
+          </div>
         </div>
 
         <h2 class="os-title">{{ item.name }}</h2>
-        <p class="os-period"><i class="fa fa-clock-o"></i> {{ item.period }}</p>
         <p class="os-desc">{{ item.description }}</p>
 
         <div class="os-actions">
@@ -42,6 +45,8 @@ export default {
           role: 'Contributor',
           period: 'April 2021 - Present',
           icon: 'fa fa-cogs',
+          iconLabel: 'Apache Airflow workflow icon',
+          color: '#017cee',
           description: 'A platform created by the Apache Software Foundation to programmatically author, schedule, and monitor data workflows.',
           link: 'https://github.com/apache/airflow'
         },
@@ -50,6 +55,8 @@ export default {
           role: 'Creator & Maintainer',
           period: 'October 2019 - Present',
           icon: 'fa fa-terminal',
+          iconLabel: 'Command-line tools icon',
+          color: '#0ea5e9',
           description: 'A suite of lightning-fast command-line developer tools designed to streamline everyday software engineering workflows.',
           link: 'https://github.com/codingtools/cdt'
         },
@@ -58,6 +65,8 @@ export default {
           role: 'Creator & Maintainer',
           period: 'October 2017 - Present',
           icon: 'fa fa-code',
+          iconLabel: 'Regular expression code icon',
+          color: '#8b5cf6',
           description: 'An interactive regular expression matcher and visualizer for testing complex regex patterns in real-time.',
           link: 'https://github.com/pateash/RegExplore',
           internalRoute: '/projects/regexplore'
@@ -67,6 +76,8 @@ export default {
           role: 'Hackathon Project',
           period: 'March 2018',
           icon: 'fa fa-cubes',
+          iconLabel: 'ReviewDeck blockchain icon',
+          color: '#10b981',
           description: 'Decentralized review ledger platform built on the Ethereum blockchain during HackInTheNorth at IIIT Allahabad.',
           link: 'https://github.com/ReviewDeck'
         }
@@ -107,16 +118,24 @@ export default {
     align-items: center;
   }
 
+  .os-meta-badges {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 6px;
+  }
+
   .os-icon-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: rgba(56, 189, 248, 0.15);
-    color: var(--accent-blue);
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--icon-color) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--icon-color) 24%, transparent);
+    color: var(--icon-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
 
   .os-role-badge {
@@ -129,14 +148,14 @@ export default {
     border: 1px solid rgba(52, 211, 153, 0.2);
   }
 
-  .os-title {
-    font-size: 1.35rem;
-    margin: 0;
+  .os-period-badge {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
   }
 
-  .os-period {
-    font-size: 0.85rem;
-    color: var(--text-muted);
+  .os-title {
+    font-size: 1.35rem;
     margin: 0;
   }
 
@@ -149,10 +168,23 @@ export default {
 
   .os-actions {
     display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
     gap: 10px;
     margin-top: auto;
-    padding-top: 10px;
+    padding-top: 16px;
   }
 }
-</style>
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>

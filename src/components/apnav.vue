@@ -12,13 +12,13 @@
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/projects" @click="$emit('nav-click')">
-          <i class="fa fa-code-fork"></i> <span>Projects</span>
+        <router-link to="/opensource" @click="$emit('nav-click')">
+          <i class="fa fa-github-alt"></i> <span>Open Source</span>
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/opensource" @click="$emit('nav-click')">
-          <i class="fa fa-github-alt"></i> <span>Open Source</span>
+        <router-link to="/projects" @click="$emit('nav-click')">
+          <i class="fa fa-code-fork"></i> <span>Projects</span>
         </router-link>
       </li>
       <li class="nav-item">
@@ -29,11 +29,6 @@
       <li class="nav-item">
         <router-link to="/education" @click="$emit('nav-click')">
           <i class="fa fa-graduation-cap"></i> <span>Education</span>
-        </router-link>
-      </li>
-      <li class="nav-item">
-        <router-link to="/timeline" @click="$emit('nav-click')">
-          <i class="fa fa-clock-o"></i> <span>Timeline</span>
         </router-link>
       </li>
       <li class="nav-item">
@@ -60,7 +55,7 @@
   .nav-list {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 3px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -71,7 +66,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      padding: 8px 14px;
+      padding: 8px 10px;
       border-radius: 10px;
       font-size: 0.9rem;
       font-weight: 500;
@@ -115,5 +110,4 @@
     }
   }
 </style>
-
 
